@@ -25,7 +25,6 @@ config
 logs
 options.txt
 saves
-lib
 usernamecache.json
 crash-report
 crash-reports
