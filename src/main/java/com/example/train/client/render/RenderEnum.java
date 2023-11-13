@@ -1,15 +1,16 @@
 package com.example.train.client.render;
 
 
-import com.example.train.common.library.TC4AddonInfo;
 import train.common.api.EntityRollingStock;
 import train.common.api.TrainRenderRecord;
 import tmt.ModelBase;
 import net.minecraft.util.ResourceLocation;
+import com.example.train.common.library.Info;
+
 
 import java.util.ArrayList;
 
-public enum TC4AddonRenderEnum implements TrainRenderRecord {
+public enum RenderEnum implements TrainRenderRecord {
 	;
 	private final Class<? extends EntityRollingStock> entityClass;
 	private final ModelBase model;
@@ -40,7 +41,7 @@ public enum TC4AddonRenderEnum implements TrainRenderRecord {
 	 * @param explosionType String
 	 * @param explosionFX ArrayList
 	 */
-	TC4AddonRenderEnum(Class<? extends EntityRollingStock> entityClass, ModelBase model, String texture, boolean multiTexture, float[] trans, float[] rotate, float[] scale, String smokeType, int smokeIterations, ArrayList<double[]> smokeFX, String explosionType, ArrayList<double[]> explosionFX, int explosionFXIterations, boolean hasSmokeOnSlopes) {
+	RenderEnum(Class<? extends EntityRollingStock> entityClass, ModelBase model, String texture, boolean multiTexture, float[] trans, float[] rotate, float[] scale, String smokeType, int smokeIterations, ArrayList<double[]> smokeFX, String explosionType, ArrayList<double[]> explosionFX, int explosionFXIterations, boolean hasSmokeOnSlopes) {
 		this.entityClass = entityClass;
 		this.model = model;
 		this.texture = texture;
@@ -124,9 +125,9 @@ public enum TC4AddonRenderEnum implements TrainRenderRecord {
     @Override
     public ResourceLocation getTextureFile(String colorString) {
 		if (multiTexture) {
-			return new ResourceLocation(TC4AddonInfo.resourceLocation, TC4AddonInfo.trainsPrefix + texture + colorString + ".png");
+			return new ResourceLocation(Info.resourceLocation, Info.trainsPrefix + texture + colorString + ".png");
 		} else {
-			return new ResourceLocation(TC4AddonInfo.resourceLocation, TC4AddonInfo.trainsPrefix + texture + ".png");
+			return new ResourceLocation(Info.resourceLocation, Info.trainsPrefix + texture + ".png");
 		}
 	}
 

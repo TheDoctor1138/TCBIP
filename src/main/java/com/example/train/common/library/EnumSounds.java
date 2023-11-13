@@ -4,7 +4,7 @@ import train.common.api.TrainSoundRecord;
 import train.common.library.Info;
 
 
-public enum TC4AddonEnumSounds implements TrainSoundRecord {
+public enum EnumSounds implements TrainSoundRecord {
 
 	;
 
@@ -33,7 +33,7 @@ public enum TC4AddonEnumSounds implements TrainSoundRecord {
 	 * @param idleSoundLenght
 	 * @param soundChangeWithSpeed
 	 */
-	TC4AddonEnumSounds(Class entityClass, String horn, float hornVolume, String run, float runVolume, int runSoundLenght, String idle, float idleVolume, int idleSoundLenght, boolean soundChangeWithSpeed) {
+	EnumSounds(Class entityClass, String horn, float hornVolume, String run, float runVolume, int runSoundLenght, String idle, float idleVolume, int idleSoundLenght, boolean soundChangeWithSpeed) {
 		this.entityClass = entityClass;
 		this.horn = horn;
 		this.hornVolume = hornVolume;
@@ -53,19 +53,19 @@ public enum TC4AddonEnumSounds implements TrainSoundRecord {
 
     @Override
 	public String getHornString() {
-        if (horn == null || horn.isEmpty() || horn.startsWith(TC4AddonInfo.resourceLocation + ":")) return horn;
+        if (horn == null || horn.isEmpty() || horn.startsWith(Info.resourceLocation + ":")) return horn;
 		return Info.resourceLocation + ":" + horn;
 	}
 
     @Override
 	public String getRunString() {
-        if (run == null || run.isEmpty() || run.startsWith(TC4AddonInfo.resourceLocation + ":")) return run;
+        if (run == null || run.isEmpty() || run.startsWith(Info.resourceLocation + ":")) return run;
 		return Info.resourceLocation + ":" + run;
 	}
 
     @Override
 	public String getIdleString() {
-        if (idle == null || idle.isEmpty() || idle.startsWith(TC4AddonInfo.resourceLocation + ":")) return idle;
+        if (idle == null || idle.isEmpty() || idle.startsWith(Info.resourceLocation + ":")) return idle;
 		return Info.resourceLocation + ":" + idle;
 	}
 

@@ -9,7 +9,10 @@ package com.example.train.common.library;
 
 import net.minecraft.item.Item;
 
-public enum TC4AddonItemIDs {
+public enum ItemIDs {
+
+	recipeBook("ItemRecipeBook", "item_book_blue", 1),
+
 
 	;
 
@@ -27,7 +30,7 @@ public enum TC4AddonItemIDs {
 	 * @param iconName
 	 * @param amountForEmerald for one emerald. For ItemRollingStock, it is the price for one train
 	 */
-	TC4AddonItemIDs(String classMethodName, String iconName, int amountForEmerald) {
+	ItemIDs(String classMethodName, String iconName, int amountForEmerald) {
 		this.className = classMethodName;
 		this.iconName = iconName;
 		this.amountForEmerald = amountForEmerald;

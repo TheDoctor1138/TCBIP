@@ -9,7 +9,7 @@ import train.common.core.util.TraincraftUtil;
 
 import java.lang.reflect.InvocationTargetException;
 
-public enum TC4AddonEnumTrains implements TrainRecord {
+public enum EnumTrains implements TrainRecord {
 
 
 	;
@@ -53,7 +53,7 @@ public enum TC4AddonEnumTrains implements TrainRecord {
 	 * @param colors: an array with all possible colors. Index 0 is used as default color when train is first spawned. leave null if no color available
 	 * @param guiRenderScale: scale at which the entity will be rendered inside the GUI (crafting GUI)
 	 */
-	TC4AddonEnumTrains(String internalName, Class entityClass, Item item, String trainType, int MHP, int maxSpeed, double mass, int fuelConsumption, int waterConsumption, int heatingTime, double accelerationRate, double brakeRate, int tankCapacity, int[] colors, int guiRenderScale, double bogieLocoPosition){
+	EnumTrains(String internalName, Class entityClass, Item item, String trainType, int MHP, int maxSpeed, double mass, int fuelConsumption, int waterConsumption, int heatingTime, double accelerationRate, double brakeRate, int tankCapacity, int[] colors, int guiRenderScale, double bogieLocoPosition){
 		this.internalName = internalName;
 		this.entityClass = entityClass;
 		this.item = item;
@@ -92,7 +92,7 @@ public enum TC4AddonEnumTrains implements TrainRecord {
 	 * @param bogieLocoPositions
 	 * @param additionnalTooltip
 	 */
-	TC4AddonEnumTrains(String internalName, Class entityClass, Item item, String trainType, int MHP, int maxSpeed, double mass, int fuelConsumption, int waterConsumption, int heatingTime, double accelerationRate, double brakeRate, int tankCapacity, int[] colors, int guiRenderScale, double bogieLocoPositions, String additionnalTooltip){
+	EnumTrains(String internalName, Class entityClass, Item item, String trainType, int MHP, int maxSpeed, double mass, int fuelConsumption, int waterConsumption, int heatingTime, double accelerationRate, double brakeRate, int tankCapacity, int[] colors, int guiRenderScale, double bogieLocoPositions, String additionnalTooltip){
 		this.internalName = internalName;
 		this.entityClass = entityClass;
 		this.item = item;
@@ -126,7 +126,7 @@ public enum TC4AddonEnumTrains implements TrainRecord {
 	 * @param cargoCapacity
 	 * @param additionnalTooltip
 	 */
-	TC4AddonEnumTrains(String internalName, Class entityClass, Item item, String trainType, double mass, int[] colors, int guiRenderScale, int cargoCapacity, String additionnalTooltip){
+	EnumTrains(String internalName, Class entityClass, Item item, String trainType, double mass, int[] colors, int guiRenderScale, int cargoCapacity, String additionnalTooltip){
 		this.internalName = internalName;
 		this.entityClass = entityClass;
 		this.item = item;
