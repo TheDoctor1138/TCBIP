@@ -28,6 +28,7 @@ import train.common.core.TrainModCore;
 import train.common.core.handlers.CraftingHandler;
 import com.example.train.common.core.handlers.RecipeHandler;
 import com.example.train.common.recipes.AssemblyTableRecipes;
+import train.common.core.handlers.EntityHandler;
 
 import java.io.File;
 
@@ -104,7 +105,7 @@ public class TC4Addon {
         tc4AddonTab = new TC4AddonsTab(CreativeTabs.getNextID(), "TC4 Addon");
 		TC4AddonBlocks.init();
 		TC4AddonItems.init();
-		//EntityHandler.init();
+		registerEntityHandlers();
 
 		proxy.registerTileEntities();
 		proxy.registerSounds();

@@ -2,6 +2,7 @@ package com.example.train.client.core;
 
 import com.example.train.client.core.handlers.ClientTickHandler;
 import com.example.train.common.core.CommonProxy;
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import javazoom.jl.decoder.JavaLayerUtils;
@@ -17,6 +18,8 @@ import train.client.core.handlers.TCKeyHandler;
 import train.client.core.helpers.JLayerHook;
 import com.example.train.client.gui.GuiRecipeBook;
 import com.example.train.common.library.GuiIDs;
+import train.client.render.RenderRollingStock;
+import train.common.api.EntityRollingStock;
 import train.common.core.Traincraft_EventSounds;
 
 import java.util.Calendar;
@@ -43,6 +46,8 @@ public class ClientProxy extends CommonProxy {
     public void registerRenderInformation() {
         FMLCommonHandler.instance().bus().register(new ClientTickHandler());
 
+
+        RenderingRegistry.registerEntityRenderingHandler(EntityRollingStock.class, new RenderRollingStock());
 		/*
 		ClientRegistry.bindTileEntitySpecialRenderer(TileFortyFootContainer.class, new FortyFootContainerRender());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.FortyFootContainer.block), new ItemRenderFortyFootContainer());

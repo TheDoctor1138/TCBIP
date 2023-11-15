@@ -15,7 +15,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import train.common.inventory.TrainCraftingManager;
-import com.example.train.common.library.ItemIDs;
+import com.example.train.common.library.AddonItemIDs;
 import train.common.recipes.RecipesArmorDyes;
 
 import java.util.ArrayList;
@@ -39,7 +39,7 @@ public class RecipeHandler {
         TrainCraftingManager.instance.getRecipeList().add(new RecipesArmorDyes());
 
         // Recipe Book
-        GameRegistry.addRecipe(new ItemStack(ItemIDs.recipeBook.item, 1),  "TTT", "TBT", "TTT", Character.valueOf('T'), Blocks.rail, Character.valueOf('B'), Items.book );
+        GameRegistry.addRecipe(new ItemStack(AddonItemIDs.recipeBook.item, 1),  "TTT", "TBT", "TTT", Character.valueOf('T'), Blocks.rail, Character.valueOf('B'), Items.book );
 
 
     }
@@ -60,7 +60,7 @@ public class RecipeHandler {
         ArrayList<ItemStack> waterbucket = waterContainers();
 
         /* Recipe book */
-       TC4AddonCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.recipeBook.item, 1),  "TTT", "TBT", "TTT", Character.valueOf('T'), Blocks.rail, Character.valueOf('B'), Items.book );
+       TC4AddonCraftingManager.instance.addRecipe(new ItemStack(AddonItemIDs.recipeBook.item, 1),  "TTT", "TBT", "TTT", Character.valueOf('T'), Blocks.rail, Character.valueOf('B'), Items.book );
 
     }
 

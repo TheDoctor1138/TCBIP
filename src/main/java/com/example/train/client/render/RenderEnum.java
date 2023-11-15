@@ -1,6 +1,10 @@
 package com.example.train.client.render;
 
 
+import com.example.train.common.entity.rollingstock.locomotive.*;
+//import com.example.train.common.entity.rollingstock.passenger.*;
+//import com.example.train.common.entity.rollingstock.freight.*;
+import com.example.train.client.render.models.rollingstock.*;
 import train.common.api.EntityRollingStock;
 import train.common.api.TrainRenderRecord;
 import tmt.ModelBase;
@@ -11,6 +15,16 @@ import com.example.train.common.library.Info;
 import java.util.ArrayList;
 
 public enum RenderEnum implements TrainRenderRecord {
+
+	locoHLE18(EntityLocoElectricNMBS_HLE_18.class, new ModelNMBS_HLE_18(), "locomotive/HLE18/hle18_", true, new float[]{-1.5F,0.05F,0}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
+
+
+
+
+
+
+
+
 	;
 	private final Class<? extends EntityRollingStock> entityClass;
 	private final ModelBase model;

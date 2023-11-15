@@ -6,11 +6,14 @@ import net.minecraft.world.World;
 import train.common.api.AbstractTrains;
 import train.common.api.TrainRecord;
 import train.common.core.util.TraincraftUtil;
-
+import com.example.train.common.entity.rollingstock.locomotive.*;
+//import com.example.train.common.entity.rollingstock.passenger.*;
+//import com.example.train.common.entity.rollingstock.freight.*;
 import java.lang.reflect.InvocationTargetException;
 
 public enum EnumTrains implements TrainRecord {
 
+	NMBS_HLE_18("NMBS_HLE_18", EntityLocoElectricNMBS_HLE_18.class, AddonItemIDs.minecartNMBS_HLE_18.item, "electric", 6705, 201, 0, 10, 0, 0, 0.9, 0.79, 0, TraincraftUtil.getBytesFromColors(new String[]{"White", "Grey"}), 10, -3.7, "Pack: B.I.P."),
 
 	;
 

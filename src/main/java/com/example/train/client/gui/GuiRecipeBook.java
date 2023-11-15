@@ -4,6 +4,7 @@ import com.example.train.client.core.handlers.RecipeBookHandler;
 import com.example.train.common.core.managers.TierRecipeManager;
 import com.example.train.common.inventory.TC4AddonCraftingManager;
 import com.example.train.common.items.ItemRecipeBook;
+import com.example.train.common.library.AddonItemIDs;
 import com.example.train.common.library.Info;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -17,9 +18,9 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 import org.lwjgl.opengl.GL11;
 import com.example.train.common.core.managers.TierRecipe;
-import train.common.items.ItemRollingStock;
-import train.common.recipes.ShapedTrainRecipes;
-import train.common.recipes.ShapelessTrainRecipe;
+import com.example.train.common.items.ItemRollingStock;
+import com.example.train.common.recipes.ShapedTrainRecipes;
+import com.example.train.common.recipes.ShapelessTrainRecipe;
 
 
 import java.util.ArrayList;
@@ -60,31 +61,33 @@ public class GuiRecipeBook extends GuiScreen {
 
         addPage("", "", "left", null);
         addPage("", "", "right", null);
-        /*addPage("Welcome to the Traincraft guide! \nThis book contains everything you need to know about Traincraft.\n\nAuthors:\nSpitfire4466,\nMrbrutal\n\nBukkit port: \nDV8FromTheWorld\n\nThanks to CovertJaguar for his help and a great API.\n", "", "left", new ArrayList<StackToDraw>() {
+        addPage("Welcome to the Traincraft guide! \nThis book contains everything you need to know about Traincraft.\n\nAuthors:\nSpitfire4466,\nMrbrutal\n\nBukkit port: \nDV8FromTheWorld\n\nThanks to CovertJaguar for his help and a great API.\n", "", "left", new ArrayList<StackToDraw>() {
             {
-                add(new StackToDraw(new ItemStack(com.example.train.common.library.ItemIDs.recipeBook.item), 20, 16));
+                add(new StackToDraw(new ItemStack(com.example.train.common.library.AddonItemIDs.recipeBook.item), 20, 16));
                 /*add(new StackToDraw(new ItemStack(BlockIDs.trainWorkbench.block), 170, 16));
                 add(new StackToDraw(new ItemStack(ItemIDs.minecartCabooseWork.item), 60, 175));
                 add(new StackToDraw(new ItemStack(ItemIDs.minecartTankWagon_DB.item), 80, 175));
                 add(new StackToDraw(new ItemStack(ItemIDs.minecartFlatCartRail_DB.item), 100, 175));
                 add(new StackToDraw(new ItemStack(ItemIDs.minecartFreightWagon_DB.item), 120, 175));
                 add(new StackToDraw(new ItemStack(ItemIDs.minecartPassengerBlue.item), 140, 175));
-                add(new StackToDraw(new ItemStack(ItemIDs.minecartV60_DB.item), 160, 175));
+                add(new StackToDraw(new ItemStack(ItemIDs.minecartV60_DB.item), 160, 175));*/
             }
         });
+
+
         addPage("Modelers:\nDAYdiecast,\nhelldiver,\nBlockStormTwo,\nChandlerBingUA.\n\nGitHub 1.7.10 port Team: \nEternal BlueFlame,\nNitroxydeX,\nFirEmerald,\nHagurd\n \nWebsite:\nhttp://traincraft-mod.\nblogspot.com", "", "right", new ArrayList<StackToDraw>() {
             {
-                add(new StackToDraw(new ItemStack(com.example.train.common.library.ItemIDs.recipeBook.item), 20, 16));
+                add(new StackToDraw(new ItemStack(AddonItemIDs.recipeBook.item), 20, 16));
                 /*add(new StackToDraw(new ItemStack(BlockIDs.assemblyTableII.block), 170, 16));
                 add(new StackToDraw(new ItemStack(ItemIDs.minecartLocoForneyRed.item), 20, 175));
                 add(new StackToDraw(new ItemStack(ItemIDs.minecartPassengerBlue.item), 40, 175));
                 add(new StackToDraw(new ItemStack(ItemIDs.minecartPassengerBlue.item), 60, 175));
                 add(new StackToDraw(new ItemStack(ItemIDs.minecartFreightWagon_DB.item), 80, 175));
                 add(new StackToDraw(new ItemStack(ItemIDs.minecartWood.item), 100, 175));
-                add(new StackToDraw(new ItemStack(ItemIDs.minecartCabooseLogging.item), 120, 175));
+                add(new StackToDraw(new ItemStack(ItemIDs.minecartCabooseLogging.item), 120, 175));*/
             }
         });
-        addPage("World generation:\n\n By default, petrol and oil sands will be generated in the world. If you don't want them, open Traincraft.cfg and change the line ENABLE_ORE_SPAWN from true to false.\nOnly the new ores will generate, the old ones can be transformed into the new ones in a crafting table.", "", "left", new ArrayList<StackToDraw>() {
+        /*addPage("World generation:\n\n By default, petrol and oil sands will be generated in the world. If you don't want them, open Traincraft.cfg and change the line ENABLE_ORE_SPAWN from true to false.\nOnly the new ores will generate, the old ones can be transformed into the new ones in a crafting table.", "", "left", new ArrayList<StackToDraw>() {
             {
                 add(new StackToDraw(new ItemStack(BlockIDs.oreTC.block, 1, 1), 60, 160));
                 add(new StackToDraw(new ItemStack(BlockIDs.oreTC.block, 1, 2), 120, 160));
@@ -359,7 +362,7 @@ public class GuiRecipeBook extends GuiScreen {
 
         addPage("On the following pages you will find all the train workbench recipes and assembly table recipes.\nIt is however strongly suggested to try to discover the recipes by yourself...\n\nWe hope you will enjoy the mod!\n\nSpitfire4466 and MrBrutal", "", "left", new ArrayList<StackToDraw>() {
             {
-                add(new StackToDraw(new ItemStack(com.example.train.common.library.ItemIDs.recipeBook.item), 20, 16));
+                add(new StackToDraw(new ItemStack(AddonItemIDs.recipeBook.item), 20, 16));
                 //add(new StackToDraw(new ItemStack(ItemIDs.hat.item), 40, 155));
                // add(new StackToDraw(new ItemStack(ItemIDs.jacket.item), 90, 155));
                // add(new StackToDraw(new ItemStack(ItemIDs.overalls.item), 140, 155));
