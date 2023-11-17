@@ -1,10 +1,12 @@
 package com.thedoctor1138.train.common.library;
 
 import train.common.api.TrainSoundRecord;
-import train.common.library.Info;
+import com.thedoctor1138.train.common.entity.rollingStock.*;
+
 
 
 public enum TCMLPEnumSounds implements TrainSoundRecord {
+	nmbs_hle_18(EntityLocoElectricNMBS_HLE_18.class, "mg_horn", 1F, "vl10_idle", 0.8F, 10, "vl10_idle", 0.6F, 50, false),
 
 	;
 
@@ -54,19 +56,19 @@ public enum TCMLPEnumSounds implements TrainSoundRecord {
     @Override
 	public String getHornString() {
         if (horn == null || horn.isEmpty() || horn.startsWith(TCMLPAddonInfo.resourceLocation + ":")) return horn;
-		return Info.resourceLocation + ":" + horn;
+		return TCMLPAddonInfo.resourceLocation + ":" + horn;
 	}
 
     @Override
 	public String getRunString() {
         if (run == null || run.isEmpty() || run.startsWith(TCMLPAddonInfo.resourceLocation + ":")) return run;
-		return Info.resourceLocation + ":" + run;
+		return TCMLPAddonInfo.resourceLocation + ":" + run;
 	}
 
     @Override
 	public String getIdleString() {
         if (idle == null || idle.isEmpty() || idle.startsWith(TCMLPAddonInfo.resourceLocation + ":")) return idle;
-		return Info.resourceLocation + ":" + idle;
+		return TCMLPAddonInfo.resourceLocation + ":" + idle;
 	}
 
     @Override

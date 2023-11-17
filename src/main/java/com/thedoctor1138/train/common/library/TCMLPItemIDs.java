@@ -10,6 +10,13 @@ package com.thedoctor1138.train.common.library;
 import net.minecraft.item.Item;
 
 public enum TCMLPItemIDs {
+
+	//Items
+
+	recipeBook("ItemRecipeBook", "item_book_blue", 1),
+
+	//Rollingstock
+
 	minecartNMBS_HLE_18("ItemRollingStock", "hle18", 1),
 	;
 

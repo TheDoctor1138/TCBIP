@@ -1,21 +1,27 @@
 package com.thedoctor1138.train.common;
 
 import com.thedoctor1138.train.common.core.TCMLPCreativeTabTraincraftTrains;
+import com.thedoctor1138.train.common.core.handlers.TCMLPRecipeHandler;
 import com.thedoctor1138.train.common.items.TCMLPItems;
 import com.thedoctor1138.train.common.library.TCMLPAddonInfo;
 import com.thedoctor1138.train.common.library.TCMLPEnumTrains;
 import com.thedoctor1138.train.common.library.TCMLPRegistry;
+import com.thedoctor1138.train.common.recipes.AssemblyTableRecipes;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStoppedEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import com.thedoctor1138.train.common.core.CommonProxy;
+
 
 @Mod(modid = TCMLPAddonInfo.modID, name = TCMLPAddonInfo.modName, version = TCMLPAddonInfo.modVersion)
 public class TCMLP {
@@ -23,6 +29,9 @@ public class TCMLP {
 	/* TrainCraft instance */
 	@Instance(TCMLPAddonInfo.modID)
 	public static TCMLP instance;
+
+	@SidedProxy(clientSide = "com.thedoctor1138.train.client.core.ClientProxy", serverSide = "com.thedoctor1138.train.common.core.CommonProxy")
+	public static CommonProxy proxy;
 
 	/* TrainCraft Logger */
 	public static Logger tcLog = LogManager.getLogger(TCMLPAddonInfo.modName);
@@ -74,6 +83,22 @@ public class TCMLP {
 
 	@EventHandler
 	public void load(FMLInitializationEvent event) {
+
+
+
+		tcLog.info("Initialize Gui");
+		NetworkRegistry.INSTANCE.registerGuiHandler(instance, proxy);
+
+
+		tcLog.info("Initialize Recipes");
+		TCMLPRecipeHandler.initBlockRecipes();
+		TCMLPRecipeHandler.initItemRecipes();
+		TCMLPRecipeHandler.initSmeltingRecipes();
+		AssemblyTableRecipes.recipes();
+
+		proxy.registerBookHandler();
+
+
 	}
 
 	@EventHandler

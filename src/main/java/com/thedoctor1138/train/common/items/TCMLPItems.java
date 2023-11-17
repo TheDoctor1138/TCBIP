@@ -28,6 +28,9 @@ public class TCMLPItems {
                 }
             }
         }
+
+        TCMLPItemIDs.recipeBook.item = new ItemRecipeBook();
+
     }
 
     private static void registerItems() {
