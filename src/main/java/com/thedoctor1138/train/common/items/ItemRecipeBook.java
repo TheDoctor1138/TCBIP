@@ -38,8 +38,7 @@ public class ItemRecipeBook extends Item {
             stack.getTagCompound().setInteger("currPage", page);
             stack.getTagCompound().setInteger("currRecipe", recipe);
         }
-
-        player.openGui(Traincraft.instance, 98, world, (int)player.posX, (int)player.posY, (int)player.posZ);
+        player.openGui(TCMLP.instance, 79, world, (int)player.posX, (int)player.posY, (int)player.posZ);
         return stack;
     }
 

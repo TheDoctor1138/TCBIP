@@ -7,6 +7,8 @@ import train.common.api.AbstractTrains;
 import train.common.api.TrainRecord;
 import train.common.core.util.TraincraftUtil;
 import com.thedoctor1138.train.common.entity.rollingStock.*;
+import train.common.entity.rollingStock.EntityPassengerSNCB_M6;
+import train.common.library.ItemIDs;
 
 
 import java.lang.reflect.InvocationTargetException;
@@ -16,6 +18,8 @@ public enum TCMLPEnumTrains implements TrainRecord {
 	//Ctyrk4 Pack
 
 	NMBS_HLE_18("NMBS_HLE_18", EntityLocoElectricNMBS_HLE_18.class, TCMLPItemIDs.minecartNMBS_HLE_18.item, "electric", 6705, 201, 0, 10, 0, 0, 0.9, 0.79, 0, TraincraftUtil.getBytesFromColors(new String[]{"White", "Grey"}), 10, -3.7, "Pack: B.I.P."),
+	EurofimaPresidentiale("EuroFimaPresidentiale", EntityPassengerEuroFimaPresidentiale.class, TCMLPItemIDs.minecartEuroFirmaPresidentiale.item, "passenger", 0, 0, 3.0,0 , 0, 0, 0,0,0,null,0,-11, "Pack: WWCP"),
+
 
 	;
 

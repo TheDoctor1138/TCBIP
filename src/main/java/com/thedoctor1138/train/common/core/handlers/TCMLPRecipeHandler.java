@@ -5,6 +5,7 @@
 
 package com.thedoctor1138.train.common.core.handlers;
 
+import com.thedoctor1138.train.common.library.TCMLPItemIDs;
 import com.thedoctor1138.train.common.recipes.AssemblyTableRecipes;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
@@ -14,6 +15,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import train.common.inventory.TrainCraftingManager;
 import train.common.library.BlockIDs;
+import train.common.library.ItemIDs;
 import train.common.recipes.RecipesArmorDyes;
 
 import java.util.ArrayList;
@@ -67,6 +69,7 @@ public class TCMLPRecipeHandler  {
             ironingot = (ItemStack)var1.next();
         }
 
+        GameRegistry.addRecipe(new ItemStack(TCMLPItemIDs.recipeBook.item, 1),  "TTT", "TBT", "TTT", Character.valueOf('T'), Blocks.rail, Character.valueOf('B'), Items.book );
     }
 
     public static void initItemRecipes() {
@@ -104,6 +107,10 @@ public class TCMLPRecipeHandler  {
         while(var10.hasNext()) {
             plankItem = (ItemStack)var10.next();
         }
+
+        TrainCraftingManager.instance.addRecipe(new ItemStack(TCMLPItemIDs.recipeBook.item, 1),  "TTT", "TBT", "TTT", Character.valueOf('T'), Blocks.rail, Character.valueOf('B'), Items.book );
+        TrainCraftingManager.instance.addRecipe(new ItemStack(TCMLPItemIDs.minecartNMBS_HLE_18.item, 1),  "TTT", "TBT", "TTT", Character.valueOf('T'), Blocks.rail, Character.valueOf('B'), Items.book );
+
 
     }
 

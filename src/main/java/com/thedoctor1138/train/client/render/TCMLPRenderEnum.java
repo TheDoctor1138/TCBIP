@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public enum TCMLPRenderEnum implements TrainRenderRecord {
 
 	locoHLE18(EntityLocoElectricNMBS_HLE_18.class, new ModelNMBS_HLE_18(), "hle18_", true, new float[]{-1.5F,0.05F,0}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
-
+	euroFimaPresidentiale(EntityPassengerEuroFimaPresidentiale.class, new ModelEurofimaPresidentiale(), "EuroFima", false, new float[]{-5.5F,0.05F,0}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
 
 
 	;

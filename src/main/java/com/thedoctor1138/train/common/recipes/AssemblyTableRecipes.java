@@ -51,12 +51,12 @@ public class AssemblyTableRecipes {
         ITierCraftingManager cm = TierRecipeManager.getInstance();
 
 
-        //for  (ItemStack k :ingotSteel){
-           // Item itemSteel = k.getItem();
-           // int itemDamageSteel = k.getItemDamage();
+            for  (ItemStack k :ingotSteel){
+            Item itemSteel = k.getItem();
+            int itemDamageSteel = k.getItemDamage();
 
             // TIER 1 //
-            
+
             // TIER 2 //
 
             // TIER 3 //
@@ -68,17 +68,22 @@ public class AssemblyTableRecipes {
                 }
             }
 
-       // }
+            for (ItemStack dye : dyeBlue){
+                cm.addRecipe(3, new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 2, itemDamageSteel), null, null, null, new ItemStack(ItemIDs.seats.item, 4), null, dye, new ItemStack(TCMLPItemIDs.minecartEuroFirmaPresidentiale.item, 1), 1);
 
-    }
-
-    public static ArrayList<ItemStack> waterContainers(){
-        ArrayList<ItemStack> containers = new ArrayList<ItemStack>();
-        for (FluidContainerRegistry.FluidContainerData data : FluidContainerRegistry.getRegisteredFluidContainerData()){
-            if(data.fluid.getFluid() == FluidRegistry.WATER){
-                containers.add(data.filledContainer);
             }
+
         }
-        return containers;
+
     }
+
+        public static ArrayList<ItemStack> waterContainers(){
+            ArrayList<ItemStack> containers = new ArrayList<ItemStack>();
+            for (FluidContainerRegistry.FluidContainerData data : FluidContainerRegistry.getRegisteredFluidContainerData()){
+                if(data.fluid.fluid == FluidRegistry.WATER){
+                    containers.add(data.filledContainer);
+                }
+            }
+            return containers;
+        }
 }

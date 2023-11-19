@@ -18,6 +18,7 @@ public enum TCMLPItemIDs {
 	//Rollingstock
 
 	minecartNMBS_HLE_18("ItemRollingStock", "hle18", 1),
+	minecartEuroFirmaPresidentiale("ItemRollingStock", "eurofima", 1),
 	;
 
 	public Item item;

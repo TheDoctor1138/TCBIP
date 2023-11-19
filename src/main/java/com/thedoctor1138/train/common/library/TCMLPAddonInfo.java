@@ -15,6 +15,8 @@ public class TCMLPAddonInfo {
 	/* All the resources for the mod */
 	public static final String resourceLocation = "tc_mlp";
 	public static final String guiPrefix = "textures/gui/";
+	public static final String bookPrefix = "textures/gui/book/";
+
 	public static final String trainsPrefix = "textures/trains/";
 	public static final String modelTexPrefix = "textures/models/";
 }

@@ -2,15 +2,17 @@ package com.thedoctor1138.train.client.core;
 
 import com.thedoctor1138.train.common.core.CommonProxy;
 import cpw.mods.fml.common.Loader;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import train.client.core.AlphaExpiredException;
-import train.client.core.handlers.RecipeBookHandler;
-import train.client.gui.*;
+import com.thedoctor1138.train.client.core.handlers.RecipeBookHandler;
+import com.thedoctor1138.train.client.gui.*;
 import train.common.entity.rollingStock.EntityJukeBoxCart;
-import train.common.library.GuiIDs;
+import com.thedoctor1138.train.common.library.GuiIDs;
 import train.common.tile.*;
 import train.common.wellcar.GuiFortyFootContainer;
 import train.common.wellcar.TileFortyFootContainer;
@@ -53,6 +55,11 @@ public class ClientProxy extends CommonProxy {
             default:
                 return null;
         }
+    }
+
+    @Override
+    public GuiScreen getCurrentScreen() {
+        return Minecraft.getMinecraft().currentScreen;
     }
 
     @Override
