@@ -10,16 +10,14 @@
 package com.thedoctor1138.train.client.render.models; //Path where the model is located
 
 import com.thedoctor1138.train.common.library.TCMLPAddonInfo;
+import fexcraft.tmt.slim.ModelConverter;
+import fexcraft.tmt.slim.ModelRendererTurbo;
+import fexcraft.tmt.slim.Tessellator;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
-import tmt.Model;
-import tmt.ModelConverter;
-import tmt.ModelRendererTurbo;
-import tmt.Tessellator;
-import train.common.api.AbstractTrains;
-import train.common.library.Info;
+
 
 public class ModelEurofimaPresidentiale extends ModelConverter //Same as Filename
 {

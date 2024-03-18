@@ -7,9 +7,9 @@ import com.thedoctor1138.train.common.entity.rollingStock.*;
 import com.thedoctor1138.train.common.library.TCMLPAddonInfo;
 import com.thedoctor1138.train.client.render.models.*;
 
+import fexcraft.tmt.slim.ModelBase;
 import train.common.api.EntityRollingStock;
 import train.common.api.TrainRenderRecord;
-import tmt.ModelBase;
 import net.minecraft.util.ResourceLocation;
 
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ public enum TCMLPRenderEnum implements TrainRenderRecord {
 
 	;
 	private Class<? extends EntityRollingStock> entityClass;
-	private ModelBase model;
+	private final ModelBase model;
 	private String texture;
 	private boolean multiTexture;
 	private float[] trans;

@@ -21,6 +21,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import com.thedoctor1138.train.common.core.CommonProxy;
+import com.thedoctor1138.train.common.core.handlers.EntityHandler;
 
 
 @Mod(modid = TCMLPAddonInfo.modID, name = TCMLPAddonInfo.modName, version = TCMLPAddonInfo.modVersion)
@@ -56,26 +57,18 @@ public class TCMLP {
         tcAddonTab = new TCMLPCreativeTabTraincraftTrains(CreativeTabs.getNextID(), "Trains");
 
         TCMLPItems.init();
-        registerEntityHandlers();
+		EntityHandler.init();
 
 		/* Other Proxy init */
 		tcLog.info("Initialize Renderer and Events");
 
         registry = new TCMLPRegistry();
-        registry.registerTrainRecords();
-        registry.registerRenderRecords();
-        registry.registerSoundRecords();
+        registry.init();
 
         tcLog.info("Finished PreInitialization");
 	}
     
-    private void registerEntityHandlers() {
-		int trainID = 1;
-		for(TCMLPEnumTrains train : TCMLPEnumTrains.values()){
-			EntityRegistry.registerModEntity(train.getEntityClass(), train.getInternalName(), trainID, TCMLP.instance, 512, 1, true);
-			trainID++;
-		}
-    } 
+
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {

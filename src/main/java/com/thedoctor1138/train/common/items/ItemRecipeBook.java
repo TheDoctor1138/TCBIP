@@ -6,7 +6,6 @@
 package com.thedoctor1138.train.common.items;
 
 import com.thedoctor1138.train.common.TCMLP;
-import com.thedoctor1138.train.common.core.TCMLPCreativeTabTraincraftTrains;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import java.util.List;

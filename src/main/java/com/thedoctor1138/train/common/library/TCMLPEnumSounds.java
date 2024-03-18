@@ -86,16 +86,15 @@ public enum TCMLPEnumSounds implements TrainSoundRecord {
 		return idleVolume;
 	}
 
-    @Override
-	public int getRunSoundLenght() {
+	@Override
+	public int getRunSoundLength() {
 		return runSoundLenght;
 	}
 
-    @Override
-	public int getIdleSoundLenght() {
+	@Override
+	public int getIdleSoundLength() {
 		return idleSoundLenght;
 	}
-
     @Override
 	public boolean getSoundChangeWithSpeed() {
 		return soundChangeWithSpeed;
