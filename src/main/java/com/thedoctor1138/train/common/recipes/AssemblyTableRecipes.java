@@ -74,6 +74,9 @@ public class AssemblyTableRecipes {
             }
 
         }
+            for (ItemStack dye : dyeBlue){
+                cm.addRecipe(3, new ItemStack(ItemIDs.controls.item, 2), new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 3), null, null, new ItemStack(ItemIDs.steelcab.item, 2), new ItemStack(ItemIDs.dieselengine.item, 1), new ItemStack(ItemIDs.electmotor.item, 2), new ItemStack(ItemIDs.transformer.item, 2), dye, new ItemStack(TCMLPItemIDs.minecartClass74.item, 1), 1);
+        }
 
     }
 
