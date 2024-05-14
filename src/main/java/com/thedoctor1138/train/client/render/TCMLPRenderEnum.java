@@ -16,13 +16,15 @@ import java.util.ArrayList;
 
 public enum TCMLPRenderEnum implements TrainRenderRecord {
 
-	locoHLE18(EntityLocoElectricNMBS_HLE_18.class, new ModelNMBS_HLE_18(), "hle18_", true, new float[]{-1.5F,0.05F,0}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
-	euroFimaPresidentiale(EntityPassengerEuroFimaPresidentiale.class, new ModelEurofimaPresidentiale(), "EuroFima", false, new float[]{-5.5F,0.05F,0}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
-	class74(EntitylocodieselClass74.class, new ModelClass74(), "Class_74_", true, new float[]{-1.5F,0.15F,0}, new float[] {0F, 180F, 180F}, null, "smoke", 1, new ArrayList<double[]>() {
+	locoHLE18(EntityLocoElectricNMBS_HLE_18.class, new ModelNMBS_HLE_18(), "hle18_", true, new float[]{-1.5F, 0.05F, 0F}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
+	euroFimaPresidentiale(EntityPassengerEuroFimaPresidentiale.class, new ModelEurofimaPresidentiale(), "EuroFima", false, new float[]{-5.5F, 0.05F, 0F}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
+	class74(EntitylocodieselClass74.class, new ModelClass74(), "Class_74_", true, new float[]{-1.5F, 0.15F, 0F}, new float[] {0F, 180F, 180F}, null, "smoke", 1, new ArrayList<double[]>() {
 		{
 			add(new double[]{2D, 1.25D, 0D});
 		}
 	}, "", null, 0, false),
+	CstockEngine(EntityLocoElectricCStockEngine.class, new ModelCstockEngine(), "C_stock_", true, new float[]{-1F, 0.16F, 0F}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
+	CstockPassenger(EntityPassengerCStockPassenger.class, new ModelCstockPassenger(), "C_stock_", true, new float[]{-1F, 0.16F, 0F}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
 
 	;
 	private Class<? extends EntityRollingStock> entityClass;

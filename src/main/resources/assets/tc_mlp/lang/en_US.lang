@@ -7,6 +7,10 @@ item.tc_mlp:minecartNMBS_HLE_18.name=NMBS HLE 18
 
 <!-- Entities -->
 entity.tc_mlp.NMBS_HLE_18.name=NMBS HLE 18
+entity.tc_mlp.EurofimaPresidentiale.name=Eurofima Presidentiale
+entity.tc_mlp.Class74.name=Class 74
+entity.tc_mlp.CstockEngine.name=C Stock Engine
+entity.tc_mlp.CstockPassenger.name=C Stock Passenger
 
 train.owner.name=You are not the owner!
 train.locked.name=Locked
