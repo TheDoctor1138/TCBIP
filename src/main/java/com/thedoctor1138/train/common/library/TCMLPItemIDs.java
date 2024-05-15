@@ -22,6 +22,8 @@ public enum TCMLPItemIDs {
 	minecartClass74("ItemRollingStock", "Class_74_icon", 1),
 	minecartCstockEngine("ItemRollingStock", "C_stock_engine_icon", 1),
 	minecartCstockPassenger("ItemRollingStock", "C_stock_passenger_icon", 1),
+	minecartClass20("ItemRollingStock", "Class_20_Icon_Iso", 1),
+
 	;
 
 	public Item item;

@@ -12,6 +12,7 @@ public class TCMLPEnumTrains {
 				TrainRecord.makeEntry("Class74", "Class74", EntitylocodieselClass74.class, TCMLPItemIDs.minecartClass74.item, "diesel", 650, 140, 0, 10, 0, 80, 0.9, 0.75, 9000, new String[]{"Black", "Blue", "Green", "Grey", "LightBlue", "Yellow"}, 18, -3, "pack B.I.P."),
 				TrainRecord.makeEntry("CStockEngine", "CStockEngine", EntityLocoElectricCStockEngine.class, TCMLPItemIDs.minecartCstockEngine.item, "electric", 200, 80, 0, 10, 0, 0, 0.9, 0.79, 0, new String[]{"Blue"}, 10, -2, "Pack: B.I.P."),
 				TrainRecord.makeEntry("CStockPassenger", "CStockPassenger", EntityPassengerCStockPassenger.class, TCMLPItemIDs.minecartCstockPassenger.item, "passenger", 0, 0, 0, 0, 0, 0, 0, 0, 0, new String[]{"Blue"}, 10, -2, "Pack: B.I.P."),
+				TrainRecord.makeEntry("Class20Diesel", "Class20", EntitylocodieselClass20.class, TCMLPItemIDs.minecartClass20.item, "diesel", 1000, 121, 0, 10, 0, 75, 0.6, 0.67, 1700, new String[]{"Black", "Blue", "Cyan", "Green", "Grey", "LightBlue", "LightGrey", "Lime", "Magenta", "Orange", "Pink", "Purple", "Red", "White", "Yellow","Skin17", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24", "Skin25"}, 9, -4, "B.I.P.")
 		};
 
 	}
