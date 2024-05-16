@@ -25,7 +25,7 @@ public enum TCMLPRenderEnum implements TrainRenderRecord {
 	}, "", null, 0, false),
 	CstockEngine(EntityLocoElectricCStockEngine.class, new ModelCstockEngine(), "C_stock_", true, new float[]{-1F, 0.16F, 0F}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
 	CstockPassenger(EntityPassengerCStockPassenger.class, new ModelCstockPassenger(), "C_stock_", true, new float[]{-1F, 0.16F, 0F}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
-	class20(EntitylocodieselClass20.class, new ModelClass20(), "Class_20_", true, new float[]{-1.5F, 0.15F, 0F}, new float[] {0F, 180F, 180F}, null, "smoke", 1, new ArrayList<double[]>() {
+	class20(EntitylocodieselClass20.class, new ModelClass20(), "Class_20_", true, new float[]{-1.75F, 0.15F, 0F}, new float[] {0F, 180F, 180F}, null, "smoke", 1, new ArrayList<double[]>() {
 		{
 			add(new double[]{2D, 1.25D, 0D});
 		}
