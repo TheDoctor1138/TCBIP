@@ -6,7 +6,6 @@ import com.thedoctor1138.train.common.entity.rollingStock.*;
 
 
 public enum TCMLPEnumSounds implements TrainSoundRecord {
-	nmbs_hle_18(EntityLocoElectricNMBS_HLE_18.class, "mg_horn", 1F, "vl10_idle", 0.8F, 10, "vl10_idle", 0.6F, 50, false),
 	class74(EntitylocodieselClass74.class, "eu07_horn", 1F, "chme3_idle", 0.6F, 4, "chem3_idle", 0.5F, 25, false),
 	CstockEngine(EntityLocoElectricCStockEngine.class, "LUwhistle", 1F, "vl10_idle", 0.8F, 10, "vl10_idle", 0.6F, 50, false),
 	class20(EntitylocodieselClass20.class, "br_horn", 1F, "Class20Thrash", 0.7F, 2, "Class20Thrash", 0.5F, 3, false)
@@ -58,20 +57,20 @@ public enum TCMLPEnumSounds implements TrainSoundRecord {
 
     @Override
 	public String getHornString() {
-        if (horn == null || horn.isEmpty() || horn.startsWith(TCMLPAddonInfo.resourceLocation + ":")) return horn;
-		return TCMLPAddonInfo.resourceLocation + ":" + horn;
+        if (horn == null || horn.isEmpty() || horn.startsWith(TCMLPInfo.resourceLocation + ":")) return horn;
+		return TCMLPInfo.resourceLocation + ":" + horn;
 	}
 
     @Override
 	public String getRunString() {
-        if (run == null || run.isEmpty() || run.startsWith(TCMLPAddonInfo.resourceLocation + ":")) return run;
-		return TCMLPAddonInfo.resourceLocation + ":" + run;
+        if (run == null || run.isEmpty() || run.startsWith(TCMLPInfo.resourceLocation + ":")) return run;
+		return TCMLPInfo.resourceLocation + ":" + run;
 	}
 
     @Override
 	public String getIdleString() {
-        if (idle == null || idle.isEmpty() || idle.startsWith(TCMLPAddonInfo.resourceLocation + ":")) return idle;
-		return TCMLPAddonInfo.resourceLocation + ":" + idle;
+        if (idle == null || idle.isEmpty() || idle.startsWith(TCMLPInfo.resourceLocation + ":")) return idle;
+		return TCMLPInfo.resourceLocation + ":" + idle;
 	}
 
     @Override

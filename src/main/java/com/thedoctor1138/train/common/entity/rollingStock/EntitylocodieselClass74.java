@@ -159,6 +159,6 @@ public class EntitylocodieselClass74 extends DieselTrain {
     }
     @Override
     public String transportcountry() {
-        return "UK";
+        return "uk";
     }
 }

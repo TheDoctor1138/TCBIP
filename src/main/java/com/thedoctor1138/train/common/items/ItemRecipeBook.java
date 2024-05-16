@@ -23,7 +23,7 @@ public class ItemRecipeBook extends Item {
 
     public ItemRecipeBook() {
         this.maxStackSize = 1;
-        this.setCreativeTab(TCMLP.tcAddonTab);
+        this.setCreativeTab(TCMLP.tcMLPTab);
     }
 
     public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {

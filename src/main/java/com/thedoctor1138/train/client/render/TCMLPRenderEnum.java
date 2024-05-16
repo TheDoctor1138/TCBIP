@@ -4,7 +4,7 @@ package com.thedoctor1138.train.client.render;
 
 
 import com.thedoctor1138.train.common.entity.rollingStock.*;
-import com.thedoctor1138.train.common.library.TCMLPAddonInfo;
+import com.thedoctor1138.train.common.library.TCMLPInfo;
 import com.thedoctor1138.train.client.render.models.*;
 
 import fexcraft.tmt.slim.ModelBase;
@@ -16,8 +16,6 @@ import java.util.ArrayList;
 
 public enum TCMLPRenderEnum implements TrainRenderRecord {
 
-	locoHLE18(EntityLocoElectricNMBS_HLE_18.class, new ModelNMBS_HLE_18(), "hle18_", true, new float[]{-1.5F, 0.05F, 0F}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
-	euroFimaPresidentiale(EntityPassengerEuroFimaPresidentiale.class, new ModelEurofimaPresidentiale(), "EuroFima", false, new float[]{-5.5F, 0.05F, 0F}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
 	class74(EntitylocodieselClass74.class, new ModelClass74(), "Class_74_", true, new float[]{-1.5F, 0.15F, 0F}, new float[] {0F, 180F, 180F}, null, "smoke", 1, new ArrayList<double[]>() {
 		{
 			add(new double[]{2D, 1.25D, 0D});
@@ -144,9 +142,9 @@ public enum TCMLPRenderEnum implements TrainRenderRecord {
     @Override
     public ResourceLocation getTextureFile(String colorString) {
 		if (multiTexture) {
-			return new ResourceLocation(TCMLPAddonInfo.resourceLocation, TCMLPAddonInfo.trainsPrefix + texture + colorString + ".png");
+			return new ResourceLocation(TCMLPInfo.resourceLocation, TCMLPInfo.trainsPrefix + texture + colorString + ".png");
 		} else {
-			return new ResourceLocation(TCMLPAddonInfo.resourceLocation, TCMLPAddonInfo.trainsPrefix + texture + ".png");
+			return new ResourceLocation(TCMLPInfo.resourceLocation, TCMLPInfo.trainsPrefix + texture + ".png");
 		}
 	}
 

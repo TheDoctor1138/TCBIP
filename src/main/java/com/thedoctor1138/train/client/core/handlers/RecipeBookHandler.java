@@ -11,14 +11,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import com.thedoctor1138.train.common.library.TCMLPAddonInfo;
 import net.minecraft.item.Item;
-import train.common.Traincraft;
 import train.common.core.interfaces.ITCRecipe;
 import train.common.core.managers.TierRecipe;
-import train.common.library.BlockIDs;
-import train.common.library.Info;
-import train.common.library.ItemIDs;
 import train.common.recipes.ShapedTrainRecipes;
 import train.common.recipes.ShapelessTrainRecipe;
 

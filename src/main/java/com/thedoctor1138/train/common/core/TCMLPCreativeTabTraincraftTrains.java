@@ -20,7 +20,7 @@ public class TCMLPCreativeTabTraincraftTrains extends CreativeTabs {
 
 	@Override
 	public ItemStack getIconItemStack() {
-		return new ItemStack(TCMLPItemIDs.minecartNMBS_HLE_18.item);
+		return new ItemStack(TCMLPItemIDs.minecartCstockEngine.item);
 	}
 
 	@Override
@@ -29,5 +29,5 @@ public class TCMLPCreativeTabTraincraftTrains extends CreativeTabs {
 	}
 
 	@Override
-	public Item getTabIconItem(){return TCMLPItemIDs.minecartNMBS_HLE_18.item;}
+	public Item getTabIconItem(){return TCMLPItemIDs.minecartCstockEngine.item;}
 }

@@ -7,8 +7,6 @@ public class TCMLPEnumTrains {
 	public static TrainRecord[] trains() {
 		return new TrainRecord[]{
 
-				TrainRecord.makeEntry("NMBSHLE18", "NMBS_HLE_18", EntityLocoElectricNMBS_HLE_18.class, TCMLPItemIDs.minecartNMBS_HLE_18.item, "electric", 6705, 201, 0, 10, 0, 0, 0.9, 0.79, 0, new String[]{"White", "Grey"}, 10, -3.7, "Pack: B.I.P."),
-				TrainRecord.makeEntry("EurofimaPresidentiale", "EuroFimaPresidentiale", EntityPassengerEuroFimaPresidentiale.class, TCMLPItemIDs.minecartEuroFirmaPresidentiale.item, "passenger", 0, 0, 3.0, 0, 0, 0, 0, 0, 0, null, 0, -11, "Pack: WWCP"),
 				TrainRecord.makeEntry("Class74", "Class74", EntitylocodieselClass74.class, TCMLPItemIDs.minecartClass74.item, "diesel", 650, 140, 0, 10, 0, 80, 0.9, 0.75, 9000, new String[]{"Black", "Blue", "Green", "Grey", "LightBlue", "Yellow"}, 18, -3, "pack B.I.P."),
 				TrainRecord.makeEntry("CStockEngine", "CStockEngine", EntityLocoElectricCStockEngine.class, TCMLPItemIDs.minecartCstockEngine.item, "electric", 200, 80, 0, 10, 0, 0, 0.9, 0.79, 0, new String[]{"Blue", "Grey"}, 10, -2, "Pack: B.I.P."),
 				TrainRecord.makeEntry("CStockPassenger", "CStockPassenger", EntityPassengerCStockPassenger.class, TCMLPItemIDs.minecartCstockPassenger.item, "passenger", 0, 0, 0, 0, 0, 0, 0, 0, 0, new String[]{"Blue", "Grey"}, 10, -2, "Pack: B.I.P."),

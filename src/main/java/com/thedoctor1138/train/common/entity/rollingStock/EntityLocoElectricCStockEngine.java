@@ -149,4 +149,9 @@ public class EntityLocoElectricCStockEngine extends ElectricTrain {
     public boolean isItemValidForSlot(int i, ItemStack itemstack) {
         return true;
     }
+
+    @Override
+    public String transportcountry() {
+        return "uk";
+    }
 }

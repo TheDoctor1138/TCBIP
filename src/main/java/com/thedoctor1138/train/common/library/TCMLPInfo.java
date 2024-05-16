@@ -1,12 +1,12 @@
 package com.thedoctor1138.train.common.library;
 
-public class TCMLPAddonInfo {
+public class TCMLPInfo {
 
 	/* Mod relevant information */
 	public static final String modID = "tc_mlp";
 	public static final String modName = "Mainline Project Addon for Traincraft";
 	public static final String modVersion = "0.0";
-	public static final String channel = "TCMLP_Addon";
+	public static final String channel = "TCMLP";
 	public static final String keyChannel = "TCMLPKey";
 	public static final String rotationChannel = "TCMLPRotation";
 

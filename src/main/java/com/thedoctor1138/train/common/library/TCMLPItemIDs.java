@@ -16,9 +16,6 @@ public enum TCMLPItemIDs {
 	recipeBook("ItemRecipeBook", "item_book_blue", 1),
 
 	//Rollingstock
-
-	minecartNMBS_HLE_18("ItemRollingStock", "hle18", 1),
-	minecartEuroFirmaPresidentiale("ItemRollingStock", "eurofima", 1),
 	minecartClass74("ItemRollingStock", "Class_74_icon", 1),
 	minecartCstockEngine("ItemRollingStock", "C_stock_engine_icon", 1),
 	minecartCstockPassenger("ItemRollingStock", "C_stock_passenger_icon", 1),

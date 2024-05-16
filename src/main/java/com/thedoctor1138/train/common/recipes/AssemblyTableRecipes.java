@@ -63,13 +63,11 @@ public class AssemblyTableRecipes {
 
             for (ItemStack dye : dyeRed){
                 for (ItemStack rs : redstone){
-                    cm.addRecipe(3, new ItemStack(ItemIDs.controls.item, 2), new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), null, null, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.transformer.item, 2), new ItemStack(ItemIDs.electmotor.item, 2), new ItemStack(rs.getItem(), 4), dye, new ItemStack(TCMLPItemIDs.minecartNMBS_HLE_18.item, 1), 1);
 
                 }
             }
 
             for (ItemStack dye : dyeBlue){
-                cm.addRecipe(3, new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 2, itemDamageSteel), null, null, null, new ItemStack(ItemIDs.seats.item, 4), null, dye, new ItemStack(TCMLPItemIDs.minecartEuroFirmaPresidentiale.item, 1), 1);
 
             }
 

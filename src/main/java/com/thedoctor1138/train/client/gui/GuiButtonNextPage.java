@@ -1,13 +1,12 @@
 package com.thedoctor1138.train.client.gui;
 
-import com.thedoctor1138.train.common.library.TCMLPAddonInfo;
+import com.thedoctor1138.train.common.library.TCMLPInfo;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
-import train.common.library.Info;
 
 @SideOnly(Side.CLIENT)
 class GuiButtonNextPage extends GuiButton {
@@ -33,7 +32,7 @@ class GuiButtonNextPage extends GuiButton {
         if (this.visible && showButton) {
             boolean var4 = par2 >= this.xPosition && par3 >= this.yPosition && par2 < this.xPosition + this.width && par3 < this.yPosition + this.height;
             GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-            mc.renderEngine.bindTexture(new ResourceLocation(TCMLPAddonInfo.resourceLocation,TCMLPAddonInfo.bookPrefix + "bookleft.png"));
+            mc.renderEngine.bindTexture(new ResourceLocation(TCMLPInfo.resourceLocation, TCMLPInfo.bookPrefix + "bookleft.png"));
             int var5 = 0;
             int var6 = 206;
 

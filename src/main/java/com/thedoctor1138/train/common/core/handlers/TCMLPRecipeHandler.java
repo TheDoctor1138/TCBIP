@@ -109,7 +109,6 @@ public class TCMLPRecipeHandler  {
         }
 
         TrainCraftingManager.instance.addRecipe(new ItemStack(TCMLPItemIDs.recipeBook.item, 1),  "TTT", "TBT", "TTT", Character.valueOf('T'), Blocks.rail, Character.valueOf('B'), Items.book );
-        TrainCraftingManager.instance.addRecipe(new ItemStack(TCMLPItemIDs.minecartNMBS_HLE_18.item, 1),  "TTT", "TBT", "TTT", Character.valueOf('T'), Blocks.rail, Character.valueOf('B'), Items.book );
 
 
     }
