@@ -28,6 +28,10 @@ public enum TCMLPRenderEnum implements TrainRenderRecord {
 			add(new double[]{2D, 1.25D, 0D});
 		}
 	}, "", null, 0, false),
+	Class68(EntityLocoDieselClass68.class, new ModelClass68(), "Class_68_", true, new float[]{-1.8F, 0F, 0F}, new float[]{0F, 180F, 180F}, null, "smoke", 1, null, "", null, 0, false),
+	Class88(EntityLocoElectricClass88.class, new ModelClass88(), "Class_88_", true, new float[]{-1.8F, 0F, 0F}, new float[]{0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
+	LessCoWagon(EntityFreightLessCoWagon.class, new ModelLessCoWagon(), "Less_Co2_", true, new float[]{0F, 0F, 0F}, new float[]{0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
+
 	;
 	private Class<? extends EntityRollingStock> entityClass;
 	private final ModelBase model;

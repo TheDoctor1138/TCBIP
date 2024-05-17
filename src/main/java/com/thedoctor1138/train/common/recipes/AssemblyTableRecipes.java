@@ -75,6 +75,7 @@ public class AssemblyTableRecipes {
             for (ItemStack dye : dyeBlue){
                 cm.addRecipe(3, new ItemStack(ItemIDs.controls.item, 2), new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 3), null, null, new ItemStack(ItemIDs.steelcab.item, 2), new ItemStack(ItemIDs.dieselengine.item, 1), new ItemStack(ItemIDs.electmotor.item, 2), new ItemStack(ItemIDs.transformer.item, 2), dye, new ItemStack(TCMLPItemIDs.minecartClass74.item, 1), 1);
                 cm.addRecipe(3, new ItemStack(ItemIDs.controls.item, 2), new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(ItemIDs.steel.item, 1), new ItemStack(ItemIDs.steelchimney.item, 1), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.electmotor.item, 4), new ItemStack(ItemIDs.dieselengine.item, 2), new ItemStack(ItemIDs.generator.item, 2), dye, new ItemStack(TCMLPItemIDs.minecartClass20.item, 1), 1);
+                cm.addRecipe(3, new ItemStack(ItemIDs.controls.item, 2), new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), null, null, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.transformer.item, 2), new ItemStack(ItemIDs.electmotor.item, 2), new ItemStack(ItemIDs.transformer.item, 4), dye, new ItemStack(TCMLPItemIDs.minecartClass88.item, 1), 1);
 
         }
 

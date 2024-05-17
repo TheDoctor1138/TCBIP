@@ -6,9 +6,11 @@ import com.thedoctor1138.train.common.entity.rollingStock.*;
 
 
 public enum TCMLPEnumSounds implements TrainSoundRecord {
-	class74(EntitylocodieselClass74.class, "eu07_horn", 1F, "chme3_idle", 0.6F, 4, "chem3_idle", 0.5F, 25, false),
+	class74(EntitylocodieselClass74.class, "eu07_horn", 1F, "chme3_idle", 0.6F, 4, "chme3_idle", 0.5F, 25, false),
 	CstockEngine(EntityLocoElectricCStockEngine.class, "LUwhistle", 1F, "vl10_idle", 0.8F, 10, "vl10_idle", 0.6F, 50, false),
-	class20(EntitylocodieselClass20.class, "br_horn", 1F, "Class20Thrash", 0.7F, 2, "Class20Thrash", 0.5F, 3, false)
+	class20(EntitylocodieselClass20.class, "br_horn", 1F, "Class20Thrash", 0.7F, 10, "Class20Thrash", 0.4F, 10, false),
+	Class68(EntityLocoDieselClass68.class, "Class88Horn", 1F, "Class68Thrash", 0.8F, 15, "Class68Thrash", 0.4F, 20, false),
+	Class88(EntityLocoElectricClass88.class, "Class88Horn", 1F, "Class90Idle", 0.7F, 15, "Class90Idle", 0.3F, 20, false),
 
 	;
 

@@ -3,14 +3,22 @@
 <!-- ## Save the file the same way this file was saved but replace "en_US" with appropriate language name ## -->
 
 <!-- Items -->
-item.tc_mlp:minecartNMBS_HLE_18.name=NMBS HLE 18
+item.tc_mlp:minecartClass74.name=Class 74
+item.tc_mlp:minecartCstockEngine.name=C Stock Engine
+item.tc_mlp:minecartCstockPassenger.name=C Stock Passenger
+item.tc_mlp:minecartClass20.name=Class 20
+item.tc_mlp:minecartClass68.name=Class 68
+item.tc_mlp:minecartClass88.name=Class 88
+item.tc_mlp:minecartLessCoWagon.name=Less Co Wagon
 
 <!-- Entities -->
-entity.tc_mlp.NMBS_HLE_18.name=NMBS HLE 18
-entity.tc_mlp.EurofimaPresidentiale.name=Eurofima Presidentiale
 entity.tc_mlp.Class74.name=Class 74
 entity.tc_mlp.CstockEngine.name=C Stock Engine
 entity.tc_mlp.CstockPassenger.name=C Stock Passenger
+entity.tc_mlp.Class20.name=Class 20
+entity.tc_mlp.Class68.name=Class 68
+entity.tc_mlp.Class88.name=Class 88
+entity.tc_mlp.LessCoWagon.name=Less Co Wagon
 
 <!-- ## GUI ## -->
 menu.item.country=Country

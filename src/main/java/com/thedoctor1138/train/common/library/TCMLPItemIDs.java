@@ -16,10 +16,14 @@ public enum TCMLPItemIDs {
 	recipeBook("ItemRecipeBook", "item_book_blue", 1),
 
 	//Rollingstock
+
 	minecartClass74("ItemRollingStock", "Class_74_icon", 1),
-	minecartCstockEngine("ItemRollingStock", "C_stock_engine_icon", 1),
+	minecartCstockEngine("ItemRollingStock", "C_stock_engine_icon", 3),
 	minecartCstockPassenger("ItemRollingStock", "C_stock_passenger_icon", 1),
 	minecartClass20("ItemRollingStock", "Class_20_Icon_Iso", 1),
+	minecartClass68("ItemRollingStock", "Class_68_Icon", 4),
+	minecartClass88("ItemRollingStock", "Class_88_Icon", 4),
+	minecartLessCoWagon("ItemRollingStock", "Less_Co_Wagon_Icon", 2),
 
 	;
 

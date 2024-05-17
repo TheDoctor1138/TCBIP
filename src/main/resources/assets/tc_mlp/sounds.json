@@ -179,5 +179,7 @@
   "HSTHorn": {"category": "master", "sounds" :  [{"name": "HSTHorn", "stream": true}]},
   "LUwhistle": {"category": "master", "sounds" :  [{"name": "LUwhistle", "stream": true}]},
   "Class20Thrash": {"category": "master", "sounds" :  [{"name": "Class20Thrash", "stream": true}]},
-  "br_horn": {"category": "master", "sounds": [{"name": "br_horn", "stream": true}]}
+  "br_horn": {"category": "master", "sounds": [{"name": "br_horn", "stream": true}]},
+  "Class68Thrash": {"category": "master", "sounds" :  [{"name": "Class68Thrash", "stream": true}]},
+  "Class88Horn": {"category": "master", "sounds" :  [{"name": "Class88Horn", "stream": true}]}
 }
