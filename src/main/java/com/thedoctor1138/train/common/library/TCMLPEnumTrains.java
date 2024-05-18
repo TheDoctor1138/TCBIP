@@ -2,8 +2,6 @@ package com.thedoctor1138.train.common.library;
 
 import com.thedoctor1138.train.common.entity.rollingStock.*;
 import train.common.api.TrainRecord;
-import train.common.entity.rollingStock.EntityFreightVentilatedVan;
-import train.common.library.ItemIDs;
 
 public class TCMLPEnumTrains {
 	public static TrainRecord[] trains() {
@@ -13,9 +11,11 @@ public class TCMLPEnumTrains {
 				TrainRecord.makeEntry("CStockEngine", "CStockEngine", EntityLocoElectricCStockEngine.class, TCMLPItemIDs.minecartCstockEngine.item, "electric", 200, 80, 0, 10, 0, 0, 0.9, 0.79, 0, new String[]{"Blue", "Grey"}, 10, -2, "Pack: B.I.P."),
 				TrainRecord.makeEntry("CStockPassenger", "CStockPassenger", EntityPassengerCStockPassenger.class, TCMLPItemIDs.minecartCstockPassenger.item, "passenger", 0, 0, 0, 0, 0, 0, 0, 0, 0, new String[]{"Blue", "Grey"}, 10, -2, "Pack: B.I.P."),
 				TrainRecord.makeEntry("Class20Diesel", "Class20", EntitylocodieselClass20.class, TCMLPItemIDs.minecartClass20.item, "diesel", 1000, 121, 0, 10, 0, 75, 0.6, 0.67, 17000, new String[]{"Black", "Blue", "Cyan", "Green", "Grey", "LightBlue", "LightGrey", "Lime", "Magenta", "Orange", "Pink", "Purple", "Red", "White", "Yellow","Skin17", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24", "Skin25"}, 9, -3.5, "B.I.P."),
-				TrainRecord.makeEntry("Class68", "Class68", EntityLocoDieselClass68.class, TCMLPItemIDs.minecartClass68.item, "diesel", 3800, 161, 0, 10, 0, 75, 0.7, 0.8, 17000, new String[]{"Blue", "Cyan", "Grey", "LightBlue", "Purple"}, 10, -3.6, "B.I.P."),
+				TrainRecord.makeEntry("Class68", "Class68", EntityLocoDieselClass68.class, TCMLPItemIDs.minecartClass68.item, "diesel", 3800, 161, 0, 10, 0, 75, 0.7, 0.8, 17000, new String[]{"Blue", "Cyan", "Grey", "LightBlue", "Purple"}, 10, -3.6, "Pack: B.I.P."),
 				TrainRecord.makeEntry("Class88", "Class88", EntityLocoElectricClass88.class, TCMLPItemIDs.minecartClass88.item, "electric", 5400, 161, 0, 10, 0, 0, 0.9, 0.8, 0, new String[]{"Blue", "Cyan", "Magenta", "Purple"}, 10, -3.6, "Pack: B.I.P."),
 				TrainRecord.makeEntry("LessCoWagon", "LessCoWagon", EntityFreightLessCoWagon.class, TCMLPItemIDs.minecartLessCoWagon.item, "freight", 2.1, new String[]{"Blue", "Brown", "Cyan", "Grey", "LightBlue", "Red", "Yellow"}, 18, 56, "Pack: B.I.P."),
+				TrainRecord.makeEntry("GWRMogul", "GWRMogul", EntityLocoSteamGWRMogul.class, TCMLPItemIDs.minecartGWRMogul.item, "steam", 1150, 121, 3, 10, 10, 100, 0.7, 0.8, 6000, new String[]{"Green", "Brown", "Black", "Grey", "LightBlue", "Lime", "Orange", "Red", "Yellow", "Magenta"}, 18, -3.14f, "Pack: B.I.P."),
+				TrainRecord.makeEntry("Churchward3500GalTender", "Churchward3500GalTender", EntityTenderChurchward3500Gal.class, TCMLPItemIDs.minecartChurchward3500GalTender.item, "tender", 0, 0, 0.6, 0, 0, 0, 0, 0, 16000, new String[]{"Green", "Blue", "Brown", "Black", "Grey", "LightBlue", "LightGrey", "Lime", "Magenta", "Orange", "Pink", "Purple", "White", "Yellow"}, 18, 0, "Pack: B.I.P Water capacity: 16000mb"),
 		};
 
 	}

@@ -24,6 +24,8 @@ public enum TCMLPItemIDs {
 	minecartClass68("ItemRollingStock", "Class_68_Icon", 4),
 	minecartClass88("ItemRollingStock", "Class_88_Icon", 4),
 	minecartLessCoWagon("ItemRollingStock", "Less_Co_Wagon_Icon", 2),
+	minecartGWRMogul("ItemRollingStock", "GWR_Mogul_Icon", 4),
+	minecartChurchward3500GalTender("ItemRollingStock", "Churchward_3500_Gal_Icon", 4),
 
 	;
 

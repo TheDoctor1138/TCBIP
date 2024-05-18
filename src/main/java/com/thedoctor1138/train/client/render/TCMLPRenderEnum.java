@@ -31,6 +31,16 @@ public enum TCMLPRenderEnum implements TrainRenderRecord {
 	Class68(EntityLocoDieselClass68.class, new ModelClass68(), "Class_68_", true, new float[]{-1.8F, 0F, 0F}, new float[]{0F, 180F, 180F}, null, "smoke", 1, null, "", null, 0, false),
 	Class88(EntityLocoElectricClass88.class, new ModelClass88(), "Class_88_", true, new float[]{-1.8F, 0F, 0F}, new float[]{0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
 	LessCoWagon(EntityFreightLessCoWagon.class, new ModelLessCoWagon(), "Less_Co2_", true, new float[]{0F, 0F, 0F}, new float[]{0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
+	GWRMogul(EntityLocoSteamGWRMogul.class, new ModelGWRMogul(), "GWR_Mogul_", true, new float[]{-1.4f, -0.03f, 0}, new float[]{0, 180, 180}, null, "largesmoke", 3, new ArrayList<double[]>() {
+		{
+			add(new double[]{2.67D, 1.3D, 0D});
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[]{2.92D, -0.2D, 0.65D});
+		}
+	}, 2, true),
+	Churchward3500GalTender(EntityTenderChurchward3500Gal.class, new ModelChurchward3500GalTender(), "Churchward_3500_Gal_", true, new float[]{-0.05f, -0.03f, 0f,}, new float[]{0F, 180f, 180F}, null, "", 0, null, "", null, 0, false),
 
 	;
 	private Class<? extends EntityRollingStock> entityClass;
