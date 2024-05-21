@@ -3,6 +3,8 @@ package com.thedoctor1138.train.client.render;
 
 
 
+import com.flansmod.client.model.YourPackage.ModelNGT6ER_Loco;
+import com.flansmod.client.model.YourPackage.ModelNGT6ER_Tail;
 import com.thedoctor1138.train.common.entity.rollingStock.*;
 import com.thedoctor1138.train.common.library.TCMLPInfo;
 import com.thedoctor1138.train.client.render.models.*;
@@ -11,6 +13,7 @@ import fexcraft.tmt.slim.ModelBase;
 import train.common.api.EntityRollingStock;
 import train.common.api.TrainRenderRecord;
 import net.minecraft.util.ResourceLocation;
+
 
 import java.util.ArrayList;
 
@@ -41,6 +44,8 @@ public enum TCMLPRenderEnum implements TrainRenderRecord {
 		}
 	}, 2, true),
 	Churchward3500GalTender(EntityTenderChurchward3500Gal.class, new ModelChurchward3500GalTender(), "Churchward_3500_Gal_", true, new float[]{-0.05f, -0.03f, 0f,}, new float[]{0F, 180f, 180F}, null, "", 0, null, "", null, 0, false),
+	DuewagNGT6ERLoco(EntityElectricDuewagNGT6ERLoco.class, new ModelNGT6ER_Loco(), "Duewag_NGT6ER_", true, new float[]{-0.85F, 0.2F, 0F}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
+	DuewagNGT6ERTail(EntityPassengerDuewagNGT6ERTail.class, new ModelNGT6ER_Tail(), "Duewag_NGT6ER_", true, new float[]{-0.85F, 0.2F, 0F}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
 
 	;
 	private Class<? extends EntityRollingStock> entityClass;

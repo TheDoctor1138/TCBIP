@@ -12,6 +12,8 @@ item.tc_mlp:minecartClass88.name=Class 88
 item.tc_mlp:minecartLessCoWagon.name=Less Co Wagon
 item.tc_mlp:minecartGWRMogul.name=GWR Mogul
 item.tc_mlp:minecartChurchward3500GalTender.name=Churchward 3500 Gal Tender
+item.tc_mlp:minecartNGT6ERLoco.name=GT6ER Loco (Normal gauge)
+item.tc_mlp:minecartNGT6ERTail.name=GT6ER Tail (Normal gauge)
 
 <!-- Entities -->
 entity.tc_mlp.Class74.name=Class 74
@@ -23,6 +25,8 @@ entity.tc_mlp.Class88.name=Class 88
 entity.tc_mlp.LessCoWagon.name=Less Co Wagon
 entity.tc_mlp.GWRMogul.name=GWR Mogul
 entity.tc_mlp.Churchward3500GalTender.name=Churchward 3500 Gal Tender
+entity.tc_mlp:minecartNGT6ERLoco.name=GT6ER Loco (Normal gauge)
+entity.tc_mlp:minecartNGT6ERTail.name=GT6ER Tail (Normal gauge)
 
 <!-- ## GUI ## -->
 menu.item.country=Country

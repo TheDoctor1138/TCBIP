@@ -23,7 +23,7 @@ public class ModelCstockEngine extends ModelConverter //Same as Filename
 
 	public ModelCstockEngine() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[201];
+		bodyModel = new ModelRendererTurbo[207];
 
 		initbodyModel_1();
 
@@ -232,10 +232,16 @@ public class ModelCstockEngine extends ModelConverter //Same as Filename
 		bodyModel[194] = new ModelRendererTurbo(this, 454, 100, textureX, textureY); // Box 196
 		bodyModel[195] = new ModelRendererTurbo(this, 13, 2, textureX, textureY); // Box 197
 		bodyModel[196] = new ModelRendererTurbo(this, 13, 2, textureX, textureY); // Box 198
-		bodyModel[197] = new ModelRendererTurbo(this, 13, 2, textureX, textureY); // Box 199
-		bodyModel[198] = new ModelRendererTurbo(this, 13, 2, textureX, textureY); // Box 200
-		bodyModel[199] = new ModelRendererTurbo(this, 13, 2, textureX, textureY); // Box 201
-		bodyModel[200] = new ModelRendererTurbo(this, 13, 2, textureX, textureY); // Box 202
+		bodyModel[197] = new ModelRendererTurbo(this, 13, 2, textureX, textureY); // Box 200
+		bodyModel[198] = new ModelRendererTurbo(this, 13, 2, textureX, textureY); // Box 202
+		bodyModel[199] = new ModelRendererTurbo(this, 18, 58, textureX, textureY); // Box 201
+		bodyModel[200] = new ModelRendererTurbo(this, 18, 61, textureX, textureY); // Box 202
+		bodyModel[201] = new ModelRendererTurbo(this, 18, 61, textureX, textureY); // Box 203
+		bodyModel[202] = new ModelRendererTurbo(this, 18, 77, textureX, textureY); // Box 204
+		bodyModel[203] = new ModelRendererTurbo(this, 18, 77, textureX, textureY); // Box 205
+		bodyModel[204] = new ModelRendererTurbo(this, 18, 77, textureX, textureY); // Box 206
+		bodyModel[205] = new ModelRendererTurbo(this, 18, 77, textureX, textureY); // Box 207
+		bodyModel[206] = new ModelRendererTurbo(this, 39, 77, textureX, textureY); // Box 208
 
 		bodyModel[0].addShapeBox(0F, 0F, 0F, 56, 1, 20, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-27F, 3.5F, -10F);
@@ -830,26 +836,44 @@ public class ModelCstockEngine extends ModelConverter //Same as Filename
 		bodyModel[194].setRotationPoint(-28F, -19F, -3F);
 
 		bodyModel[195].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F); // Box 197
-		bodyModel[195].setRotationPoint(-18.5F, 9F, -8F);
+		bodyModel[195].setRotationPoint(-18.5F, 8.5F, -7.99F);
 
 		bodyModel[196].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F); // Box 198
-		bodyModel[196].setRotationPoint(-18.5F, 9F, 7F);
+		bodyModel[196].setRotationPoint(-18.5F, 8.5F, 6.99F);
 
-		bodyModel[197].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F); // Box 199
-		bodyModel[197].setRotationPoint(-18.5F, 9F, 7F);
+		bodyModel[197].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F); // Box 200
+		bodyModel[197].setRotationPoint(18.5F, 8.5F, 6.99F);
 
-		bodyModel[198].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F); // Box 200
-		bodyModel[198].setRotationPoint(18.5F, 9F, 7F);
+		bodyModel[198].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F); // Box 202
+		bodyModel[198].setRotationPoint(18.5F, 8.5F, -7.99F);
 
-		bodyModel[199].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F); // Box 201
-		bodyModel[199].setRotationPoint(18.5F, 9F, 7F);
+		bodyModel[199].addShapeBox(0F, 0F, 0F, 9, 1, 1, 0F,0F, 0F, 0.075F, 0F, 0F, 0.075F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.075F, 0F, 0F, 0.075F); // Box 201
+		bodyModel[199].setRotationPoint(-15F, -14.5F, 9.3F);
 
-		bodyModel[200].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F); // Box 202
-		bodyModel[200].setRotationPoint(18.5F, 9F, -8F);
+		bodyModel[200].addShapeBox(0F, 0F, 0F, 9, 1, 1, 0F,0F, 0F, 0.075F, 0F, 0F, 0.075F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.075F, 0F, 0F, 0.075F); // Box 202
+		bodyModel[200].setRotationPoint(7F, -14.5F, 9.3F);
+
+		bodyModel[201].addShapeBox(0F, 0F, 0F, 9, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.075F, 0F, 0F, 0.075F); // Box 203
+		bodyModel[201].setRotationPoint(7F, -14.5F, 9.3F);
+
+		bodyModel[202].addShapeBox(0F, 0F, 0F, 9, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.075F, 0F, 0F, 0.075F, 0F, 0F, 0.075F, 0F, 0F, 0.075F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 204
+		bodyModel[202].setRotationPoint(7F, -14.5F, -10.3F);
+
+		bodyModel[203].addShapeBox(0F, 0F, 0F, 9, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.075F, 0F, 0F, 0.075F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 205
+		bodyModel[203].setRotationPoint(7F, -14.5F, -10.3F);
+
+		bodyModel[204].addShapeBox(0F, 0F, 0F, 9, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.075F, 0F, 0F, 0.075F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 206
+		bodyModel[204].setRotationPoint(7F, -14.5F, -10.3F);
+
+		bodyModel[205].addShapeBox(0F, 0F, 0F, 9, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.075F, 0F, 0F, 0.075F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 207
+		bodyModel[205].setRotationPoint(7F, -14.5F, -10.3F);
+
+		bodyModel[206].addShapeBox(0F, 0F, 0F, 9, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.075F, 0F, 0F, 0.075F, 0F, 0F, 0.075F, 0F, 0F, 0.075F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 208
+		bodyModel[206].setRotationPoint(-15F, -14.5F, -10.3F);
 	}
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 
-		for (int i = 0; i < 201; i++) {
+		for (int i = 0; i < 207; i++) {
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);
