@@ -29,6 +29,11 @@ public class ClientProxy extends CommonProxy {
         Calendar cal = Calendar.getInstance();
         return(cal.get(Calendar.MONTH) == Calendar.OCTOBER || cal.get(Calendar.MONTH) == Calendar.NOVEMBER && cal.get(Calendar.DATE) < 15);
     }
+    public static boolean isAnniversary() {
+        Calendar cal = Calendar.getInstance();
+        return(cal.get(Calendar.MONTH) == Calendar.AUGUST && cal.get(Calendar.DATE) == 29);
+    }
+
 
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
