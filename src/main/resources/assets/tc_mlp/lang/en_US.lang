@@ -14,6 +14,7 @@ item.tc_mlp:minecartGWRMogul.name=GWR Mogul
 item.tc_mlp:minecartChurchward3500GalTender.name=Churchward 3500 Gal Tender
 item.tc_mlp:minecartNGT6ERLoco.name=GT6ER Loco (Normal gauge)
 item.tc_mlp:minecartNGT6ERTail.name=GT6ER Tail (Normal gauge)
+item.tc_mlp:minecartBR_MK3_Sleeper.name=BR Mk3 Sleeper
 
 <!-- Entities -->
 entity.tc_mlp.Class74.name=Class 74
@@ -27,6 +28,7 @@ entity.tc_mlp.GWRMogul.name=GWR Mogul
 entity.tc_mlp.Churchward3500GalTender.name=Churchward 3500 Gal Tender
 entity.tc_mlp:minecartNGT6ERLoco.name=GT6ER Loco (Normal gauge)
 entity.tc_mlp:minecartNGT6ERTail.name=GT6ER Tail (Normal gauge)
+entity.tc_mlp:BR_MK3_Sleeper.name=BR Mk3 Sleeper
 
 <!-- ## GUI ## -->
 menu.item.country=Country

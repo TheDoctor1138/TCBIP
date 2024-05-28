@@ -2,6 +2,7 @@ package com.thedoctor1138.train.common.library;
 
 import com.thedoctor1138.train.common.entity.rollingStock.*;
 import train.common.api.TrainRecord;
+import train.common.library.ItemIDs;
 
 
 public class TCMLPEnumTrains {
@@ -19,6 +20,7 @@ public class TCMLPEnumTrains {
 				TrainRecord.makeEntry("Churchward3500GalTender", "Churchward3500GalTender", EntityTenderChurchward3500Gal.class, TCMLPItemIDs.minecartChurchward3500GalTender.item, "tender", 0, 0, 0.6, 0, 0, 0, 0, 0, 16000, new String[]{"Green", "Blue", "Brown", "Black", "Grey", "LightBlue", "LightGrey", "Lime", "Magenta", "Orange", "Pink", "Purple", "White", "Yellow"}, 18, 0, "Pack: B.I.P \nWater capacity: 16000mb"),
 				TrainRecord.makeEntry("DuewagNGT6ERLoco", "DuewagNGT6ERLoco", EntityElectricDuewagNGT6ERLoco.class, TCMLPItemIDs.minecartNGT6ERLoco.item, "electric", 250, 80, 0, 10, 0, 0, 0.9, 0.8, 0, new String[]{"Red", "Grey", "Green", "Magenta"}, 10, -2, "Pack: TramsIM"),
 				TrainRecord.makeEntry("DuewagNGT6ERTail", "DuewagNGT6ERTail", EntityPassengerDuewagNGT6ERTail.class, TCMLPItemIDs.minecartNGT6ERTail.item, "passenger", 0, 0, 0, 0, 0, 0, 0, 0, 0, new String[]{"Red", "Grey","Green","Magenta"}, 10, -1.65, "Pack: TramsIM"),
+				TrainRecord.makeEntry("BR_MK3_Sleeper", "BR_MK3_Sleeper", EntityPassengerBR_MK3_Sleeper.class, TCMLPItemIDs.minecartBR_MK3_Sleeper.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, new String[]{"Blue", "White", "Pink", "Cyan", "Green", "Brown", "Red"}, 0, 0, "Pack: B.I.P."),
 		};
 
 	}
