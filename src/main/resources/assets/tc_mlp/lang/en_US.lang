@@ -15,6 +15,7 @@ item.tc_mlp:minecartChurchward3500GalTender.name=Churchward 3500 Gal Tender
 item.tc_mlp:minecartNGT6ERLoco.name=GT6ER Loco (Normal gauge)
 item.tc_mlp:minecartNGT6ERTail.name=GT6ER Tail (Normal gauge)
 item.tc_mlp:minecartBR_MK3_Sleeper.name=BR Mk3 Sleeper
+item.tc_mlp:minecartHornby040E2.name=Hornby 0-4-0 E2
 
 <!-- Entities -->
 entity.tc_mlp.Class74.name=Class 74
@@ -29,6 +30,7 @@ entity.tc_mlp.Churchward3500GalTender.name=Churchward 3500 Gal Tender
 entity.tc_mlp:minecartNGT6ERLoco.name=GT6ER Loco (Normal gauge)
 entity.tc_mlp:minecartNGT6ERTail.name=GT6ER Tail (Normal gauge)
 entity.tc_mlp:BR_MK3_Sleeper.name=BR Mk3 Sleeper
+entity.tc_mlp.Hornby040E2.name=Hornby 0-4-0 E2
 
 <!-- ## GUI ## -->
 menu.item.country=Country

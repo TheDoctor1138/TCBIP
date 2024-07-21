@@ -29,6 +29,7 @@ public enum TCMLPItemIDs {
     minecartNGT6ERLoco("ItemRollingStock", "DuewagNGT6ER_Loco_icon", 2),
 	minecartNGT6ERTail("ItemRollingStock", "DuewagNGT6ER_Tail_icon", 2),
 	minecartBR_MK3_Sleeper("ItemRollingStock", "Mk3_Sleeper_Icon", 2),
+	minecartHornby040E2("ItemRollingStock", "Hornby_040_E2_Icon", 4),
 
 	;
 

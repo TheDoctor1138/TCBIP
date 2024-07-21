@@ -47,6 +47,15 @@ public enum TCMLPRenderEnum implements TrainRenderRecord {
 	DuewagNGT6ERLoco(EntityElectricDuewagNGT6ERLoco.class, new ModelNGT6ER_Loco(), "Duewag_NGT6ER_", true, new float[]{-0.85F, 0.2F, 0F}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
 	DuewagNGT6ERTail(EntityPassengerDuewagNGT6ERTail.class, new ModelNGT6ER_Tail(), "Duewag_NGT6ER_", true, new float[]{-0.85F, 0.2F, 0F}, new float[] {0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
 	BR_MK3_Sleeper(EntityPassengerBR_MK3_Sleeper.class, new ModelBR_MK3_Sleeper(), "BR_Mk3_Sleeper_", true, new float[]{0.15F, 0F, 0F}, new float[]{0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
+	Hornby040E2(EntityLocoSteamHornby040E2.class, new ModelHornby040E2(), "0_4_0_E2_", true, new float[]{0.5f, 0.17f, 0}, new float[]{0, 180, 180}, null, "largesmoke", 3, new ArrayList<double[]>() {
+		{
+			add(new double[]{2.45D, 1.7D, 0D});
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[]{2.8D, -0.2D, 0.65D});
+		}
+	}, 2, true),
 
 	;
 	private Class<? extends EntityRollingStock> entityClass;

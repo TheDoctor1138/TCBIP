@@ -12,6 +12,7 @@ public enum TCMLPEnumSounds implements TrainSoundRecord {
 	Class88(EntityLocoElectricClass88.class, "Class88Horn", 1F, "Class90Idle", 0.7F, 15, "Class90Idle", 0.3F, 20, false),
 	GWRMogul(EntityLocoSteamGWRMogul.class, "GWRWhistle", 1.1F, "steam_run", 0.4F, 20, "steam_run", 0.3F, 20, true),
 	DuewagNGT6ERLoco(EntityElectricDuewagNGT6ERLoco.class, "tram_bell", 1F, "vl10_idle", 0.8F, 10, "vl10_idle", 0.6F, 50, false),
+	Hornby040E2(EntityLocoSteamHornby040E2.class, "GWRWhistle", 1.1F, "steam_run", 0.4F, 20, "steam_run", 0.3F, 20, true),
 	;
 
 	private Class entityClass;
