@@ -16,6 +16,8 @@ item.tc_mlp:minecartNGT6ERLoco.name=GT6ER Loco (Normal gauge)
 item.tc_mlp:minecartNGT6ERTail.name=GT6ER Tail (Normal gauge)
 item.tc_mlp:minecartBR_MK3_Sleeper.name=BR Mk3 Sleeper
 item.tc_mlp:minecartHornby040E2.name=Hornby 0-4-0 E2
+item.tc_mlp:minecartHornby060E2.name=Hornby 0-6-0 E2
+item.tc_mlp:minecart4WheeledCoach.name=4 Wheeled Coach
 
 <!-- Entities -->
 entity.tc_mlp.Class74.name=Class 74
@@ -31,6 +33,8 @@ entity.tc_mlp:minecartNGT6ERLoco.name=GT6ER Loco (Normal gauge)
 entity.tc_mlp:minecartNGT6ERTail.name=GT6ER Tail (Normal gauge)
 entity.tc_mlp:BR_MK3_Sleeper.name=BR Mk3 Sleeper
 entity.tc_mlp.Hornby040E2.name=Hornby 0-4-0 E2
+entity.tc_mlp.Hornby060E2.name=Hornby 0-6-0 E2
+entity.tc_mlp:4WheeledCoach.name=4 Wheeled Coach
 
 <!-- ## GUI ## -->
 menu.item.country=Country

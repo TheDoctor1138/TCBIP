@@ -22,6 +22,8 @@ public class TCMLPEnumTrains {
 				TrainRecord.makeEntry("DuewagNGT6ERTail", "DuewagNGT6ERTail", EntityPassengerDuewagNGT6ERTail.class, TCMLPItemIDs.minecartNGT6ERTail.item, "passenger", 0, 0, 0, 0, 0, 0, 0, 0, 0, new String[]{"Red", "Grey","Green","Magenta"}, 10, -1.65, "Pack: TramsIM"),
 				TrainRecord.makeEntry("BR_MK3_Sleeper", "BR_MK3_Sleeper", EntityPassengerBR_MK3_Sleeper.class, TCMLPItemIDs.minecartBR_MK3_Sleeper.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, new String[]{"Blue", "White", "Pink", "Cyan", "Green", "Brown", "Red"}, 0, 0, "Pack: B.I.P."),
 				TrainRecord.makeEntry("Hornby040E2", "Hornby040E2", EntityLocoSteamHornby040E2.class, TCMLPItemIDs.minecartHornby040E2.item, "steam", 550, 121, 3, 10, 10, 100, 0.7, 0.8, 6000, new String[]{"Black", "Grey", "Red", "Magenta", "Yellow", "Blue", "Green"}, 18, -2.5f, "Pack: B.I.P."),
+				TrainRecord.makeEntry("Hornby060E2", "Hornby060E2", EntityLocoSteamHornby060E2.class, TCMLPItemIDs.minecartHornby060E2.item, "steam", 550, 121, 3, 10, 10, 100, 0.71, 0.8, 6000, new String[]{"Brown", "Black", "Blue"}, 18, -2.5f, "Pack: B.I.P."),
+				TrainRecord.makeEntry("4WheeledCoach", "4WheeledCoach", EntityPassenger4WheeledCoach.class, TCMLPItemIDs.minecart4WheeledCoach.item, "passenger", 0, 0, 2.2, 0, 0, 0, 0, 0, 0, new String[]{"Orange", "Red", "LightBlue", "Green", "Brown", "Blue"}, 0, 0, "Pack: B.I.P."),
 		};
 
 	}

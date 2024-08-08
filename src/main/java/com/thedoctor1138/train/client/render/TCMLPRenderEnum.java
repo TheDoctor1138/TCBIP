@@ -56,6 +56,16 @@ public enum TCMLPRenderEnum implements TrainRenderRecord {
 			add(new double[]{2.8D, -0.2D, 0.65D});
 		}
 	}, 2, true),
+	Hornby060E2(EntityLocoSteamHornby060E2.class, new ModelHornby060E2(), "0_6_0_E2_", true, new float[]{0.5f, 0.17f, 0}, new float[]{0, 180, 180}, null, "largesmoke", 3, new ArrayList<double[]>() {
+		{
+			add(new double[]{2.45D, 1.7D, 0D});
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[]{2.8D, -0.2D, 0.65D});
+		}
+	}, 2, true),
+	WheeledCoach4(EntityPassenger4WheeledCoach.class, new Model4WheeledCoach(), "4_Wheeled_Coach_", true, new float[]{0F, 0.05F, 0F}, new float[]{0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
 
 	;
 	private Class<? extends EntityRollingStock> entityClass;
