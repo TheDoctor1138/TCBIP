@@ -101,7 +101,7 @@ repositories {
 		url "https://maven.cil.li/"
 	}
         flatDir {
-            dirs "lib"
+            dirs "libs"
         }
     maven {
         name "curse.maven"
