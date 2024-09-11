@@ -1,0 +1,59 @@
+<!-- ## This is a comment, do no remove or modify these! ## -->
+<!-- ## Only replace the words on the right side of "=" ## -->
+<!-- ## Save the file the same way this file was saved but replace "en_US" with appropriate language name ## -->
+
+<!-- Items -->
+item.tcbip:minecartClass74.name=Class 74
+item.tcbip:minecartCstockEngine.name=C Stock Engine
+item.tcbip:minecartCstockPassenger.name=C Stock Passenger
+item.tcbip:minecartClass20.name=Class 20
+item.tcbip:minecartClass68.name=Class 68
+item.tcbip:minecartClass88.name=Class 88
+item.tcbip:minecartLessCoWagon.name=Less Co Wagon
+item.tcbip:minecartGWRMogul.name=GWR Mogul
+item.tcbip:minecartChurchward3500GalTender.name=Churchward 3500 Gal Tender
+item.tcbip:minecartNGT6ERLoco.name=GT6ER Loco (Normal gauge)
+item.tcbip:minecartNGT6ERTail.name=GT6ER Tail (Normal gauge)
+item.tcbip:minecartBR_MK3_Sleeper.name=BR Mk3 Sleeper
+item.tcbip:minecartHornby040E2.name=Hornby 0-4-0 E2
+item.tcbip:minecartHornby060E2.name=Hornby 0-6-0 E2
+item.tcbip:minecart4WheeledCoach.name=4 Wheeled Coach
+
+<!-- Entities -->
+entity.tc.Class74.name=Class 74
+entity.tc.CstockEngine.name=C Stock Engine
+entity.tc.CstockPassenger.name=C Stock Passenger
+entity.tc.Class20.name=Class 20
+entity.tc.Class68.name=Class 68
+entity.tc.Class88.name=Class 88
+entity.tc.LessCoWagon.name=Less Co Wagon
+entity.tc.GWRMogul.name=GWR Mogul
+entity.tc.Churchward3500GalTender.name=Churchward 3500 Gal Tender
+entity.tc:minecartNGT6ERLoco.name=GT6ER Loco (Normal gauge)
+entity.tc:minecartNGT6ERTail.name=GT6ER Tail (Normal gauge)
+entity.tc:BR_MK3_Sleeper.name=BR Mk3 Sleeper
+entity.tc.Hornby040E2.name=Hornby 0-4-0 E2
+entity.tc.Hornby060E2.name=Hornby 0-6-0 E2
+entity.tc:4WheeledCoach.name=4 Wheeled Coach
+
+<!-- ## GUI ## -->
+menu.item.country=Country
+menu.item.=N/A
+menu.item.be=Belgium
+menu.item.uk=United Kingdom
+menu.item.us=United States
+menu.item.cz=Czech Republic
+menu.item.de=Germany
+menu.item.es=Spain
+
+train.owner.name=You are not the owner!
+train.locked.name=Locked
+train.unlocked.name=Unlocked
+
+key.categories.traincraft=Traincraft-CE
+key.traincraft.horn=Horn
+key.traincraft.inventory=Inventory
+key.traincraft.up=Up
+key.traincraft.down=Down
+key.traincraft.idle=Idle
+key.traincraft.furnace=Furnace
