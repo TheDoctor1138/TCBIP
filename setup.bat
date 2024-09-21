@@ -15,7 +15,6 @@
 @ECHO [2] Idea (Intelij) - (Does work)
 @ECHO [3] Build the source.
 @ECHO [4] Get Traincraft Submodule.
-@ECHO [5] Get Traincraft-4.5 API.
 @echo off
 @ECHO.
 @ECHO. 
@@ -34,7 +33,6 @@ IF "%variable%"=="Idea" (goto intelij)
 IF "%variable%"=="3" (goto build)
 
 IF "%variable%"=="4" (goto submodule)
-IF "%variable%"=="5" (goto api)
 
 pause
 @ECHO Incorrect option, try again.
@@ -112,20 +110,6 @@ pause
 pause
 
 goto restart
-
-
-:api
-@echo on
-REM Grab the API from the SubModule
-start call gradlew getTrainAPI
-@ECHO ##########################################################################
-@ECHO.
-@ECHO  The API will be located in /lib
-@ECHO.
-@ECHO  You may now exit this window.
-@ECHO.
-@ECHO ##########################################################################
-
 
 pause
 goto quit
