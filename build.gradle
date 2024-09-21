@@ -51,12 +51,12 @@ def commonManifest = {
 
 version = config.modVersion.toString()
 group= "src.train" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "British International Pack"
+archivesBaseName = "TCMLP"
 
 minecraft {
     version = "1.7.10-10.13.4.1614-1.7.10"
     runDir = "run"
-    replaceIn "TCMLPAddonInfo.java"
+    replaceIn "TCBIPInfo.java"
     replace "@VERSION1@", config.modVersion.toString()
 }
 
@@ -69,11 +69,11 @@ task buildSubmoduleJar(type: GradleBuild) {
 task copySubmoduleJar(type: Copy, dependsOn: buildSubmoduleJar) {
     description = 'Copies the JAR from the submodule to the main repository'
     from 'submodules/Traincraft/build/libs' // The directory where the submodule's JAR is located
-    into 'libs' // The destination directory in the main repository
+    into 'lib' // The destination directory in the main repository
     include '*.jar'
 }
 
-task getTrainAPIAutoBuild(dependsOn: buildSubmoduleJar) {
+task getTrainAPI(dependsOn: copySubmoduleJar) {
     description = 'Builds the JAR from the submodule and copies it to the main repository'
     group = 'build'
 }
@@ -121,7 +121,7 @@ dependencies {
 	compile "codechicken:CodeChickenLib:1.7.10-1.1.3.136:dev"
 	compile "codechicken:CodeChickenCore:1.7.10-1.0.4.35:dev"
 	compile "codechicken:NotEnoughItems:1.7.10-1.0.4.90:dev"
-    implementation "train:Traincraft-4.5_001"
+    implementation "train:Traincraft-4.5.0_001"
 
     // quality of life line to simplify importing jars for experimental testing
     compile fileTree(dir: 'libs', include: ['*.jar'])

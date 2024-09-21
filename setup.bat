@@ -14,6 +14,8 @@
 @ECHO [1] Eclipse - (Usually does not work)
 @ECHO [2] Idea (Intelij) - (Does work)
 @ECHO [3] Build the source.
+@ECHO [4] Get Traincraft Submodule.
+@ECHO [5] Get Traincraft-4.5 API.
 @echo off
 @ECHO.
 @ECHO. 
@@ -30,6 +32,9 @@ IF "%variable%"=="idea" (goto intelij)
 IF "%variable%"=="Idea" (goto intelij)
 
 IF "%variable%"=="3" (goto build)
+
+IF "%variable%"=="4" (goto submodule)
+IF "%variable%"=="5" (goto api)
 
 pause
 @ECHO Incorrect option, try again.
@@ -64,7 +69,7 @@ goto quit
 
 :intelij
 @echo on
-start call gradlew setupDecompWorkspace --refresh-dependencies idea
+start call gradlew getTrainAPI setupDecompWorkspace --refresh-dependencies idea
 @echo off
 @ECHO.
 @ECHO.
@@ -89,7 +94,7 @@ goto quit
 
 :build
 @echo on
-start call gradlew setupDecompWorkspace --refresh-dependencies build
+start call gradlew getTrainAPI setupDecompWorkspace --refresh-dependencies build
 @echo off
 @ECHO.
 @ECHO.
@@ -108,6 +113,45 @@ pause
 
 goto restart
 
+
+:api
+@echo on
+REM Grab the API from the SubModule
+start call gradlew getTrainAPI
+@ECHO ##########################################################################
+@ECHO.
+@ECHO  The API will be located in /lib
+@ECHO.
+@ECHO  You may now exit this window.
+@ECHO.
+@ECHO ##########################################################################
+
+
+pause
+goto quit
+
+:submodule
+@echo on
+REM Pull the latest changes in the main repository (optional)
+git submodule update --remote
+
+REM Navigate to the submodule directory (relative path)
+cd submodules\Traincraft
+
+REM Pull the latest commit in the submodule
+git fetch origin TC4.5-1.7.10
+
+REM Navigate back to the main repository
+cd ../..
+
+REM Update the submodule reference in the main repository
+git add submodules\Traincraft
+
+
+REM Pause to view output
+pause
+
+goto quit
 
 :quit
 
