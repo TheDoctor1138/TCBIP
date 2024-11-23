@@ -1,4 +1,8 @@
-
+//change this for a different TC5 git
+def gitTC = 'https://github.com/TheDoctor1138/Traincraft-5.git'
+def branch = 'TC4.5-1.7.10'
+def cloneDir = "${buildDir}/libs/TC/"
+import org.apache.tools.ant.taskdefs.condition.Os
 
 buildscript {
     repositories {
@@ -60,23 +64,45 @@ minecraft {
     replace "@VERSION1@", config.modVersion.toString()
 }
 
-task buildSubmoduleJar(type: GradleBuild) {
-    description = 'Builds the JAR from the submodule'
-    dir = 'submodules/Traincraft' // Adjust this path to match your submodule location
-    tasks = ['clean', 'packapi']
+// Task to run the Gradle build in the cloned repo
+task buildClonedRepo(type: Exec) {
+    //first, download or update the repo
+    doFirst {
+        if (!file(cloneDir).exists()) {
+            mkdir(cloneDir)
+            commandLine 'git', 'clone', '--branch', branch, gitTC, cloneDir
+            workingDir cloneDir
+        } else {
+            workingDir cloneDir
+            commandLine 'git', 'pull'
+        }
+    }
+    //next, add the dependence source directory, and add execute perms for linux/mac
+    sourceSets.main.java.srcDirs += file("${cloneDir}/src/main/java")
+    if (Os.isFamily(Os.FAMILY_UNIX)) {
+        commandLine 'chmod', 'a+rwx', './gradlew'
+    }
+    //last, compile the dependency
+    doLast {
+        if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+            commandLine 'cmd', '/c', 'gradlew.bat', 'build'
+        }
+        else {
+            commandLine './gradlew', 'setupDecompWorkspace --refresh-dependencies idea'
+        }
+    }
 }
 
-task copySubmoduleJar(type: Copy, dependsOn: buildSubmoduleJar) {
-    description = 'Copies the JAR from the submodule to the main repository'
-    from 'submodules/Traincraft/build/libs' // The directory where the submodule's JAR is located
-    into 'lib' // The destination directory in the main repository
-    include '*.jar'
+
+sourceSets {
+    main {
+        resources {
+            // Include the cloned assets folder as a resource directory
+            srcDir "${cloneDir}/src/main/resources"
+        }
+    }
 }
 
-task getTrainAPI(dependsOn: copySubmoduleJar) {
-    description = 'Builds the JAR from the submodule and copies it to the main repository'
-    group = 'build'
-}
 
 //task packApi(type: Jar, dependsOn: "classes") {
  //   // Jar will always be updated
@@ -133,4 +159,23 @@ idea
 	{
 		inheritOutputDirs = true
 	}
+}
+
+processResources {
+    // this will ensure that this task is redone when the versions change.
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    // replace stuff in mcmod.info, nothing else
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+                
+        // replace version and mcversion
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+        
+    // copy everything else, thats not the mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
 }
