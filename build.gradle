@@ -153,12 +153,9 @@ dependencies {
     compile fileTree(dir: 'lib', include: ['*.jar'])
 }
 
-idea
-{
-	module
-	{
-		inheritOutputDirs = true
-	}
+afterEvaluate {
+    tasks["idea"].dependsOn.add(buildClonedRepo);
+    tasks["build"].dependsOn.add(buildClonedRepo);
 }
 
 processResources {
