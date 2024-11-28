@@ -3,6 +3,13 @@
 <!-- ## Save the file the same way this file was saved but replace "en_US" with appropriate language name ## -->
 
 <!-- Items -->
+
+
+item.London Underground C-Stock.name=London Underground C-Stock Engine
+item.BR Class 74.name=BR Class 74
+
+
+
 item.tcbip:minecartClass74.name=Class 74
 item.tcbip:minecartCstockEngine.name=C Stock Engine
 item.tcbip:minecartCstockPassenger.name=C Stock Passenger
@@ -20,8 +27,8 @@ item.tcbip:minecartHornby060E2.name=Hornby 0-6-0 E2
 item.tcbip:minecart4WheeledCoach.name=4 Wheeled Coach
 
 <!-- Entities -->
-entity.tc.Class74.name=Class 74
-entity.tc.CstockEngine.name=C Stock Engine
+entity.tc.BR Class 74.name=BR Class 74
+entity.tc.London Underground C-Stock.name=London Underground C-Stock Engine
 entity.tc.CstockPassenger.name=C Stock Passenger
 entity.tc.Class20.name=Class 20
 entity.tc.Class68.name=Class 68
@@ -38,6 +45,7 @@ entity.tc:4WheeledCoach.name=4 Wheeled Coach
 
 <!-- ## GUI ## -->
 menu.item.country=Country
+menu.item.year=Build Year
 menu.item.=N/A
 menu.item.be=Belgium
 menu.item.uk=United Kingdom
