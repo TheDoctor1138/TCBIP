@@ -6,9 +6,10 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import td1138.bip.core.CommonProxy;
+import td1138.bip.entities.rollingstock.EntityPassengerCStockPassenger;
 import td1138.bip.entities.trains.EntityLocoDieselClass74;
+import td1138.bip.library.TCBIPInfo;
 import td1138.bip.recipes.TCBIPRecipeHandler;
-import td1138.bip.common.library.TCBIPInfo;
 import td1138.bip.entities.trains.EntityLocoElectricCStockEngine;
 import td1138.bip.items.TCBIPItems;
 import train.common.api.AbstractTrains;
@@ -18,15 +19,13 @@ import train.common.entity.rollingStock.EntityPassenger2;
 import train.common.items.ItemRollingStock;
 import train.common.library.TraincraftRegistry;
 
-@Mod(modid = TCBIP.MODID, version = TCBIP.MOD_VERSION, name = "TCBIP",dependencies = "required-after:tc")
+@Mod(modid = TCBIPInfo.modID, version = TCBIPInfo.modVersion, name = TCBIPInfo.modName ,dependencies = "required-after:tc")
 public class TCBIP {
 
-	public static final String MODID = "tcbip";
-	public static final String MOD_VERSION = "0.1_beta";
 	public static CreativeTabTraincraft tabBIP;
 
 
-	@Mod.Instance(MODID)
+	@Mod.Instance(TCBIPInfo.modID)
 	public static TCBIP instance;
 
 	@SidedProxy(clientSide = "td1138.bip.core.ClientProxy", serverSide = "td1138.bip.core.CommonProxy")
@@ -71,7 +70,7 @@ public class TCBIP {
 
 	public static AbstractTrains[] listPassenger() {
 
-		return new AbstractTrains[]{};
+		return new AbstractTrains[]{new EntityPassengerCStockPassenger(null)};
 	}
 
 	public static AbstractTrains[] listFreight() {

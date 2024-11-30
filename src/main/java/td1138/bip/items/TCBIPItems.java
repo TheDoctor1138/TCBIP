@@ -9,6 +9,7 @@ package td1138.bip.items;
 
 import net.minecraft.item.Item;
 import td1138.bip.TCBIP;
+import td1138.bip.library.TCBIPInfo;
 import train.common.library.TraincraftRegistry;
 
 public class TCBIPItems {
@@ -20,6 +21,6 @@ public class TCBIPItems {
     public static Item itemBIPRecipeBook = new ItemRecipeBook();
 
     public static void registerItems(){
-        TraincraftRegistry.RegisterItem(itemBIPRecipeBook, TCBIP.MODID, "bipRecipeBook", TCBIP.tabBIP);
+        TraincraftRegistry.RegisterItem(itemBIPRecipeBook, TCBIPInfo.modID, "bipRecipeBook", TCBIP.tabBIP);
     }
 }

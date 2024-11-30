@@ -1,12 +1,12 @@
 package td1138.bip.gui;
 
-import td1138.bip.common.library.TCBIPInfo;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
+import td1138.bip.library.TCBIPInfo;
 
 @SideOnly(Side.CLIENT)
 class GuiButtonNextPage extends GuiButton {

@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.oredict.OreDictionary;
 import td1138.bip.TCBIP;
+import td1138.bip.library.TCBIPInfo;
 import td1138.bip.models.trains.ModelClass74;
 import train.common.api.AbstractTrains;
 import train.common.api.DieselTrain;
@@ -49,7 +50,7 @@ public class EntityLocoDieselClass74 extends DieselTrain {
      */
 
 
-    public static final Item thisItem = new ItemRollingStock(new EntityLocoDieselClass74(null), TCBIP.MODID, TCBIP.tabBIP);
+    public static final Item thisItem = new ItemRollingStock(new EntityLocoDieselClass74(null), TCBIPInfo.modID, TCBIP.tabBIP);
 
     /**
      * these basic constructors only need to have their names changed to that of this class, that is assuming your editor doesn't automatically do that.
@@ -83,12 +84,12 @@ public class EntityLocoDieselClass74 extends DieselTrain {
 
 
 
-        SkinRegistry.addSkin(this.getClass(), TCBIP.MODID,"textures/trains/Class_74_Blue.png", new String[]{} ,"default", "Class 74 in BR Blue livery.");
-        SkinRegistry.addSkin(this.getClass(), TCBIP.MODID,"textures/trains/Class_74_Grey.png", new String[]{}, "Grey", "Class 74 in BR Blue livery.");
-        SkinRegistry.addSkin(this.getClass(), TCBIP.MODID,"textures/trains/Class_74_LightBlue.png", new String[]{}, "Light Blue", "Class 74 in BR Blue livery.");
-        SkinRegistry.addSkin(this.getClass(), TCBIP.MODID,"textures/trains/Class_74_Yellow.png", new String[]{}, "Yellow", "Class 74 in BR Blue livery.");
-        SkinRegistry.addSkin(this.getClass(), TCBIP.MODID,"textures/trains/Class_74_Black.png", new String[]{}, "Black", "Class 74 in BR Blue livery.");
-        SkinRegistry.addSkin(this.getClass(), TCBIP.MODID,"textures/trains/Class_74_Green.png", new String[]{}, "Green", "Class 74 in BR Blue livery.");
+        SkinRegistry.addSkin(this.getClass(), TCBIPInfo.modID,"textures/trains/Class_74_Blue.png", new String[]{} ,"default", "Class 74 in BR Blue livery.");
+        SkinRegistry.addSkin(this.getClass(), TCBIPInfo.modID,"textures/trains/Class_74_Grey.png", new String[]{}, "Grey", "Class 74 in BR Blue livery.");
+        SkinRegistry.addSkin(this.getClass(), TCBIPInfo.modID,"textures/trains/Class_74_LightBlue.png", new String[]{}, "Light Blue", "Class 74 in BR Blue livery.");
+        SkinRegistry.addSkin(this.getClass(), TCBIPInfo.modID,"textures/trains/Class_74_Yellow.png", new String[]{}, "Yellow", "Class 74 in BR Blue livery.");
+        SkinRegistry.addSkin(this.getClass(), TCBIPInfo.modID,"textures/trains/Class_74_Black.png", new String[]{}, "Black", "Class 74 in BR Blue livery.");
+        SkinRegistry.addSkin(this.getClass(), TCBIPInfo.modID,"textures/trains/Class_74_Green.png", new String[]{}, "Green", "Class 74 in BR Blue livery.");
 
 
         /*
@@ -196,7 +197,7 @@ public class EntityLocoDieselClass74 extends DieselTrain {
 
     @Override
     public float[][] modelOffsets() {
-        return null;
+       return new float[][] {{0.0f,0.18f,0.0f}};
     }
 
     /**

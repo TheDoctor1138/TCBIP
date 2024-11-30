@@ -15,6 +15,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import td1138.bip.TCBIP;
+import td1138.bip.library.TCBIPInfo;
 
 public class ItemRecipeBook extends Item {
     public static int page = 0;
@@ -58,6 +59,6 @@ public class ItemRecipeBook extends Item {
 
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
-        this.itemIcon = iconRegister.registerIcon(TCBIP.MODID + ":item_book_black");
+        this.itemIcon = iconRegister.registerIcon(TCBIPInfo.modID + ":item_book_black");
     }
 }

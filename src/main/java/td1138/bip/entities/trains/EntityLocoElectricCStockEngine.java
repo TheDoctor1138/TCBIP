@@ -16,7 +16,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.oredict.OreDictionary;
 import td1138.bip.TCBIP;
-import td1138.bip.client.render.models.ModelCstockEngine;
+import td1138.bip.library.TCBIPInfo;
+import td1138.bip.models.trains.ModelCstockEngine;
 import train.common.Traincraft;
 import train.common.api.AbstractTrains;
 import train.common.api.ElectricTrain;
@@ -57,7 +58,7 @@ public class EntityLocoElectricCStockEngine extends ElectricTrain {
      *     The last part defines the unlocalized name, this is used for the item name, entity name, and language file entries.
      */
 
-    public static final Item thisItem = new ItemRollingStock(new EntityLocoElectricCStockEngine(null), TCBIP.MODID, TCBIP.tabBIP);
+    public static final Item thisItem = new ItemRollingStock(new EntityLocoElectricCStockEngine(null), TCBIPInfo.modID, TCBIP.tabBIP);
 
     /**
      * these basic constructors only need to have their names changed to that of this class, that is assuming your editor doesn't automatically do that.
@@ -73,7 +74,7 @@ public class EntityLocoElectricCStockEngine extends ElectricTrain {
     }
 
     @Override
-    public String transportName(){return "London Underground C-Stock";}
+    public String transportName(){return "London Underground C-Stock Engine";}
     @Override
     public String transportcountry(){return "uk";}
     @Override
@@ -83,13 +84,13 @@ public class EntityLocoElectricCStockEngine extends ElectricTrain {
     @Override
     public boolean isFictional(){return false;}
     @Override
-    public float transportTractiveEffort(){return 0;}
+    public float transportTractiveEffort(){return 1;}
 
     @Override
     public void registerSkins(){
-        SkinRegistry.addSkin(this.getClass(),TCBIP.MODID, "textures/trains/C_stock_Blue.png",new String[]{},
+        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/C_stock_Blue.png",new String[]{},
                 "default", "");
-        SkinRegistry.addSkin(this.getClass(),TCBIP.MODID, "textures/trains/C_stock_Grey.png",new String[]{},
+        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/C_stock_Grey.png",new String[]{},
                 "Grey", "");
     }
 
@@ -122,11 +123,23 @@ public class EntityLocoElectricCStockEngine extends ElectricTrain {
      *     Only the first 3 values of each set of floats are actually used.
      */
     @Override
-    public float[][] getRiderOffsets(){return new float[][]{{1.6f,-0.5f, 0.40f}};}
+    public float[][] getRiderOffsets(){return new float[][]{{-1.6f,-0.5f, -0.40f}};}
 
     @Override
     public float[] getHitboxSize() {
-        return new float[]{3.6f,2.1f,1.3f};
+        return new float[]{0.55f,2.1f,1f};
+    }
+
+
+    /**
+     first value is back, 2nd value is front?
+     *
+     */
+
+
+    @Override
+    public float[] rotationPoints() {
+        return new float[]{1.3f, -1.3f};
     }
 
     /**
@@ -136,15 +149,15 @@ public class EntityLocoElectricCStockEngine extends ElectricTrain {
      */
 
     @Override
-    public float transportMetricHorsePower(){return 200f;}
+    public float transportMetricHorsePower(){return 2000f;}
 
     @Override
     public String[] additionalItemText() {
-        return new String[]{"Testing entity for electric trains"};
+        return null;
     }
 
     @Override
-    public float weightKg(){return 33690f;}
+    public float weightKg(){return 31f;}
 
     @Override
     public ItemStack[] getRecipe() {
@@ -174,14 +187,16 @@ public class EntityLocoElectricCStockEngine extends ElectricTrain {
     public float getPlayerScale(){
         return 0.45f;
     }
-    @Override
-    public float[] rotationPoints() {
-        return new float[]{1.4f, -1.4f};
-    }
+
 
     @Override
     public float[][] modelOffsets() {
-        return null;
+        return new float[][] {{0.0f,0.18f,0.0f}};
+    }
+
+    @Override
+    public float[][] modelRotations() {
+        return new float[][] {{180.0f,180.0f,0.0f}};
     }
 
     /**

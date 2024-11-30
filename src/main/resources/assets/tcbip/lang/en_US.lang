@@ -5,7 +5,9 @@
 <!-- Items -->
 
 
-item.London Underground C-Stock.name=London Underground C-Stock Engine
+item.London Underground C-Stock Engine.name=London Underground C-Stock Engine
+item.London Underground C-Stock Passenger.name=London Underground C-Stock Passenger
+
 item.BR Class 74.name=BR Class 74
 
 

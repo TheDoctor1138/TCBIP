@@ -104,6 +104,12 @@ sourceSets {
 }
 
 
+jar {
+    // Exclude unwanted directories or files
+    exclude('train/**')
+    exclude('build/libs/tc/src/main/java/train/**')
+}
+
 //task packApi(type: Jar, dependsOn: "classes") {
  //   // Jar will always be updated
    // outputs.upToDateWhen {false}

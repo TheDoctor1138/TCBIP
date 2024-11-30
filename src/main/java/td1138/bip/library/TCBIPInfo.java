@@ -1,10 +1,10 @@
-package td1138.bip.common.library;
+package td1138.bip.library;
 
 public class TCBIPInfo {
 
 	/* Mod relevant information */
 	public static final String modID = "tcbip";
-	public static final String modName = "British International Pack:";
+	public static final String modName = "British International Pack for Traincraft";
 	public static final String modVersion = "1.0";
 	public static final String channel = "TCBIP";
 	public static final String keyChannel = "TCBIPKey";

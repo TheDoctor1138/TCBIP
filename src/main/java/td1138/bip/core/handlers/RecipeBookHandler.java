@@ -13,6 +13,7 @@ import java.util.Set;
 
 import net.minecraft.item.Item;
 import td1138.bip.TCBIP;
+import td1138.bip.library.TCBIPInfo;
 import train.common.core.interfaces.ITCRecipe;
 import train.common.core.managers.TierRecipe;
 import train.common.recipes.ShapedTrainRecipes;
@@ -42,7 +43,7 @@ public class RecipeBookHandler {
             ITCRecipe recipe = (ITCRecipe)r;
             String output = Item.itemRegistry.getNameForObject(recipe.getRecipeOutput().getItem());
             if (!outputs.contains(output)) {
-                if (output.contains(TCBIP.MODID)) {
+                if (output.contains(TCBIPInfo.modID)) {
                     cleaned.add(recipe);
                     outputs.add(output);
                 }
