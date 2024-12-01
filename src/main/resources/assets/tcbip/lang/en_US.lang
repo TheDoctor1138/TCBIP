@@ -9,7 +9,7 @@ item.London Underground C-Stock Engine.name=London Underground C-Stock Engine
 item.London Underground C-Stock Passenger.name=London Underground C-Stock Passenger
 
 item.BR Class 74.name=BR Class 74
-
+item.BR Class 88.name=BR Class 88
 
 
 item.tcbip:minecartClass74.name=Class 74
@@ -17,7 +17,7 @@ item.tcbip:minecartCstockEngine.name=C Stock Engine
 item.tcbip:minecartCstockPassenger.name=C Stock Passenger
 item.tcbip:minecartClass20.name=Class 20
 item.tcbip:minecartClass68.name=Class 68
-item.tcbip:minecartClass88.name=Class 88
+item.tcbip:minecartClass88.name=BR Class 88
 item.tcbip:minecartLessCoWagon.name=Less Co Wagon
 item.tcbip:minecartGWRMogul.name=GWR Mogul
 item.tcbip:minecartChurchward3500GalTender.name=Churchward 3500 Gal Tender
@@ -34,7 +34,7 @@ entity.tc.London Underground C-Stock.name=London Underground C-Stock Engine
 entity.tc.CstockPassenger.name=C Stock Passenger
 entity.tc.Class20.name=Class 20
 entity.tc.Class68.name=Class 68
-entity.tc.Class88.name=Class 88
+entity.tc.Class88.name=BR Class 88
 entity.tc.LessCoWagon.name=Less Co Wagon
 entity.tc.GWRMogul.name=GWR Mogul
 entity.tc.Churchward3500GalTender.name=Churchward 3500 Gal Tender

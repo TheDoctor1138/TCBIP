@@ -8,6 +8,7 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import td1138.bip.core.CommonProxy;
 import td1138.bip.entities.rollingstock.EntityPassengerCStockPassenger;
 import td1138.bip.entities.trains.EntityLocoDieselClass74;
+import td1138.bip.entities.trains.EntityLocoElectricClass88;
 import td1138.bip.library.TCBIPInfo;
 import td1138.bip.recipes.TCBIPRecipeHandler;
 import td1138.bip.entities.trains.EntityLocoElectricCStockEngine;
@@ -15,8 +16,6 @@ import td1138.bip.items.TCBIPItems;
 import train.common.api.AbstractTrains;
 import train.common.core.CreativeTabTraincraft;
 import train.common.core.handlers.CraftingHandler;
-import train.common.entity.rollingStock.EntityPassenger2;
-import train.common.items.ItemRollingStock;
 import train.common.library.TraincraftRegistry;
 
 @Mod(modid = TCBIPInfo.modID, version = TCBIPInfo.modVersion, name = TCBIPInfo.modName ,dependencies = "required-after:tc")
@@ -56,7 +55,7 @@ public class TCBIP {
 	public static AbstractTrains[] listElectricTrains() {
 		return new AbstractTrains[]{
 			new EntityLocoElectricCStockEngine(null),
-
+				new EntityLocoElectricClass88(null),
 		};
 	}
 
