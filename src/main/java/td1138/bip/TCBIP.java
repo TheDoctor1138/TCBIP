@@ -6,6 +6,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import td1138.bip.core.CommonProxy;
+import td1138.bip.entities.rollingstock.EntityPassengerBRMK3Sleeper;
 import td1138.bip.entities.rollingstock.EntityPassengerCStockPassenger;
 import td1138.bip.entities.trains.EntityLocoDieselClass74;
 import td1138.bip.entities.trains.EntityLocoElectricClass88;
@@ -69,7 +70,10 @@ public class TCBIP {
 
 	public static AbstractTrains[] listPassenger() {
 
-		return new AbstractTrains[]{new EntityPassengerCStockPassenger(null)};
+		return new AbstractTrains[]{
+				new EntityPassengerCStockPassenger(null),
+				new EntityPassengerBRMK3Sleeper(null),
+		};
 	}
 
 	public static AbstractTrains[] listFreight() {

@@ -183,7 +183,7 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
 
     @Override
     public float[][] modelOffsets() {
-        return new float[][] {{0.0f,0.18f,0.0f}};
+        return new float[][] {{0.0f,0.1f,0.0f}};
     }
 
     @Override
