@@ -4,11 +4,10 @@
 
 <!-- Items -->
 
-
+item.BIPRecipeBook.name=BIP Recipe Book
 item.London Underground C-Stock Engine.name=London Underground C-Stock Engine
 item.London Underground C-Stock Passenger.name=London Underground C-Stock Passenger
 item.BR MK3 Sleeper.name=BR MK3 Sleeper
-
 item.BR Class 74.name=BR Class 74
 item.BR Class 88.name=BR Class 88
 
@@ -30,6 +29,7 @@ item.tcbip:minecartHornby060E2.name=Hornby 0-6-0 E2
 item.tcbip:minecart4WheeledCoach.name=4 Wheeled Coach
 
 <!-- Entities -->
+entity.tc.BIPRecipeBook.name=BIP Recipe Book
 entity.tc.BR Class 74.name=BR Class 74
 entity.tc.London Underground C-Stock.name=London Underground C-Stock Engine
 entity.tc.CstockPassenger.name=C Stock Passenger

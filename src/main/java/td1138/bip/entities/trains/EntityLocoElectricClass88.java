@@ -72,18 +72,18 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
     @Override
     public boolean isFictional(){return false;}
     @Override
-    public float transportTractiveEffort(){return 1;}
+    public float transportTractiveEffort(){return 0;}
 
     @Override
     public void registerSkins(){
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/Class_88_Blue.png",new String[]{},
-                "default", "Blue livery for Class 88");
+                "default", "DRS Plain Blue Panto Up");
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/Class_88_Cyan.png",new String[]{},
-                "Cyan", "Cyan livery for Class 88");
-        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/Class_88_Magenta.png",new String[]{},
-                "Magenta", "Magenta livery for Class 88");
+                "Cyan", "DRS Plain Blue Panto Down");
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/Class_88_Purple.png",new String[]{},
-                "Purple", "Purple livery for Class 88");
+                "Purple", "DRS Blue Livery Panto Up");
+        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/Class_88_Magenta.png",new String[]{},
+                "Magenta", "DRS Blue Livery Panto Down");
     }
 
     /**
@@ -99,7 +99,7 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
      */
 
     @Override
-    public float transportTopSpeed(){return 160f;}
+    public float transportTopSpeed(){return 161f;}
 
     /**
      * <h2>Inventory Size</h2>
@@ -115,7 +115,7 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
      *     Only the first 3 values of each set of floats are actually used.
      */
     @Override
-    public float[][] getRiderOffsets(){return new float[][]{{-2.15f,-0.2f, 0.0f}};}
+    public float[][] getRiderOffsets(){return new float[][]{{-2.15f,-0.3f, 0.0f}};}
 
     @Override
     public float[] getHitboxSize() {
@@ -177,13 +177,13 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
     }
     @Override
     public float getPlayerScale(){
-        return 0.45f;
+        return 0.65f;
     }
 
 
     @Override
     public float[][] modelOffsets() {
-        return new float[][] {{0.0f,0.1f,0.0f}};
+        return new float[][] {{0.0f,0.05f,0.0f}};
     }
 
     @Override
@@ -247,13 +247,19 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
      */
     @SideOnly(Side.CLIENT)
     @Override
-    public TrainSound getHorn(){return new TrainSound("tcbip:Class88Horn",1,1,0);}
+    public TrainSound getHorn(){return new TrainSound("tcbip:Class88Horn",1f,0,0);}
 
     @SideOnly(Side.CLIENT)
     @Override
     public TrainSound getRunningSound(){
 
-        return new TrainSound("tcbip:vl10_idle",1,1,0);}
+        return new TrainSound("tcbip:vl10_idle",0.7f,1,0);}
+
+    @SideOnly(Side.CLIENT)
+    @Override
+    public TrainSound getIdleSound(){
+
+        return new TrainSound("tcbip:vl10_idle",0.3f,1,0);}
 }
 
 

@@ -55,13 +55,14 @@ public class TCBIP {
 
 	public static AbstractTrains[] listElectricTrains() {
 		return new AbstractTrains[]{
-			new EntityLocoElectricCStockEngine(null),
+				new EntityLocoElectricCStockEngine(null),
 				new EntityLocoElectricClass88(null),
 		};
 	}
 
 	public static AbstractTrains[] listDieselTrains() {
-		return new AbstractTrains[]{new EntityLocoDieselClass74(null)};
+		return new AbstractTrains[]{
+		        new EntityLocoDieselClass74(null)};
 	}
 	public static AbstractTrains[] listSteamTrains() {
 

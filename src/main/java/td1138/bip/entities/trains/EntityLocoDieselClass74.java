@@ -121,8 +121,8 @@ public class EntityLocoDieselClass74 extends DieselTrain {
      * @return the value of the max speed in km/h
      */
     @Override
-    public float transportTopSpeed(){return backwardPressed?70f:140f;}
-
+    public float transportTopSpeed(){return 145f;}
+    //backwardPressed?70f://
 
     /**
      * <h2>Inventory Size</h2>
@@ -139,11 +139,11 @@ public class EntityLocoDieselClass74 extends DieselTrain {
      *     Only the first 3 values of each set of floats are actually used.
      */
     @Override
-    public float[][] getRiderOffsets(){return new float[][]{{1.3f,1.2f, 0f}};}
+    public float[][] getRiderOffsets(){ return new float[][]{{1.6f,-0.2f,0.3f}};}
 
     @Override
     public float getPlayerScale(){
-        return 0.45f;
+        return 0.6f;
     }
 
     @Override
@@ -241,8 +241,11 @@ public class EntityLocoDieselClass74 extends DieselTrain {
      */
     @SideOnly(Side.CLIENT)
     @Override
-    public TrainSound getHorn(){return new TrainSound("tcbip:eu07_horn",1,1,0);}
+    public TrainSound getHorn(){return new TrainSound("tcbip:eu07_horn",1f,1,0);}
     @SideOnly(Side.CLIENT)
     @Override
-    public TrainSound getRunningSound(){return new TrainSound("tcbip:chme3_idle",0.6f,1,1);}
+    public TrainSound getRunningSound(){return new TrainSound("tcbip:chme3_idle",0.7f,1,0);}
+    @SideOnly(Side.CLIENT)
+    @Override
+    public TrainSound getIdleSound(){return new TrainSound("tcbip:chme3_idle",0.3f,1,0);}
 }

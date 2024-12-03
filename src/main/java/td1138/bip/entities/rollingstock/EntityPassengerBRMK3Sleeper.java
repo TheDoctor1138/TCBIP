@@ -55,19 +55,19 @@ public class EntityPassengerBRMK3Sleeper extends EntityRollingStock implements I
     @Override
     public void registerSkins(){
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/BR_Mk3_Sleeper_Blue.png",new String[]{},
-                "default", "");
+                "default", "BR Blue Grey Livery");
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/BR_Mk3_Sleeper_Brown.png",new String[]{},
-                "Brown", "");
+                "Brown", "BR Chocolate & Cream Livery");
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/BR_Mk3_Sleeper_Cyan.png",new String[]{},
-                "Cyan", "");
+                "Cyan", "Caledonian Sleeper Serco Livery");
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/BR_Mk3_Sleeper_Green.png",new String[]{},
-                "Green", "");
+                "Green", "GWR Green Livery");
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/BR_Mk3_Sleeper_Pink.png",new String[]{},
-                "Pink", "");
+                "Pink", "First ScotRail Caledonian Sleeper Livery");
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/BR_Mk3_Sleeper_Red.png",new String[]{},
-                "Red", "");
+                "Red", "BR Crimson & Cream Livery");
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/BR_Mk3_Sleeper_White.png",new String[]{},
-                "White", "");
+                "White", "BR Intercity Swallow Livery");
 
     }
 
@@ -83,7 +83,7 @@ public class EntityPassengerBRMK3Sleeper extends EntityRollingStock implements I
 
     @Override
     public float weightKg() {
-        return 20200.0f;
+        return 43000.0f;
     }
 
     @Override
@@ -118,7 +118,7 @@ public class EntityPassengerBRMK3Sleeper extends EntityRollingStock implements I
 
     @Override
     public String transportYear() {
-        return "1979";
+        return "1981";
     }
 
     @Override

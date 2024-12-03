@@ -84,7 +84,7 @@ public class EntityLocoElectricCStockEngine extends ElectricTrain {
     @Override
     public boolean isFictional(){return false;}
     @Override
-    public float transportTractiveEffort(){return 1;}
+    public float transportTractiveEffort(){return 0;}
 
     @Override
     public void registerSkins(){
@@ -123,7 +123,7 @@ public class EntityLocoElectricCStockEngine extends ElectricTrain {
      *     Only the first 3 values of each set of floats are actually used.
      */
     @Override
-    public float[][] getRiderOffsets(){return new float[][]{{-1.6f,-0.5f, -0.40f}};}
+    public float[][] getRiderOffsets(){ return new float[][]{{-1.5f,-0.5f,-0.40f}};}
 
     @Override
     public float[] getHitboxSize() {
@@ -153,7 +153,7 @@ public class EntityLocoElectricCStockEngine extends ElectricTrain {
 
     @Override
     public String[] additionalItemText() {
-        return null;
+        return new String[]{"Funny Beep Barp Train"};
     }
 
     @Override
@@ -255,13 +255,19 @@ public class EntityLocoElectricCStockEngine extends ElectricTrain {
      */
     @SideOnly(Side.CLIENT)
     @Override
-    public TrainSound getHorn(){return new TrainSound("tcbip:LUwhistle",1,1,0);}
+    public TrainSound getHorn(){return new TrainSound("tcbip:LUwhistle",1f,1,0);}
 
     @SideOnly(Side.CLIENT)
     @Override
     public TrainSound getRunningSound(){
 
-        return new TrainSound("tcbip:vl10_idle",1,1,0);}
+        return new TrainSound("tcbip:vl10_idle",0.7f,0,0);}
+
+    @SideOnly(Side.CLIENT)
+    @Override
+    public TrainSound getIdleSound(){
+
+        return new TrainSound("tcbip:vl10_idle",0.3f,0,0);}
 }
 
 
