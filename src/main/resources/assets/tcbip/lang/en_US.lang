@@ -5,12 +5,15 @@
 <!-- Items -->
 
 item.BIPRecipeBook.name=BIP Recipe Book
+item.NMBS HLE Class 18.name=NMBS HLE Class 18
+item.NMBS M6 Coach.name=NMBS M6 Coach
+item.NMBS M6 Tail.name=NMBS M6 Tail
 item.London Underground C-Stock Engine.name=London Underground C-Stock Engine
 item.London Underground C-Stock Passenger.name=London Underground C-Stock Passenger
-item.BR MK3 Sleeper.name=BR MK3 Sleeper
+item.BR Mk3 Sleeper.name=BR Mk3 Sleeper
 item.BR Class 74.name=BR Class 74
+item.BR Class 68.name=BR Class 68
 item.BR Class 88.name=BR Class 88
-
 
 item.tcbip:minecartClass74.name=Class 74
 item.tcbip:minecartCstockEngine.name=C Stock Engine
@@ -23,13 +26,16 @@ item.tcbip:minecartGWRMogul.name=GWR Mogul
 item.tcbip:minecartChurchward3500GalTender.name=Churchward 3500 Gal Tender
 item.tcbip:minecartNGT6ERLoco.name=GT6ER Loco (Normal gauge)
 item.tcbip:minecartNGT6ERTail.name=GT6ER Tail (Normal gauge)
-item.tcbip:minecartBR_MK3_Sleeper.name=BR Mk3 Sleeper
+item.tcbip:minecartBR_Mk3_Sleeper.name=BR Mk3 Sleeper
 item.tcbip:minecartHornby040E2.name=Hornby 0-4-0 E2
 item.tcbip:minecartHornby060E2.name=Hornby 0-6-0 E2
 item.tcbip:minecart4WheeledCoach.name=4 Wheeled Coach
 
 <!-- Entities -->
 entity.tc.BIPRecipeBook.name=BIP Recipe Book
+entity.tc:SNCBM6.name=NMBS M6 Coach
+entity.tc:SNCBM6Tail.name=NMBS M6 Tail
+entity.tc.HLEClass18.name=NMBS HLE Class 18
 entity.tc.BR Class 74.name=BR Class 74
 entity.tc.London Underground C-Stock.name=London Underground C-Stock Engine
 entity.tc.CstockPassenger.name=C Stock Passenger
@@ -41,7 +47,7 @@ entity.tc.GWRMogul.name=GWR Mogul
 entity.tc.Churchward3500GalTender.name=Churchward 3500 Gal Tender
 entity.tc:minecartNGT6ERLoco.name=GT6ER Loco (Normal gauge)
 entity.tc:minecartNGT6ERTail.name=GT6ER Tail (Normal gauge)
-entity.tc:BR_MK3_Sleeper.name=BR Mk3 Sleeper
+entity.tc:BR_Mk3_Sleeper.name=BR Mk3 Sleeper
 entity.tc.Hornby040E2.name=Hornby 0-4-0 E2
 entity.tc.Hornby060E2.name=Hornby 0-6-0 E2
 entity.tc:4WheeledCoach.name=4 Wheeled Coach

@@ -6,13 +6,13 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import td1138.bip.core.CommonProxy;
-import td1138.bip.entities.rollingstock.EntityPassengerBRMK3Sleeper;
+import td1138.bip.entities.rollingstock.EntityPassengerBRMk3Sleeper;
 import td1138.bip.entities.rollingstock.EntityPassengerCStockPassenger;
-import td1138.bip.entities.trains.EntityLocoDieselClass74;
-import td1138.bip.entities.trains.EntityLocoElectricClass88;
+import td1138.bip.entities.rollingstock.EntityPassengerSNCBM6;
+import td1138.bip.entities.rollingstock.EntityPassengerSNCBM6Tail;
+import td1138.bip.entities.trains.*;
 import td1138.bip.library.TCBIPInfo;
 import td1138.bip.recipes.TCBIPRecipeHandler;
-import td1138.bip.entities.trains.EntityLocoElectricCStockEngine;
 import td1138.bip.items.TCBIPItems;
 import train.common.api.AbstractTrains;
 import train.common.core.CreativeTabTraincraft;
@@ -57,12 +57,15 @@ public class TCBIP {
 		return new AbstractTrains[]{
 				new EntityLocoElectricCStockEngine(null),
 				new EntityLocoElectricClass88(null),
+				new EntityLocoElectricHLEClass18(null),
 		};
 	}
 
 	public static AbstractTrains[] listDieselTrains() {
 		return new AbstractTrains[]{
-		        new EntityLocoDieselClass74(null)};
+				new EntityLocoDieselClass74(null),
+				new EntityLocoDieselClass68(null),
+	    };
 	}
 	public static AbstractTrains[] listSteamTrains() {
 
@@ -73,7 +76,9 @@ public class TCBIP {
 
 		return new AbstractTrains[]{
 				new EntityPassengerCStockPassenger(null),
-				new EntityPassengerBRMK3Sleeper(null),
+				new EntityPassengerBRMk3Sleeper(null),
+				new EntityPassengerSNCBM6(null),
+				new EntityPassengerSNCBM6Tail(null),
 		};
 	}
 

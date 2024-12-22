@@ -10,7 +10,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.oredict.OreDictionary;
 import td1138.bip.TCBIP;
 import td1138.bip.library.TCBIPInfo;
-import td1138.bip.models.trains.ModelClass88;
+import td1138.bip.models.trains.ModelNMBSHLE18;
+import td1138.bip.models.trains.ModelNMBSHLE18a;
 import train.common.api.AbstractTrains;
 import train.common.api.ElectricTrain;
 import train.common.api.Locomotive;
@@ -25,7 +26,7 @@ import train.common.library.ItemIDs;
  * @author TheDoctor1138
  */
 
-public class EntityLocoElectricClass88 extends ElectricTrain {
+public class EntityLocoElectricHLEClass18 extends ElectricTrain {
 
     /**
      * <h2>Basic Train Constructor</h2>
@@ -46,7 +47,7 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
      *     The last part defines the unlocalized name, this is used for the item name, entity name, and language file entries.
      */
 
-    public static final Item thisItem = new ItemRollingStock(new EntityLocoElectricClass88(null), TCBIPInfo.modID, TCBIP.tabBIP);
+    public static final Item thisItem = new ItemRollingStock(new EntityLocoElectricHLEClass18(null), TCBIPInfo.modID, TCBIP.tabBIP);
 
     /**
      * these basic constructors only need to have their names changed to that of this class, that is assuming your editor doesn't automatically do that.
@@ -54,19 +55,19 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
      * @see Locomotive
      */
 
-    public EntityLocoElectricClass88(World world, double x, double y, double z){
+    public EntityLocoElectricHLEClass18(World world, double x, double y, double z){
         super(world,x,y,z);
     }
-    public EntityLocoElectricClass88(World world){
+    public EntityLocoElectricHLEClass18(World world){
         super(world);
     }
 
     @Override
-    public String transportName(){return "BR Class 88";}
+    public String transportName(){return "NMBS HLE Class 18";}
     @Override
-    public String transportcountry(){return "uk";}
+    public String transportcountry(){return "be";}
     @Override
-    public String transportYear(){return "2015";}
+    public String transportYear(){return "2008";}
     @Override
     public String transportFuelType(){return "Electric";}
     @Override
@@ -76,14 +77,10 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
 
     @Override
     public void registerSkins(){
-        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/Class_88_Blue.png",new String[]{},
-                "default", "DRS Plain Blue Panto Up");
-        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/Class_88_Cyan.png",new String[]{},
-                "Cyan", "DRS Plain Blue Panto Down");
-        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/Class_88_Purple.png",new String[]{},
-                "Purple", "DRS Blue Livery Panto Up");
-        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/Class_88_Magenta.png",new String[]{},
-                "Magenta", "DRS Blue Livery Panto Down");
+        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/hle19_White.png",new String[]{},
+                "default", "HLE Class 18");
+        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/hle19_Grey.png",new String[]{},
+                "Grey", "HLE Class 19 (different coupler)");
     }
 
     /**
@@ -99,7 +96,7 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
      */
 
     @Override
-    public float transportTopSpeed(){return 161f;}
+    public float transportTopSpeed(){return 201f;}
 
     /**
      * <h2>Inventory Size</h2>
@@ -115,7 +112,7 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
      *     Only the first 3 values of each set of floats are actually used.
      */
     @Override
-    public float[][] getRiderOffsets(){return new float[][]{{-2.15f,-0.3f, 0.0f}};}
+    public float[][] getRiderOffsets(){return new float[][]{{-2.4f,-0.32f, -0.24f}};}
 
     @Override
     public float[] getHitboxSize() {
@@ -141,7 +138,7 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
      */
 
     @Override
-    public float transportMetricHorsePower(){return 5400f;}
+    public float transportMetricHorsePower(){return 6700f;}
 
     @Override
     public String[] additionalItemText() {
@@ -149,7 +146,7 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
     }
 
     @Override
-    public float weightKg(){return 86000f;}
+    public float weightKg(){return 88000f;}
 
     @Override
     public ItemStack[] getRecipe() {
@@ -226,7 +223,7 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
 
 
     @Override
-    public ModelBase[] getModel(){return new ModelBase[]{new ModelClass88()};}
+    public ModelBase[] getModel(){return new ModelBase[]{new ModelNMBSHLE18()};}
 
     /**defines the scale to render the model at. Default is 0.0625*/
     public float[][] getRenderScale(){
@@ -247,7 +244,7 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
      */
     @SideOnly(Side.CLIENT)
     @Override
-    public TrainSound getHorn(){return new TrainSound("tcbip:Class88Horn",0.8f,1,0);}
+    public TrainSound getHorn(){return new TrainSound("tcbip:mg_horn",0.8f,1,0);}
 
     @SideOnly(Side.CLIENT)
     @Override

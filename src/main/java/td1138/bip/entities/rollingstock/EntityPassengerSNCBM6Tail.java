@@ -8,7 +8,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.oredict.OreDictionary;
 import td1138.bip.TCBIP;
 import td1138.bip.library.TCBIPInfo;
-import td1138.bip.models.rollingstock.ModelBR_MK3_Sleeper;
+import td1138.bip.models.trains.ModelSNCBM6;
+import td1138.bip.models.trains.ModelSNCBM6Tail;
 import train.common.api.EntityRollingStock;
 import train.common.api.IPassenger;
 import train.common.items.ItemRollingStock;
@@ -19,19 +20,19 @@ import train.common.library.ItemIDs;
  * For more information on the overrides and functions:
  * @author Eternal Blue Flame
  */
-public class EntityPassengerBRMk3Sleeper extends EntityRollingStock implements IPassenger {
+public class EntityPassengerSNCBM6Tail extends EntityRollingStock implements IPassenger {
     /*private static final String[] itemDescription = new String[]{
             "\u00A77" + StatCollector.translateToLocal("menu.item.weight") +": 2 " + StatCollector.translateToLocal("menu.item.tons"),
             "\u00A77" + StatCollector.translateToLocal("menu.item.seats") +": 4 " + StatCollector.translateToLocal("menu.item.players")};*/
 
 
-    public static final Item thisItem = new ItemRollingStock(new EntityPassengerBRMk3Sleeper(null), TCBIPInfo.modID, TCBIP.tabBIP);
+    public static final Item thisItem = new ItemRollingStock(new EntityPassengerSNCBM6Tail(null), TCBIPInfo.modID, TCBIP.tabBIP);
 
 
-    public EntityPassengerBRMk3Sleeper(World world, double d, double d1, double d2) {
+    public EntityPassengerSNCBM6Tail(World world, double d, double d1, double d2) {
         super(world, d, d1, d2);
     }
-    public EntityPassengerBRMk3Sleeper(World world){
+    public EntityPassengerSNCBM6Tail(World world){
         super(world);
     }
 
@@ -53,20 +54,8 @@ public class EntityPassengerBRMk3Sleeper extends EntityRollingStock implements I
 
     @Override
     public void registerSkins(){
-        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/BR_Mk3_Sleeper_Blue.png",new String[]{},
-                "default", "BR Blue Grey Livery");
-        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/BR_Mk3_Sleeper_Brown.png",new String[]{},
-                "Brown", "BR Chocolate & Cream Livery");
-        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/BR_Mk3_Sleeper_Cyan.png",new String[]{},
-                "Cyan", "Caledonian Sleeper Serco Livery");
-        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/BR_Mk3_Sleeper_Green.png",new String[]{},
-                "Green", "GWR Green Livery");
-        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/BR_Mk3_Sleeper_Pink.png",new String[]{},
-                "Pink", "First ScotRail Caledonian Sleeper Livery");
-        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/BR_Mk3_Sleeper_Red.png",new String[]{},
-                "Red", "BR Crimson & Cream Livery");
-        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/BR_Mk3_Sleeper_White.png",new String[]{},
-                "White", "BR Intercity Swallow Livery");
+        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/SNCB_M6_Tail_White.png",new String[]{},
+                "default", "SNCB M6 Coach 2nd Class Driving Car");
 
     }
 
@@ -82,7 +71,7 @@ public class EntityPassengerBRMk3Sleeper extends EntityRollingStock implements I
 
     @Override
     public float weightKg() {
-        return 43000.0f;
+        return 49600.0f;
     }
 
     @Override
@@ -99,7 +88,7 @@ public class EntityPassengerBRMk3Sleeper extends EntityRollingStock implements I
                 new ItemStack(ItemIDs.bogie.item, 2, 0),
                 new ItemStack(ItemIDs.steelframe.item, 1, 0),
                 null,
-                new ItemStack(ItemIDs.seats.item, 2, 0),
+                new ItemStack(ItemIDs.seats.item, 3, 0),
                 new ItemStack(itemSteel.getItem(), 1, itemSteel.getItemDamage()),
                 new ItemStack(thisItem)};
 
@@ -107,17 +96,17 @@ public class EntityPassengerBRMk3Sleeper extends EntityRollingStock implements I
 
     @Override
     public String transportName() {
-        return "BR Mk3 Sleeper";
+        return "NMBS M6 Tail";
     }
 
     @Override
     public String transportcountry() {
-        return "uk";
+        return "be";
     }
 
     @Override
     public String transportYear() {
-        return "1981";
+        return "2002";
     }
 
     @Override
@@ -158,7 +147,7 @@ public class EntityPassengerBRMk3Sleeper extends EntityRollingStock implements I
      * <h2>Rider offsets</h2>
      */
     @Override
-    public float[][] getRiderOffsets(){return new float[][]{{1.6f,-0.5f, 0.40f}};}
+    public float[][] getRiderOffsets(){return new float[][]{{0.0f,-0.1f, 0f}};}
 
     @Override
     public float[] getHitboxSize() {
@@ -166,7 +155,7 @@ public class EntityPassengerBRMk3Sleeper extends EntityRollingStock implements I
     }
 
     @Override
-    public ModelBase[] getModel(){return new ModelBase[]{new ModelBR_MK3_Sleeper()};}
+    public ModelBase[] getModel(){return new ModelBase[]{new ModelSNCBM6Tail()};}
 
     /**
      * <h2>pre-asigned values</h2>
