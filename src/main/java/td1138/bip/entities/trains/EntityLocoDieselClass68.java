@@ -55,7 +55,7 @@ public class EntityLocoDieselClass68 extends DieselTrain {
      * @see Locomotive
      */
     public EntityLocoDieselClass68(World world, double x, double y, double z){
-        super(world,x,y,z);
+        super(world, x, y, z);
     }
     public EntityLocoDieselClass68(World world){
         super(world);
@@ -135,7 +135,7 @@ public class EntityLocoDieselClass68 extends DieselTrain {
      *     Only the first 3 values of each set of floats are actually used.
      */
     @Override
-    public float[][] getRiderOffsets(){ return new float[][]{{-2.15f,-0.3f, 0.0f}};}
+    public float[][] getRiderOffsets(){ return new float[][]{{2.15f,-0.3f, 0.0f}};}
 
     @Override
     public float getPlayerScale(){
@@ -144,7 +144,7 @@ public class EntityLocoDieselClass68 extends DieselTrain {
 
     @Override
     public float[] getHitboxSize() {
-        return new float[]{0.55f,2.1f,1f};
+        return new float[]{0.55f,2.1f,1.0f};
     }
 
     /**

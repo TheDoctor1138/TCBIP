@@ -6,10 +6,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import td1138.bip.core.CommonProxy;
-import td1138.bip.entities.rollingstock.EntityPassengerBRMk3Sleeper;
-import td1138.bip.entities.rollingstock.EntityPassengerCStockPassenger;
-import td1138.bip.entities.rollingstock.EntityPassengerSNCBM6;
-import td1138.bip.entities.rollingstock.EntityPassengerSNCBM6Tail;
+import td1138.bip.entities.rollingstock.*;
 import td1138.bip.entities.trains.*;
 import td1138.bip.library.TCBIPInfo;
 import td1138.bip.recipes.TCBIPRecipeHandler;
@@ -56,6 +53,7 @@ public class TCBIP {
 	public static AbstractTrains[] listElectricTrains() {
 		return new AbstractTrains[]{
 				new EntityLocoElectricCStockEngine(null),
+				new EntityLocoElectricDStockEngine(null),
 				new EntityLocoElectricClass88(null),
 				new EntityLocoElectricHLEClass18(null),
 		};
@@ -76,6 +74,7 @@ public class TCBIP {
 
 		return new AbstractTrains[]{
 				new EntityPassengerCStockPassenger(null),
+				new EntityPassengerDStockPassenger(null),
 				new EntityPassengerBRMk3Sleeper(null),
 				new EntityPassengerSNCBM6(null),
 				new EntityPassengerSNCBM6Tail(null),
@@ -84,7 +83,9 @@ public class TCBIP {
 
 	public static AbstractTrains[] listFreight() {
 
-		return new AbstractTrains[]{};
+		return new AbstractTrains[]{
+		        new EntityFreightLessCoWagon(null),
+	    };
 	}
 
 	public static AbstractTrains[] listTanker() {

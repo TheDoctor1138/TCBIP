@@ -8,7 +8,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.oredict.OreDictionary;
 import td1138.bip.TCBIP;
 import td1138.bip.library.TCBIPInfo;
-import td1138.bip.models.rollingstock.ModelSNCBM6Tail;
+import td1138.bip.models.rollingstock.ModelDstockPassenger;
 import train.common.api.EntityRollingStock;
 import train.common.api.IPassenger;
 import train.common.items.ItemRollingStock;
@@ -19,19 +19,19 @@ import train.common.library.ItemIDs;
  * For more information on the overrides and functions:
  * @author Eternal Blue Flame
  */
-public class EntityPassengerSNCBM6Tail extends EntityRollingStock implements IPassenger {
+public class EntityPassengerDStockPassenger extends EntityRollingStock implements IPassenger {
     /*private static final String[] itemDescription = new String[]{
             "\u00A77" + StatCollector.translateToLocal("menu.item.weight") +": 2 " + StatCollector.translateToLocal("menu.item.tons"),
             "\u00A77" + StatCollector.translateToLocal("menu.item.seats") +": 4 " + StatCollector.translateToLocal("menu.item.players")};*/
 
 
-    public static final Item thisItem = new ItemRollingStock(new EntityPassengerSNCBM6Tail(null), TCBIPInfo.modID, TCBIP.tabBIP);
+    public static final Item thisItem = new ItemRollingStock(new EntityPassengerDStockPassenger(null), TCBIPInfo.modID, TCBIP.tabBIP);
 
 
-    public EntityPassengerSNCBM6Tail(World world, double d, double d1, double d2) {
+    public EntityPassengerDStockPassenger(World world, double d, double d1, double d2) {
         super(world, d, d1, d2);
     }
-    public EntityPassengerSNCBM6Tail(World world){
+    public EntityPassengerDStockPassenger(World world){
         super(world);
     }
 
@@ -43,19 +43,24 @@ public class EntityPassengerSNCBM6Tail extends EntityRollingStock implements IPa
      */
     @Override
     public float[] rotationPoints() {
-        return new float[]{2.65f, -2.45f};
+        return new float[]{1.3f, -1.3f};
     }
 
     @Override
     public float[][] modelOffsets() {
-        return new float[][] {{0.0f,0.05f,0.0f}};
+        return new float[][] {{0.0f,0.18f,0.0f}};
     }
 
     @Override
     public void registerSkins(){
-        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/SNCB_M6_Tail_White.png",new String[]{},
-                "default", "SNCB M6 Coach 2nd Class Driving Car");
-
+        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/D_Stock_Passenger_Blue.png",new String[]{},
+                "default", "");
+        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/D_Stock_Passenger_Grey.png",new String[]{},
+                "Grey", "");
+        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/D_Stock_Passenger_Orange.png",new String[]{},
+                "Orange", "");
+        SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/D_Stock_Passenger_Red.png",new String[]{},
+                "Red", "");
     }
 
     @Override
@@ -70,7 +75,7 @@ public class EntityPassengerSNCBM6Tail extends EntityRollingStock implements IPa
 
     @Override
     public float weightKg() {
-        return 49600.0f;
+        return 20200.0f;
     }
 
     @Override
@@ -80,32 +85,31 @@ public class EntityPassengerSNCBM6Tail extends EntityRollingStock implements IPa
 
         return new ItemStack[]{
                 null,
-                null,
-                null,
-                null,
-                null,
                 new ItemStack(ItemIDs.bogie.item, 2, 0),
                 new ItemStack(ItemIDs.steelframe.item, 1, 0),
-                null,
-                new ItemStack(ItemIDs.seats.item, 3, 0),
                 new ItemStack(itemSteel.getItem(), 1, itemSteel.getItemDamage()),
+                null,
+                new ItemStack(ItemIDs.steelcab.item, 1, 0),
+                new ItemStack(ItemIDs.transformer.item, 2, 0),
+                new ItemStack(itemRedstone.getItem(), 4, 0),
+                null,
                 new ItemStack(thisItem)};
 
     }
 
     @Override
     public String transportName() {
-        return "NMBS M6 Tail";
+        return "London Underground D-Stock Passenger";
     }
 
     @Override
     public String transportcountry() {
-        return "be";
+        return "uk";
     }
 
     @Override
     public String transportYear() {
-        return "2002";
+        return "1978";
     }
 
     @Override
@@ -129,11 +133,6 @@ public class EntityPassengerSNCBM6Tail extends EntityRollingStock implements IPa
     }
 
     @Override
-    public int getTier(){
-        return 2;
-    }
-
-    @Override
     public String[] additionalItemText() {
         return null;
     }
@@ -146,19 +145,15 @@ public class EntityPassengerSNCBM6Tail extends EntityRollingStock implements IPa
      * <h2>Rider offsets</h2>
      */
     @Override
-    public float[][] getRiderOffsets(){return new float[][]{
-            {0f,-0.1f,0f},
-            {0f,0.5f,-0.40f}
-       };
-    }
+    public float[][] getRiderOffsets(){return new float[][]{{1.6f,-0.5f, 0.40f}};}
 
     @Override
     public float[] getHitboxSize() {
-        return new float[]{0.55f,2.1f,1.0f};
+        return new float[]{1.5f,2.1f,1.0f};
     }
 
     @Override
-    public ModelBase[] getModel(){return new ModelBase[]{new ModelSNCBM6Tail()};}
+    public ModelBase[] getModel(){return new ModelBase[]{new ModelDstockPassenger()};}
 
     /**
      * <h2>pre-asigned values</h2>

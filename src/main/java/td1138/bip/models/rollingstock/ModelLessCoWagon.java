@@ -7,7 +7,7 @@
 // Created on: 25.01.2024 - 06:10:54
 // Last changed on: 25.01.2024 - 06:10:54
 
-package td1138.bip.client.render.models; //Path where the model is located
+package td1138.bip.models.rollingstock; //Path where the model is located
 
 
 import fexcraft.tmt.slim.ModelConverter;

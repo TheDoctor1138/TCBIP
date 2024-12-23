@@ -57,9 +57,9 @@ public class EntityPassengerCStockPassenger extends EntityRollingStock implement
     @Override
     public void registerSkins(){
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/C_stock_Blue.png",new String[]{},
-                "default", "");
+                "default", "London Underground Modern Livery");
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/C_stock_Grey.png",new String[]{},
-                "Grey", "");
+                "Grey", "London Underground Old Grey Livery");
     }
 
     @Override

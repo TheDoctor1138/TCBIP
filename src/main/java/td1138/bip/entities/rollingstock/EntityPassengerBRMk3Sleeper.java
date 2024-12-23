@@ -1,7 +1,10 @@
 package td1138.bip.entities.rollingstock;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import ebf.tim.api.SkinRegistry;
 import fexcraft.tmt.slim.ModelBase;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -13,6 +16,8 @@ import train.common.api.EntityRollingStock;
 import train.common.api.IPassenger;
 import train.common.items.ItemRollingStock;
 import train.common.library.ItemIDs;
+
+import javax.swing.*;
 
 /**
  * <h1>Pullman's Palace entity</h1>
@@ -48,7 +53,7 @@ public class EntityPassengerBRMk3Sleeper extends EntityRollingStock implements I
 
     @Override
     public float[][] modelOffsets() {
-        return new float[][] {{0.0f,0.05f,0.0f}};
+        return new float[][] {{0.0f,0.0f,0.0f}};
     }
 
     @Override
@@ -175,4 +180,5 @@ public class EntityPassengerBRMk3Sleeper extends EntityRollingStock implements I
     public Item getItem(){
         return thisItem;
     }
+
 }

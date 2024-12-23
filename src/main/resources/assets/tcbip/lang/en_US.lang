@@ -4,16 +4,19 @@
 
 <!-- Items -->
 
-item.BIPRecipeBook.name=BIP Recipe Book
+item.bipRecipeBook.name=BIP Recipe Book
 item.NMBS HLE Class 18.name=NMBS HLE Class 18
 item.NMBS M6 Coach.name=NMBS M6 Coach
 item.NMBS M6 Tail.name=NMBS M6 Tail
+item.London Underground D-Stock Engine.name=London Underground D-Stock Engine
+item.London Underground D-Stock Passenger.name=London Underground D-Stock Passenger
 item.London Underground C-Stock Engine.name=London Underground C-Stock Engine
 item.London Underground C-Stock Passenger.name=London Underground C-Stock Passenger
 item.BR Mk3 Sleeper.name=BR Mk3 Sleeper
 item.BR Class 74.name=BR Class 74
 item.BR Class 68.name=BR Class 68
 item.BR Class 88.name=BR Class 88
+item.Less Co Wagon.name=Less Co Wagon
 
 item.tcbip:minecartClass74.name=Class 74
 item.tcbip:minecartCstockEngine.name=C Stock Engine
@@ -33,24 +36,27 @@ item.tcbip:minecart4WheeledCoach.name=4 Wheeled Coach
 
 <!-- Entities -->
 entity.tc.BIPRecipeBook.name=BIP Recipe Book
-entity.tc:SNCBM6.name=NMBS M6 Coach
-entity.tc:SNCBM6Tail.name=NMBS M6 Tail
+entity.tc.SNCBM6.name=NMBS M6 Coach
+entity.tc.SNCBM6Tail.name=NMBS M6 Tail
 entity.tc.HLEClass18.name=NMBS HLE Class 18
-entity.tc.BR Class 74.name=BR Class 74
+entity.tc.Class 74.name=BR Class 74
 entity.tc.London Underground C-Stock.name=London Underground C-Stock Engine
+entity.tc.CstockEngine.name=C Stock Engine
 entity.tc.CstockPassenger.name=C Stock Passenger
+entity.tc.DstockEngine.name=D Stock Engine
+entity.tc.DstockPassenger.name=D Stock Passenger
 entity.tc.Class20.name=Class 20
 entity.tc.Class68.name=Class 68
 entity.tc.Class88.name=BR Class 88
 entity.tc.LessCoWagon.name=Less Co Wagon
 entity.tc.GWRMogul.name=GWR Mogul
 entity.tc.Churchward3500GalTender.name=Churchward 3500 Gal Tender
-entity.tc:minecartNGT6ERLoco.name=GT6ER Loco (Normal gauge)
-entity.tc:minecartNGT6ERTail.name=GT6ER Tail (Normal gauge)
-entity.tc:BR_Mk3_Sleeper.name=BR Mk3 Sleeper
+entity.tc.minecartNGT6ERLoco.name=GT6ER Loco (Normal gauge)
+entity.tc.minecartNGT6ERTail.name=GT6ER Tail (Normal gauge)
+entity.tc.:BR Mk3 Sleeper.name=BR Mk3 Sleeper
 entity.tc.Hornby040E2.name=Hornby 0-4-0 E2
 entity.tc.Hornby060E2.name=Hornby 0-6-0 E2
-entity.tc:4WheeledCoach.name=4 Wheeled Coach
+entity.tc.4WheeledCoach.name=4 Wheeled Coach
 
 <!-- ## GUI ## -->
 menu.item.country=Country
@@ -62,6 +68,20 @@ menu.item.us=United States
 menu.item.cz=Czech Republic
 menu.item.de=Germany
 menu.item.es=Spain
+menu.item.seats=Seats
+menu.item.weight=WhatTheFuckIsAKilogram
+menu.item.types=Type
+menu.item.fueltype=FuelType
+menu.item.speed=Speed
+menu.item.mhp=MHP
+menu.item.rollingstock=RollingStock
+menu.item.passenger=Passenger
+menu.item.locomotive=Locomotive
+menu.item.diesel=Diesel
+menu.item.electric=Electric
+menu.item.freight=Freight
+menu.item.tanker=Tanker
+menu.item.tender=Tender
 
 train.owner.name=You are not the owner!
 train.locked.name=Locked
