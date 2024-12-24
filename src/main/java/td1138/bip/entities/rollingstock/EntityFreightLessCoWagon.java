@@ -64,7 +64,6 @@ public class EntityFreightLessCoWagon extends Freight implements IInventory {
                 "Yellow", "Russel Blue High 45ft");
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/Less_Co2_Brown.png",new String[]{},
                 "Brown", "Empty Wagon");
-
     }
 
     @Override
@@ -104,11 +103,6 @@ public class EntityFreightLessCoWagon extends Freight implements IInventory {
 
     @Override
     public String transportYear() { return "2006"; }
-
-    @Override
-    public String transportFuelType() {
-        return "Diesel-Electric";
-    }
 
     @Override
     public float transportTopSpeed() { return 0; }

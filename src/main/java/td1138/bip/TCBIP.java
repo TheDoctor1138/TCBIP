@@ -7,6 +7,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import td1138.bip.core.CommonProxy;
 import td1138.bip.entities.rollingstock.*;
+import td1138.bip.entities.rollingstock.EntityLocoGWRMogul;
 import td1138.bip.entities.trains.*;
 import td1138.bip.library.TCBIPInfo;
 import td1138.bip.recipes.TCBIPRecipeHandler;
@@ -63,11 +64,14 @@ public class TCBIP {
 		return new AbstractTrains[]{
 				new EntityLocoDieselClass74(null),
 				new EntityLocoDieselClass68(null),
-	    };
+		};
 	}
+
 	public static AbstractTrains[] listSteamTrains() {
 
-		return new AbstractTrains[]{};
+		return new AbstractTrains[]{
+				new EntityLocoGWRMogul(null),
+		};
 	}
 
 	public static AbstractTrains[] listPassenger() {
@@ -84,8 +88,8 @@ public class TCBIP {
 	public static AbstractTrains[] listFreight() {
 
 		return new AbstractTrains[]{
-		        new EntityFreightLessCoWagon(null),
-	    };
+				new EntityFreightLessCoWagon(null),
+		};
 	}
 
 	public static AbstractTrains[] listTanker() {
@@ -95,6 +99,8 @@ public class TCBIP {
 
 	public static AbstractTrains[] listTender() {
 
-		return new AbstractTrains[]{};
+		return new AbstractTrains[]{
+				new EntityTenderChurchward3500Gal(null),
+		};
 	}
 }
