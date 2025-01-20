@@ -103,7 +103,7 @@ public class EntityPassengerBRMk3Sleeper extends EntityRollingStock implements I
                 null,
                 new ItemStack(ItemIDs.bogie.item, 2, 0),
                 new ItemStack(ItemIDs.steelframe.item, 1, 0),
-                null,
+                new ItemStack(itemRedstone.getItem(), 4, 0),
                 new ItemStack(ItemIDs.seats.item, 2, 0),
                 new ItemStack(itemSteel.getItem(), 1, itemSteel.getItemDamage()),
                 new ItemStack(thisItem)};

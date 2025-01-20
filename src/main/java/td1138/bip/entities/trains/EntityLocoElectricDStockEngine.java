@@ -10,7 +10,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.oredict.OreDictionary;
 import td1138.bip.TCBIP;
 import td1138.bip.library.TCBIPInfo;
-import td1138.bip.models.trains.ModelCstockEngine;
 import td1138.bip.models.trains.ModelDstockEngine;
 import train.common.api.AbstractTrains;
 import train.common.api.ElectricTrain;
@@ -132,7 +131,7 @@ public class EntityLocoElectricDStockEngine extends ElectricTrain {
 
     @Override
     public float[] rotationPoints() {
-        return new float[]{1.3f, -1.3f};
+        return new float[]{1.5f, -1.5f};
     }
 
     /**

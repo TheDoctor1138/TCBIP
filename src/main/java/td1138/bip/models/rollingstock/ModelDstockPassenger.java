@@ -1,5 +1,5 @@
 //This File was created with the Minecraft-SMP Modelling Toolbox 2.3.0.0
-// Copyright (C) 2024 Minecraft-SMP.de
+// Copyright (C) 2025 Minecraft-SMP.de
 // This file is for Flan's Flying Mod Version 4.0.x+
 
 // Model: 
@@ -246,8 +246,8 @@ public class ModelDstockPassenger extends ModelConverter //Same as Filename
 		bodyModel[27].addShapeBox(0F, 0F, 0F, 53, 3, 1, 0F,0F, -0.5F, -1.75F, 0F, -0.5F, -1.75F, 0F, -0.5F, 2F, 0F, -0.5F, 2F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F); // Box 37
 		bodyModel[27].setRotationPoint(-26F, -17F, -10.25F);
 
-		bodyModel[28].addBox(0F, 0F, 0F, 1, 2, 7, 0F); // Box 39
-		bodyModel[28].setRotationPoint(-27F, 4F, -3.5F);
+		bodyModel[28].addShapeBox(0F, 0F, 0F, 1, 2, 7, 0F,0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F); // Box 39
+		bodyModel[28].setRotationPoint(-28F, 4F, -3.5F);
 
 		bodyModel[29].addShapeBox(0F, 0F, 0F, 53, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.9F, 0F, 0F, -0.9F, 0F, 0F, -0.9F, 0F, 0F, -0.9F, 0F); // Box 40
 		bodyModel[29].setRotationPoint(-26F, 4F, -11F);
@@ -472,7 +472,7 @@ public class ModelDstockPassenger extends ModelConverter //Same as Filename
 		bodyModel[100].setRotationPoint(-2.5F, 5F, -9F);
 
 		bodyModel[101].addBox(0F, 0F, 0F, 7, 2, 2, 0F); // Box 111
-		bodyModel[101].setRotationPoint(-28F, 6F, -1F);
+		bodyModel[101].setRotationPoint(-29F, 6F, -1F);
 
 		bodyModel[102].addBox(0F, 0F, 0F, 7, 2, 2, 0F); // Box 112
 		bodyModel[102].setRotationPoint(23F, 6F, -1F);
@@ -489,7 +489,7 @@ public class ModelDstockPassenger extends ModelConverter //Same as Filename
 		bodyModel[106].addShapeBox(0F, 0F, 0F, 1, 1, 3, 0F,0F, 0.2F, 0F, 0F, 0.2F, 0F, 0F, 0.2F, 0F, 0F, 0.2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 116
 		bodyModel[106].setRotationPoint(27.5F, 4.2F, 5F);
 
-		bodyModel[107].addBox(0F, 0F, 0F, 1, 2, 7, 0F); // Box 117
+		bodyModel[107].addShapeBox(0F, 0F, 0F, 1, 2, 7, 0F,1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F); // Box 117
 		bodyModel[107].setRotationPoint(28F, 4F, -3.5F);
 
 		bodyModel[108].addBox(0F, 0F, 0F, 1, 17, 7, 0F); // Box 118

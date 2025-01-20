@@ -43,7 +43,7 @@ public class EntityPassengerDStockPassenger extends EntityRollingStock implement
      */
     @Override
     public float[] rotationPoints() {
-        return new float[]{1.3f, -1.3f};
+        return new float[]{1.58f, -1.61f};
     }
 
     @Override
@@ -54,13 +54,13 @@ public class EntityPassengerDStockPassenger extends EntityRollingStock implement
     @Override
     public void registerSkins(){
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/D_Stock_Passenger_Blue.png",new String[]{},
-                "default", "");
+                "default", "London Underground Modern Livery");
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/D_Stock_Passenger_Grey.png",new String[]{},
-                "Grey", "");
+                "Grey", "Fictional Idk Livery Ask Kranker");
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/D_Stock_Passenger_Orange.png",new String[]{},
-                "Orange", "");
+                "Orange", "Metropolis Underground (Fictional)");
         SkinRegistry.addSkin(this.getClass(),TCBIPInfo.modID, "textures/trains/D_Stock_Passenger_Red.png",new String[]{},
-                "Red", "");
+                "Red", "London Underground Old Grey Livery");
     }
 
     @Override
@@ -145,7 +145,7 @@ public class EntityPassengerDStockPassenger extends EntityRollingStock implement
      * <h2>Rider offsets</h2>
      */
     @Override
-    public float[][] getRiderOffsets(){return new float[][]{{1.6f,-0.5f, 0.40f}};}
+    public float[][] getRiderOffsets(){return new float[][]{{0f,-0.5f, 0.0f}};}
 
     @Override
     public float[] getHitboxSize() {
