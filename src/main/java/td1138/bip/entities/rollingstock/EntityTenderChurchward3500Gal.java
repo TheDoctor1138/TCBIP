@@ -7,11 +7,14 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import td1138.bip.TCBIP;
 import td1138.bip.library.TCBIPInfo;
 import td1138.bip.models.rollingstock.ModelChurchward3500GalTender;
 import train.common.api.Freight;
+import train.common.api.LiquidManager;
 import train.common.api.Tender;
 import train.common.items.ItemRollingStock;
 import train.common.library.ItemIDs;
@@ -31,7 +34,7 @@ public class EntityTenderChurchward3500Gal extends Tender implements IInventory 
 
 
     public EntityTenderChurchward3500Gal(World world, double d, double d1, double d2) { super(world, d, d1, d2); }
-    public EntityTenderChurchward3500Gal(World world){ super(world); }
+    public EntityTenderChurchward3500Gal(World world){ super(world, FluidRegistry.WATER, 0, LiquidManager.WATER_FILTER); }
 
     /**
      * <h1>Variable Overrides</h1>

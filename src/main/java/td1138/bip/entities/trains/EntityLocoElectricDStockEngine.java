@@ -115,7 +115,7 @@ public class EntityLocoElectricDStockEngine extends ElectricTrain {
      *     Only the first 3 values of each set of floats are actually used.
      */
     @Override
-    public float[][] getRiderOffsets(){ return new float[][]{{-1.5f,-0.5f,-0.40f}};}
+    public float[][] getRiderOffsets(){ return new float[][]{{0.4f,-0.3f,1.40f}};}
 
     @Override
     public float[] getHitboxSize() {
@@ -177,7 +177,7 @@ public class EntityLocoElectricDStockEngine extends ElectricTrain {
     }
     @Override
     public float getPlayerScale(){
-        return 0.45f;
+        return 0.5f;
     }
 
 
@@ -247,7 +247,7 @@ public class EntityLocoElectricDStockEngine extends ElectricTrain {
      */
     @SideOnly(Side.CLIENT)
     @Override
-    public TrainSound getHorn(){return new TrainSound("tcbip:LUwhistle",1f,1,0);}
+    public TrainSound getHorn(){return new TrainSound("tcbip:LUwhistle",1f,0,0);}
 
     @SideOnly(Side.CLIENT)
     @Override

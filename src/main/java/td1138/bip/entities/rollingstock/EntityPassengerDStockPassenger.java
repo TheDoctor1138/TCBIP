@@ -145,7 +145,7 @@ public class EntityPassengerDStockPassenger extends EntityRollingStock implement
      * <h2>Rider offsets</h2>
      */
     @Override
-    public float[][] getRiderOffsets(){return new float[][]{{0f,-0.5f, 0.0f}};}
+    public float[][] getRiderOffsets(){return new float[][]{{0f,-0.3f, 0.0f}};}
 
     @Override
     public float[] getHitboxSize() {
