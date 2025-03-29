@@ -46,7 +46,7 @@ public class EntityPassengerCStockPassenger extends EntityRollingStock implement
      */
     @Override
     public float[] rotationPoints() {
-        return new float[]{1.61f, -1.68f};
+        return new float[]{1.41f, -1.31f};
     }
 
     @Override
@@ -148,7 +148,7 @@ public class EntityPassengerCStockPassenger extends EntityRollingStock implement
 
     @Override
     public float[] getHitboxSize() {
-        return new float[]{1.5f,2.1f,1.0f};
+        return new float[]{3.25f,2.1f,1.0f};
     }
 
     @Override

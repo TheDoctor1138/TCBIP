@@ -43,7 +43,7 @@ public class EntityFreightLessCoWagon extends Freight implements IInventory {
      * <h2>Bogie Offset</h2>
      */
     @Override
-    public float[] rotationPoints() { return new float[]{2.45f, -2.45f}; }
+    public float[] rotationPoints() { return new float[]{1.85f, -1.85f}; }
 
     @Override
     public float[][] modelOffsets() { return new float[][] {{0.0f,0.05f,0.0f}}; }
@@ -131,7 +131,7 @@ public class EntityFreightLessCoWagon extends Freight implements IInventory {
      */
 
     @Override
-    public float[] getHitboxSize() { return new float[]{0.55f,2.1f,1.0f}; }
+    public float[] getHitboxSize() { return new float[]{4.05f,2.1f,1.0f}; }
 
     @Override
     public ModelBase[] getModel(){return new ModelBase[]{new ModelLessCoWagon()};}
