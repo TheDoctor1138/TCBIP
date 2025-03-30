@@ -1,10 +1,7 @@
 package td1138.bip.entities.rollingstock;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import ebf.tim.api.SkinRegistry;
 import fexcraft.tmt.slim.ModelBase;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -16,8 +13,6 @@ import train.common.api.EntityRollingStock;
 import train.common.api.IPassenger;
 import train.common.items.ItemRollingStock;
 import train.common.library.ItemIDs;
-
-import javax.swing.*;
 
 /**
  * <h1>Pullman's Palace entity</h1>
@@ -48,12 +43,12 @@ public class EntityPassengerBRMk3Sleeper extends EntityRollingStock implements I
      */
     @Override
     public float[] rotationPoints() {
-        return new float[]{2.65f, -2.45f};
+        return new float[]{2.25f, -2.25f};
     }
 
     @Override
     public float[][] modelOffsets() {
-        return new float[][] {{0.0f,0.0f,0.0f}};
+        return new float[][] {{0.1f,0.0f,0.0f}};
     }
 
     @Override
@@ -163,11 +158,11 @@ public class EntityPassengerBRMk3Sleeper extends EntityRollingStock implements I
      * <h2>Rider offsets</h2>
      */
     @Override
-    public float[][] getRiderOffsets(){return new float[][]{{1.6f,-0.5f, 0.40f}};}
+    public float[][] getRiderOffsets(){return new float[][]{{1.6f,-0.2f, 0.20f}};}
 
     @Override
     public float[] getHitboxSize() {
-        return new float[]{0.55f,2.1f,1.0f};
+        return new float[]{6.1f,2.1f,1.0f};
     }
 
     @Override

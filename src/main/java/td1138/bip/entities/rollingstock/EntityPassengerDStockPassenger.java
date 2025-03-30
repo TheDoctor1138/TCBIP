@@ -149,7 +149,7 @@ public class EntityPassengerDStockPassenger extends EntityRollingStock implement
 
     @Override
     public float[] getHitboxSize() {
-        return new float[]{4.5f,2.1f,1.0f};
+        return new float[]{3.6f,2.1f,1.0f};
     }
 
     @Override

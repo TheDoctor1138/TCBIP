@@ -15,12 +15,12 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import org.lwjgl.opengl.GL11;
 
-public class ModelBR_MK3_Sleeper extends ModelConverter //Same as Filename
+public class ModelBR_MK3_Sleepera extends ModelConverter //Same as Filename
 {
 	int textureX = 512;
 	int textureY = 512;
 
-	public ModelBR_MK3_Sleeper() //Same as Filename
+	public ModelBR_MK3_Sleepera() //Same as Filename
 	{
 		bodyModel = new ModelRendererTurbo[282];
 
@@ -265,7 +265,7 @@ public class ModelBR_MK3_Sleeper extends ModelConverter //Same as Filename
 		bodyModel[228] = new ModelRendererTurbo(this, 35, 281, textureX, textureY); // Box 170
 		bodyModel[229] = new ModelRendererTurbo(this, 31, 303, textureX, textureY); // Box 170
 		bodyModel[230] = new ModelRendererTurbo(this, 31, 310, textureX, textureY); // Box 170
-		bodyModel[231] = new ModelRendererTurbo(this, 31, 316, textureX, textureY, "Lamp"); // Lamp
+		bodyModel[231] = new ModelRendererTurbo(this, 31, 316, textureX, textureY); // Lamp
 		bodyModel[232] = new ModelRendererTurbo(this, 53, 303, textureX, textureY); // Box 170
 		bodyModel[233] = new ModelRendererTurbo(this, 30, 311, textureX, textureY); // Box 170
 		bodyModel[234] = new ModelRendererTurbo(this, 29, 346, textureX, textureY); // Box 170
@@ -279,7 +279,7 @@ public class ModelBR_MK3_Sleeper extends ModelConverter //Same as Filename
 		bodyModel[242] = new ModelRendererTurbo(this, 93, 281, textureX, textureY); // Box 170
 		bodyModel[243] = new ModelRendererTurbo(this, 87, 303, textureX, textureY); // Box 170
 		bodyModel[244] = new ModelRendererTurbo(this, 87, 310, textureX, textureY); // Box 170
-		bodyModel[245] = new ModelRendererTurbo(this, 87, 316, textureX, textureY, "Lamp"); // Lamp
+		bodyModel[245] = new ModelRendererTurbo(this, 87, 316, textureX, textureY); // Lamp
 		bodyModel[246] = new ModelRendererTurbo(this, 109, 303, textureX, textureY); // Box 170
 		bodyModel[247] = new ModelRendererTurbo(this, 87, 311, textureX, textureY); // Box 170
 		bodyModel[248] = new ModelRendererTurbo(this, 84, 346, textureX, textureY); // Box 170

@@ -2,7 +2,6 @@ package td1138.bip.entities.rollingstock;
 
 import ebf.tim.api.SkinRegistry;
 import fexcraft.tmt.slim.ModelBase;
-import li.cil.oc.api.driver.item.Inventory;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -10,12 +9,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.oredict.OreDictionary;
 import td1138.bip.TCBIP;
 import td1138.bip.library.TCBIPInfo;
-import td1138.bip.models.rollingstock.ModelBR_MK3_Sleeper;
 import td1138.bip.models.rollingstock.ModelLessCoWagon;
-import train.common.api.EntityRollingStock;
 import train.common.api.Freight;
-import train.common.api.IPassenger;
-import train.common.entity.rollingStockOld.EntityFreightCart;
 import train.common.items.ItemRollingStock;
 import train.common.library.ItemIDs;
 
@@ -43,7 +38,7 @@ public class EntityFreightLessCoWagon extends Freight implements IInventory {
      * <h2>Bogie Offset</h2>
      */
     @Override
-    public float[] rotationPoints() { return new float[]{1.85f, -1.85f}; }
+    public float[] rotationPoints() { return new float[]{2.15f, -2.15f}; }
 
     @Override
     public float[][] modelOffsets() { return new float[][] {{0.0f,0.05f,0.0f}}; }
@@ -131,7 +126,7 @@ public class EntityFreightLessCoWagon extends Freight implements IInventory {
      */
 
     @Override
-    public float[] getHitboxSize() { return new float[]{4.05f,2.1f,1.0f}; }
+    public float[] getHitboxSize() { return new float[]{4.95f,2.1f,1.0f}; }
 
     @Override
     public ModelBase[] getModel(){return new ModelBase[]{new ModelLessCoWagon()};}
