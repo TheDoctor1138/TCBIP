@@ -48,7 +48,7 @@ public class EntityPassengerSNCBM6Tail extends EntityRollingStock implements IPa
 
     @Override
     public float[][] modelOffsets() {
-        return new float[][] {{0.0f,0.05f,0.0f}};
+        return new float[][] {{0.0f,0.06f,0.0f}};
     }
 
     @Override
@@ -147,14 +147,14 @@ public class EntityPassengerSNCBM6Tail extends EntityRollingStock implements IPa
      */
     @Override
     public float[][] getRiderOffsets(){return new float[][]{
-            {0f,-0.1f,0f},
-            {0f,0.5f,-0.40f}
+            {-0.19f,0.1f,-0.2f},
+            {0f,0.7f,-0.40f}
        };
     }
 
     @Override
     public float[] getHitboxSize() {
-        return new float[]{0.55f,2.1f,1.0f};
+        return new float[]{6.7f,2.1f,1.0f};
     }
 
     @Override

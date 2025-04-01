@@ -122,7 +122,7 @@ public class EntityLocoGWRMogul extends SteamTrain {
      *     Only the first 3 values of each set of floats are actually used.
      */
     @Override
-    public float[][] getRiderOffsets(){return new float[][]{{-1.8f,-1.3f, -0.45f}};}
+    public float[][] getRiderOffsets(){return new float[][]{{-1.7f,0.0f,0.45f}};}
 
     @Override
     public float getPlayerScale(){

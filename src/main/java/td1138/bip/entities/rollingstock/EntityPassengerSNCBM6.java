@@ -48,7 +48,7 @@ public class EntityPassengerSNCBM6 extends EntityRollingStock implements IPassen
 
     @Override
     public float[][] modelOffsets() {
-        return new float[][] {{0.0f,0.1f,0.0f}};
+        return new float[][] {{0.0f,0.12f,0.0f}};
     }
 
     @Override
@@ -148,11 +148,11 @@ public class EntityPassengerSNCBM6 extends EntityRollingStock implements IPassen
      * <h2>Rider offsets</h2>
      */
     @Override
-    public float[][] getRiderOffsets(){return new float[][]{{0f,-0.1f, 0.0f}};}
+    public float[][] getRiderOffsets(){return new float[][]{{-0.32f,0.1f, -0.2f}};}
 
     @Override
     public float[] getHitboxSize() {
-        return new float[]{0.55f,2.1f,1.0f};
+        return new float[]{6.7f,2.1f,1.0f};
     }
 
     @Override

@@ -148,7 +148,7 @@ public class EntityTenderChurchward3500Gal extends Tender implements IInventory 
     public int getSizeInventory() { return 3; }
 
     @Override
-    public float[] getHitboxSize() { return new float[]{0.55f,2.1f,1.0f}; }
+    public float[] getHitboxSize() { return new float[]{3.15f,2.1f,1.0f}; }
 
     @Override
     public ModelBase[] getModel(){return new ModelBase[]{new ModelChurchward3500GalTender()};}

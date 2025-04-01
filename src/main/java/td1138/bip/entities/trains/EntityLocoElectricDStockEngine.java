@@ -115,11 +115,11 @@ public class EntityLocoElectricDStockEngine extends ElectricTrain {
      *     Only the first 3 values of each set of floats are actually used.
      */
     @Override
-    public float[][] getRiderOffsets(){ return new float[][]{{0.4f,-0.3f,1.40f}};}
+    public float[][] getRiderOffsets(){ return new float[][]{{1.49f,-0.2f,-0.35f}};}
 
     @Override
     public float[] getHitboxSize() {
-        return new float[]{0.55f,2.1f,1f};
+        return new float[]{3.5f,2.1f,1f};
     }
 
 
@@ -141,7 +141,7 @@ public class EntityLocoElectricDStockEngine extends ElectricTrain {
      */
 
     @Override
-    public float transportMetricHorsePower(){return 2000f;}
+    public float transportMetricHorsePower(){return 500f;}
 
     @Override
     public String[] additionalItemText() {
@@ -188,7 +188,7 @@ public class EntityLocoElectricDStockEngine extends ElectricTrain {
 
     @Override
     public float[][] modelRotations() {
-        return new float[][] {{180.0f,180.0f,0.0f}};
+        return new float[][] {{180.0f,0.0f,0.0f}};
     }
 
     /**

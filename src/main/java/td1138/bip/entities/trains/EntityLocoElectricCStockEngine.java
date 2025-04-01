@@ -107,7 +107,7 @@ public class EntityLocoElectricCStockEngine extends ElectricTrain {
      */
 
     @Override
-    public float transportTopSpeed(){return 80f;}
+    public float transportTopSpeed(){return 81f;}
 
     /**
      * <h2>Inventory Size</h2>
@@ -123,12 +123,10 @@ public class EntityLocoElectricCStockEngine extends ElectricTrain {
      *     Only the first 3 values of each set of floats are actually used.
      */
     @Override
-    public float[][] getRiderOffsets(){ return new float[][]{{-1.5f,-0.5f,-0.40f}};}
+    public float[][] getRiderOffsets(){ return new float[][]{{1.49f,-0.2f,-0.35f}}; }
 
     @Override
-    public float[] getHitboxSize() {
-        return new float[]{0.55f,2.1f,1f};
-    }
+    public float[] getHitboxSize() { return new float[]{3.65f,2.1f,1f}; }
 
 
     /**
@@ -149,7 +147,7 @@ public class EntityLocoElectricCStockEngine extends ElectricTrain {
      */
 
     @Override
-    public float transportMetricHorsePower(){return 2000f;}
+    public float transportMetricHorsePower(){return 500f;}
 
     @Override
     public String[] additionalItemText() {
@@ -185,7 +183,7 @@ public class EntityLocoElectricCStockEngine extends ElectricTrain {
     }
     @Override
     public float getPlayerScale(){
-        return 0.45f;
+        return 0.5f;
     }
 
 
@@ -196,7 +194,7 @@ public class EntityLocoElectricCStockEngine extends ElectricTrain {
 
     @Override
     public float[][] modelRotations() {
-        return new float[][] {{180.0f,180.0f,0.0f}};
+        return new float[][] {{180.0f,0.0f,0.0f}};
     }
 
     /**

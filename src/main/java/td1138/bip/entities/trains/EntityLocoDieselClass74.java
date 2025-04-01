@@ -139,7 +139,7 @@ public class EntityLocoDieselClass74 extends DieselTrain {
      *     Only the first 3 values of each set of floats are actually used.
      */
     @Override
-    public float[][] getRiderOffsets(){ return new float[][]{{1.6f,-0.2f,0.3f}};}
+    public float[][] getRiderOffsets(){ return new float[][]{{1.6f,-0.0f,-0.3f}};}
 
     @Override
     public float getPlayerScale(){
