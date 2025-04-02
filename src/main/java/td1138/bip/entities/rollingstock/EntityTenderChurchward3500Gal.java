@@ -2,18 +2,14 @@ package td1138.bip.entities.rollingstock;
 
 import ebf.tim.api.SkinRegistry;
 import fexcraft.tmt.slim.ModelBase;
-import mods.railcraft.api.carts.IFluidCart;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import td1138.bip.TCBIP;
 import td1138.bip.library.TCBIPInfo;
 import td1138.bip.models.rollingstock.ModelChurchward3500GalTender;
-import train.common.api.Freight;
 import train.common.api.LiquidManager;
 import train.common.api.Tender;
 import train.common.items.ItemRollingStock;
@@ -24,7 +20,9 @@ import train.common.library.ItemIDs;
  * For more information on the overrides and functions:
  * @author Eternal Blue Flame
  */
-public class EntityTenderChurchward3500Gal extends Tender implements IInventory {
+public class EntityTenderChurchward3500Gal extends Tender {
+    public int freightInventorySize;
+    public int numFreightSlots;
     /*private static final String[] itemDescription = new String[]{
             "\u00A77" + StatCollector.translateToLocal("menu.item.weight") +": 2 " + StatCollector.translateToLocal("menu.item.tons"),
             "\u00A77" + StatCollector.translateToLocal("menu.item.seats") +": 4 " + StatCollector.translateToLocal("menu.item.players")};*/
@@ -32,9 +30,13 @@ public class EntityTenderChurchward3500Gal extends Tender implements IInventory 
 
     public static final Item thisItem = new ItemRollingStock(new EntityTenderChurchward3500Gal(null), TCBIPInfo.modID, TCBIP.tabBIP);
 
-
-    public EntityTenderChurchward3500Gal(World world, double d, double d1, double d2) { super(world, d, d1, d2); }
+    public EntityTenderChurchward3500Gal(World world, double d, double d1, double d2) { super(world, d ,d1, d2); }
     public EntityTenderChurchward3500Gal(World world){ super(world, FluidRegistry.WATER, 0, LiquidManager.WATER_FILTER); }
+
+    public void initFreightTender() {
+        freightInventorySize = 16;
+        tenderItems = new ItemStack[freightInventorySize];
+    }
 
     /**
      * <h1>Variable Overrides</h1>
@@ -145,7 +147,9 @@ public class EntityTenderChurchward3500Gal extends Tender implements IInventory 
      */
 
     @Override
-    public int getSizeInventory() { return 3; }
+    public int getSizeInventory() {
+        return freightInventorySize;
+    }
 
     @Override
     public float[] getHitboxSize() { return new float[]{3.15f,2.1f,1.0f}; }

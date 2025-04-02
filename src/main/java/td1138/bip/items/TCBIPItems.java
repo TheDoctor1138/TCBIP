@@ -10,7 +10,7 @@ package td1138.bip.items;
 import net.minecraft.item.Item;
 import td1138.bip.TCBIP;
 import td1138.bip.library.TCBIPInfo;
-import train.common.library.TraincraftRegistry;
+import train.common.library.*;
 
 public class TCBIPItems {
 

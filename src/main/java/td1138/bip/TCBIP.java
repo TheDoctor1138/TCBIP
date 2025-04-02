@@ -5,6 +5,9 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import td1138.bip.blocks.TCBlocks;
 import td1138.bip.core.CommonProxy;
 import td1138.bip.entities.rollingstock.*;
 import td1138.bip.entities.rollingstock.EntityLocoGWRMogul;
@@ -42,6 +45,7 @@ public class TCBIP {
 		TraincraftRegistry.registerTransports("", listTender());
 
 		TCBIPItems.init();
+		TCBlocks.init();
 		TCBIPRecipeHandler.init();
 
 		/* GUI handler initiation */
@@ -101,6 +105,13 @@ public class TCBIP {
 
 		return new AbstractTrains[]{
 				new EntityTenderChurchward3500Gal(null),
+		};
+	}
+
+	public static Blocks[] listItems() {
+
+		return new Blocks[]{
+				new Item.BR_2_Aspect_Signal(null),
 		};
 	}
 }

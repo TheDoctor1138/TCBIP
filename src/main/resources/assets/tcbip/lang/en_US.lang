@@ -2,8 +2,10 @@
 <!-- ## Only replace the words on the right side of "=" ## -->
 <!-- ## Save the file the same way this file was saved but replace "en_US" with appropriate language name ## -->
 
-<!-- Items -->
+<!-- Blocks -->
+tile.tcbip:BR_2_Aspect_Signal.name=BR 2 Aspect Signal
 
+<!-- Items -->
 item.bipRecipeBook.name=BIP Recipe Book
 item.NMBS HLE Class 18.name=NMBS HLE Class 18
 item.NMBS M6 Coach.name=NMBS M6 Coach
