@@ -14,13 +14,13 @@ import train.common.library.*;
 
 public class TCBIPItems {
 
-    public static void init() {
-        registerItems();
-    }
+    public static void init() { registerItems(); }
 
     public static Item itemBIPRecipeBook = new ItemRecipeBook();
+    public static Item itemBR_2_Aspect_Signal = new ItemBR_2_Aspect_Signal(null);
 
     public static void registerItems(){
         TraincraftRegistry.RegisterItem(itemBIPRecipeBook, TCBIPInfo.modID, "bipRecipeBook", TCBIP.tabBIP);
+        TraincraftRegistry.RegisterItem(itemBR_2_Aspect_Signal, TCBIPInfo.modID, "BR_2_Aspect_Signal", TCBIP.tabBIP);
     }
 }

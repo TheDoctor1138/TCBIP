@@ -16,16 +16,18 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import td1138.bip.tile.switchStand.TileBR_2_Aspect_Signal;
 import train.common.Traincraft;
-import train.common.tile.switchStand.TilesignalSpanish;
+import train.common.api.blocks.BlockDynamic;
+import train.common.api.blocks.BlockSignal;
+import train.common.api.blocks.BlockSwitch;
 
 import java.util.List;
 import java.util.Random;
 
-public class BlockBR_2_Aspect_Signal extends Block {
+public class BlockBR_2_Aspect_Signal extends BlockSwitch {
     private IIcon texture;
 
     public BlockBR_2_Aspect_Signal() {
-        super(Material.rock);
+        super(Material.rock,0);
         setCreativeTab(Traincraft.tcTab);
         //this.setTickRandomly(true);
         //this.setBlockBounds(0.5F , 0.0F, 0.5F , 0.5F ,  2.0F, 0.5F);
@@ -52,9 +54,7 @@ public class BlockBR_2_Aspect_Signal extends Block {
     }
 
     @Override
-    public TileEntity createTileEntity(World world, int metadata) {
-        return new TileBR_2_Aspect_Signal();
-    }
+    public TileEntity createTileEntity(World world, int metadata) { return new TileBR_2_Aspect_Signal(); }
 
     @Override
     public int getRenderType() {

@@ -9,13 +9,14 @@ package td1138.bip.library;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
+import td1138.bip.items.ItemBR_2_Aspect_Signal;
 import train.common.items.*;
 import train.common.items.slabs.*;
 import train.common.wellcar.ItemFortyFootContainer;
 
 public enum BlockIDs {
 
-	BR_2_Aspect_Signal(false,null),//ItemBR_2_Aspect_Signal.class
+	BR_2_Aspect_Signal(false, null),//ItemBR_2_Aspect_Signal.class
 
 
 	;

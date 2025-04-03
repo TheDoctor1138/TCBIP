@@ -71,7 +71,7 @@ public class GuiRecipeBook extends GuiScreen {
                 this.add(GuiRecipeBook.this.new StackToDraw(new ItemStack(ItemIDs.minecartV60_DB.item), 160, 175));
             }
         });
-        this.addPage("Modelers:\nchazi898,\nkrankerbusfahrer,\nsquidman88,\nTheDoctor1138.\n\nGitHub 1.7.10 port Team: \nEternal BlueFlame,\nNitroxydeX,\nFirEmerald,\nHagurd\nTheDoctor1138\n\nWebsite:\nhttp://traincraft-mod.\nblogspot.com", "", "right", new ArrayList<StackToDraw>() {
+        this.addPage("Modelers:\nChazi898,\nKrankerbusfahrer,\nSquidman888,\nTheDoctor1138.\n\nGitHub 1.7.10 port Team: \nEternal BlueFlame,\nNitroxydeX,\nFirEmerald,\nHagurd\nTheDoctor1138\n\nWebsite:\nhttp://traincraft-mod.\nblogspot.com", "", "right", new ArrayList<StackToDraw>() {
             {
                 this.add(GuiRecipeBook.this.new StackToDraw(new ItemStack(ItemIDs.minecartLocoSteamAdler.item), 20, 16));
                 this.add(GuiRecipeBook.this.new StackToDraw(new ItemStack(TCBlocks.assemblyTableII), 170, 16));

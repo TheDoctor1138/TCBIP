@@ -11,7 +11,7 @@ import net.minecraft.item.Item;
 import train.common.api.IItemIDs;
 
 public enum ItemIDs implements IItemIDs {
-	BR_2_Aspect_Signal("ItemBR_2_Aspect_Signal", "signalK", 2),
+	BR_2_Aspect_Signal("ItemBR_2_Aspect_Signal", "BR_2_Aspect_Signal", 2),
 
 
 	;
