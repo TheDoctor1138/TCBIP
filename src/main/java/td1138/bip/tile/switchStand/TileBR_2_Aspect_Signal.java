@@ -6,10 +6,17 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.NetworkManager;
+import net.minecraft.network.Packet;
+import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
+import net.minecraftforge.common.util.ForgeDirection;
+import td1138.bip.api.blocks.TileSwitch;
 import td1138.bip.blocks.TCBlocks;
+import td1138.bip.blocks.blockSwitch.BlockBR_2_Aspect_Signal;
 import train.common.api.blocks.BlockSwitch;
-import train.common.api.blocks.TileSwitch;
 
 import java.util.Random;
 
@@ -21,7 +28,7 @@ public class TileBR_2_Aspect_Signal extends TileSwitch {
 
     public TileBR_2_Aspect_Signal(){
     }
-    public TileBR_2_Aspect_Signal(BlockSwitch block){
+    public TileBR_2_Aspect_Signal(BlockBR_2_Aspect_Signal block){
         host = block;
     }
 
@@ -32,6 +39,12 @@ public class TileBR_2_Aspect_Signal extends TileSwitch {
 
     public int getState(){
        return state;
+    }
+
+    @Override
+    public void readFromNBT(NBTTagCompound tag){
+        super.readFromNBT(tag);
+        state = tag.getInteger("state");
     }
 
     @Override

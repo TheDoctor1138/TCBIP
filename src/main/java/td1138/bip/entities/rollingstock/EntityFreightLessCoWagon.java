@@ -2,6 +2,7 @@ package td1138.bip.entities.rollingstock;
 
 import ebf.tim.api.SkinRegistry;
 import fexcraft.tmt.slim.ModelBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -10,8 +11,10 @@ import net.minecraftforge.oredict.OreDictionary;
 import td1138.bip.TCBIP;
 import td1138.bip.library.TCBIPInfo;
 import td1138.bip.models.rollingstock.ModelLessCoWagon;
+import train.common.Traincraft;
 import train.common.api.Freight;
 import train.common.items.ItemRollingStock;
+import train.common.library.GuiIDs;
 import train.common.library.ItemIDs;
 
 /**
@@ -29,7 +32,15 @@ public class EntityFreightLessCoWagon extends Freight implements IInventory {
 
 
     public EntityFreightLessCoWagon(World world, double d, double d1, double d2) { super(world, d, d1, d2); }
-    public EntityFreightLessCoWagon(World world){ super(world); }
+    public EntityFreightLessCoWagon(World world){ super(world); initFreightCart(); }
+    public int freightInventorySize;
+    public int numFreightSlots;
+
+    public void initFreightCart() {
+        numFreightSlots = 9;
+        freightInventorySize = getInventoryRows()*9;
+        cargoItems = new ItemStack[freightInventorySize];
+    }
 
     /**
      * <h1>Variable Overrides</h1>
@@ -126,10 +137,28 @@ public class EntityFreightLessCoWagon extends Freight implements IInventory {
      */
 
     @Override
+    public float[][] getRiderOffsets(){return null; }
+
+    @Override
     public float[] getHitboxSize() { return new float[]{4.95f,2.1f,1.0f}; }
 
     @Override
     public ModelBase[] getModel(){return new ModelBase[]{new ModelLessCoWagon()};}
+
+    @Override
+    public boolean interactFirst(EntityPlayer entityplayer) {
+        playerEntity = entityplayer;
+        if ((super.interactFirst(entityplayer))) {
+            return false;
+        }
+        entityplayer.openGui(Traincraft.instance, GuiIDs.FREIGHT, worldObj, this.getEntityId(), -1, (int) this.posZ);
+        return true;
+    }
+
+    @Override
+    public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+        return true;
+    }
 
     /**
      * <h2>pre-asigned values</h2>

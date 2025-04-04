@@ -76,6 +76,10 @@ public class EntityLocoDieselClass74 extends DieselTrain {
     public boolean isFictional(){return false;}
     @Override
     public float transportTractiveEffort(){return 0;}
+    @Override
+    public String getInventoryName() {
+        return "BR Class 74";
+    }
 
     @Override
     public void registerSkins(){

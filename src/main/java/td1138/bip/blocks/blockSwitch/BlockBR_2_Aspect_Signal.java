@@ -14,11 +14,11 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
+import td1138.bip.api.blocks.BlockSwitch;
 import td1138.bip.tile.switchStand.TileBR_2_Aspect_Signal;
 import train.common.Traincraft;
 import train.common.api.blocks.BlockDynamic;
 import train.common.api.blocks.BlockSignal;
-import train.common.api.blocks.BlockSwitch;
 
 import java.util.List;
 import java.util.Random;
@@ -55,6 +55,9 @@ public class BlockBR_2_Aspect_Signal extends BlockSwitch {
 
     @Override
     public TileEntity createTileEntity(World world, int metadata) { return new TileBR_2_Aspect_Signal(); }
+
+    @Override
+    public TileEntity createNewTileEntity(World world, int metadata) { return new TileBR_2_Aspect_Signal(); }
 
     @Override
     public int getRenderType() {
@@ -99,6 +102,9 @@ public class BlockBR_2_Aspect_Signal extends BlockSwitch {
     @Override
     public void onBlockPlacedBy(World world, int i, int j, int k, EntityLivingBase entityliving, ItemStack stack) {
         super.onBlockPlacedBy(world, i, j, k, entityliving, stack);
+        if (!(world.getTileEntity(i, j, k) instanceof TileBR_2_Aspect_Signal)) {
+            return;
+        }
         TileBR_2_Aspect_Signal te = (TileBR_2_Aspect_Signal) world.getTileEntity(i, j, k);
         if (te != null) {
             int dir = MathHelper.floor_double((double) ((entityliving.rotationYaw * 4F) / 360F) + 0.5D) & 3;

@@ -73,6 +73,10 @@ public class EntityLocoElectricHLEClass18 extends ElectricTrain {
     public boolean isFictional(){return false;}
     @Override
     public float transportTractiveEffort(){return 0;}
+    @Override
+    public String getInventoryName() {
+        return "NMBS HLE Class 18";
+    }
 
     @Override
     public void registerSkins(){

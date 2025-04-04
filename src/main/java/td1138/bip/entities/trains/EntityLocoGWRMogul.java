@@ -1,4 +1,4 @@
-package td1138.bip.entities.rollingstock;
+package td1138.bip.entities.trains;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -75,6 +75,10 @@ public class EntityLocoGWRMogul extends SteamTrain {
     public boolean isFictional(){return false;}
     @Override
     public float transportTractiveEffort(){return 0;}
+    @Override
+    public String getInventoryName() {
+        return "GWR Mogul";
+    }
 
     @Override
     public void registerSkins(){

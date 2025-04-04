@@ -2,6 +2,8 @@ package td1138.bip.entities.rollingstock;
 
 import ebf.tim.api.SkinRegistry;
 import fexcraft.tmt.slim.ModelBase;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -10,9 +12,11 @@ import net.minecraftforge.oredict.OreDictionary;
 import td1138.bip.TCBIP;
 import td1138.bip.library.TCBIPInfo;
 import td1138.bip.models.rollingstock.ModelChurchward3500GalTender;
+import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.Tender;
 import train.common.items.ItemRollingStock;
+import train.common.library.GuiIDs;
 import train.common.library.ItemIDs;
 
 /**
@@ -31,7 +35,7 @@ public class EntityTenderChurchward3500Gal extends Tender {
     public static final Item thisItem = new ItemRollingStock(new EntityTenderChurchward3500Gal(null), TCBIPInfo.modID, TCBIP.tabBIP);
 
     public EntityTenderChurchward3500Gal(World world, double d, double d1, double d2) { super(world, d ,d1, d2); }
-    public EntityTenderChurchward3500Gal(World world){ super(world, FluidRegistry.WATER, 0, LiquidManager.WATER_FILTER); }
+    public EntityTenderChurchward3500Gal(World world){ super(world, FluidRegistry.WATER, 0, LiquidManager.WATER_FILTER); initFreightTender(); }
 
     public void initFreightTender() {
         freightInventorySize = 16;
@@ -152,10 +156,41 @@ public class EntityTenderChurchward3500Gal extends Tender {
     }
 
     @Override
-    public float[] getHitboxSize() { return new float[]{3.15f,2.1f,1.0f}; }
+    public String getInventoryName() {
+        return "Churchward 3500 Gal Tender";
+    }
+
+    @Override
+    public boolean interactFirst(EntityPlayer entityplayer) {
+        playerEntity = entityplayer;
+        if ((super.interactFirst(entityplayer))) {
+            return false;
+        }
+        if (!this.worldObj.isRemote) {
+            entityplayer.openGui(Traincraft.instance, GuiIDs.TENDER, worldObj, this.getEntityId(), -1, (int) this.posZ);
+        }
+        return true;
+    }
+
+    @Override
+    public float[][] getRiderOffsets(){return null; }
+
+    @Override
+    public float[] getHitboxSize() { return new float[]{3.1f,2.1f,1.0f}; }
 
     @Override
     public ModelBase[] getModel(){return new ModelBase[]{new ModelChurchward3500GalTender()};}
+
+    @Override
+    public void onUpdate() {
+        super.onUpdate();
+        checkInvent(tenderItems[0], this);
+    }
+
+    @Override
+    public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+        return true;
+    }
 
     /**
      * <h2>pre-asigned values</h2>

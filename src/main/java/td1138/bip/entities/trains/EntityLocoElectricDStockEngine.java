@@ -73,6 +73,10 @@ public class EntityLocoElectricDStockEngine extends ElectricTrain {
     public boolean isFictional(){return false;}
     @Override
     public float transportTractiveEffort(){return 0;}
+    @Override
+    public String getInventoryName() {
+        return "London Underground D-Stock Engine";
+    }
 
     @Override
     public void registerSkins(){

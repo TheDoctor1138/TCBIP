@@ -13,6 +13,7 @@ import td1138.bip.blocks.blockSwitch.BlockBR_2_Aspect_Signal;
 import td1138.bip.library.BlockIDs;
 import train.common.Traincraft;
 import train.common.library.Info;
+import train.common.library.TraincraftRegistry;
 
 public class TCBlocks {
 
@@ -44,6 +45,7 @@ public class TCBlocks {
 	}
 
 	public static void setHarvestLevels() {
+
 		BlockIDs.BR_2_Aspect_Signal.block.setHarvestLevel("pickaxe",1);
 	}
 }

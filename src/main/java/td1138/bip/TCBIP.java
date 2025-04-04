@@ -6,21 +6,23 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import td1138.bip.blocks.TCBlocks;
 import td1138.bip.blocks.blockSwitch.BlockBR_2_Aspect_Signal;
 import td1138.bip.core.CommonProxy;
 import td1138.bip.entities.rollingstock.*;
-import td1138.bip.entities.rollingstock.EntityLocoGWRMogul;
 import td1138.bip.entities.trains.*;
 import td1138.bip.items.ItemBR_2_Aspect_Signal;
 import td1138.bip.library.TCBIPInfo;
 import td1138.bip.recipes.TCBIPRecipeHandler;
 import td1138.bip.items.TCBIPItems;
+import train.common.Traincraft;
 import train.common.api.AbstractTrains;
 import train.common.core.CreativeTabTraincraft;
 import train.common.core.handlers.CraftingHandler;
+import train.common.library.Info;
 import train.common.library.TraincraftRegistry;
 
 @Mod(modid = TCBIPInfo.modID, version = TCBIPInfo.modVersion, name = TCBIPInfo.modName ,dependencies = "required-after:tc")

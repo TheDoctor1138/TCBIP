@@ -73,6 +73,10 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
     public boolean isFictional(){return false;}
     @Override
     public float transportTractiveEffort(){return 0;}
+    @Override
+    public String getInventoryName() {
+        return "BR Class 88";
+    }
 
     @Override
     public void registerSkins(){
@@ -175,11 +179,11 @@ public class EntityLocoElectricClass88 extends ElectricTrain {
     public int getTier(){
         return 3;
     }
+
     @Override
     public float getPlayerScale(){
         return 0.65f;
     }
-
 
     @Override
     public float[][] modelOffsets() {
