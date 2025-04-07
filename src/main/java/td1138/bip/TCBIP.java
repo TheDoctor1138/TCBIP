@@ -1,28 +1,24 @@
 package td1138.bip;
 
-import buildcraft.core.lib.EntityBlock;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import td1138.bip.blocks.TCBlocks;
-import td1138.bip.blocks.blockSwitch.BlockBR_2_Aspect_Signal;
 import td1138.bip.core.CommonProxy;
 import td1138.bip.entities.rollingstock.*;
 import td1138.bip.entities.trains.*;
-import td1138.bip.items.ItemBR_2_Aspect_Signal;
+import td1138.bip.items.TCBIPItems;
 import td1138.bip.library.TCBIPInfo;
 import td1138.bip.recipes.TCBIPRecipeHandler;
-import td1138.bip.items.TCBIPItems;
-import train.common.Traincraft;
 import train.common.api.AbstractTrains;
 import train.common.core.CreativeTabTraincraft;
 import train.common.core.handlers.CraftingHandler;
-import train.common.library.Info;
+import train.common.core.handlers.PacketHandler;
+import train.common.items.TCItems;
 import train.common.library.TraincraftRegistry;
 
 @Mod(modid = TCBIPInfo.modID, version = TCBIPInfo.modVersion, name = TCBIPInfo.modName ,dependencies = "required-after:tc")
@@ -36,9 +32,10 @@ public class TCBIP {
 
 	@SidedProxy(clientSide = "td1138.bip.core.ClientProxy", serverSide = "td1138.bip.core.CommonProxy")
 	public static CommonProxy proxy;
+	private Object FMLPreInitializationEvent;
 
 	@Mod.EventHandler
-	public void init(FMLInitializationEvent event) {
+	public void init(cpw.mods.fml.common.event.FMLPreInitializationEvent event) {
 
 		tabBIP = new CreativeTabTraincraft("B.I.P.", TCBIPInfo.modID, "trains/bipLogo");
 		TraincraftRegistry.registerTransports("", listSteamTrains());
@@ -50,14 +47,20 @@ public class TCBIP {
 		TraincraftRegistry.registerTransports("", listTender());
 
 		TCBlocks.init();
+		TCItems.init();
 		TCBIPRecipeHandler.init();
 
 		/* GUI handler initiation */
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, proxy);
 		FMLCommonHandler.instance().bus().register(new CraftingHandler());
 
-	}
+		proxy.registerTileEntities();
+		proxy.registerBookHandler();
+		PacketHandler.init();
+		proxy.registerRenderInformation();
+		proxy.registerEvents(event);
 
+	}
 
 	public static AbstractTrains[] listElectricTrains() {
 		return new AbstractTrains[]{

@@ -1,6 +1,9 @@
 package td1138.bip.core;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.IGuiHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 import ebf.tim.entities.EntitySeat;
@@ -14,6 +17,8 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.client.MinecraftForgeClient;
+import net.minecraftforge.common.ForgeChunkManager;
+import net.minecraftforge.common.MinecraftForge;
 import org.lwjgl.opengl.GL11;
 import td1138.bip.blocks.blockSwitch.BlockBR_2_Aspect_Signal;
 import td1138.bip.gui.GuiRecipeBook;
@@ -28,6 +33,8 @@ import train.common.api.Freight;
 import train.common.api.LiquidTank;
 import train.common.api.Tender;
 import train.common.containers.*;
+import train.common.core.handlers.ChunkEvents;
+import train.common.core.handlers.WorldEvents;
 import train.common.entity.digger.EntityRotativeDigger;
 import train.common.entity.rollingStockOld.EntityJukeBoxCart;
 import train.common.entity.rollingStockOld.EntityTracksBuilder;
@@ -126,4 +133,18 @@ public class CommonProxy implements IGuiHandler {
         @Override
         protected void bindTexture(ResourceLocation p_147499_1_){}
     };
+
+    public void registerEvents(FMLPreInitializationEvent event) {
+        WorldEvents worldEvents = new WorldEvents();
+        ChunkEvents chunkEvents = new ChunkEvents();
+
+        registerEvent(worldEvents);
+        registerEvent(chunkEvents);
+        ForgeChunkManager.setForcedChunkLoadingCallback(Traincraft.instance, chunkEvents);
+    }
+
+    public void registerEvent(Object o) {
+        FMLCommonHandler.instance().bus().register(o);
+        MinecraftForge.EVENT_BUS.register(o);
+    }
 }

@@ -4,9 +4,13 @@ import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
 import ebf.tim.entities.EntitySeat;
+import net.minecraft.client.renderer.entity.Render;
+import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
 import net.minecraftforge.client.MinecraftForgeClient;
+import org.lwjgl.opengl.GL11;
 import td1138.bip.core.handlers.RecipeBookHandler;
 import td1138.bip.gui.GuiRecipeBook;
 import net.minecraft.client.Minecraft;
@@ -82,6 +86,32 @@ public class ClientProxy extends CommonProxy {
                 return null;
         }
     }
+
+    @Override
+    public Object getTESR(){return specialRenderer;}
+
+    public static final TileEntitySpecialRenderer specialRenderer = new TileEntitySpecialRenderer() {
+        @Override
+        public void renderTileEntityAt(TileEntity tileEntity, double x, double y, double z, float p_147500_8_) {
+            GL11.glPushMatrix();
+            GL11.glTranslated(x,y, z);
+            tileEntity.func_145828_a(null);
+            GL11.glPopMatrix();
+        }
+
+        @Override
+        protected void bindTexture(ResourceLocation p_147499_1_){}
+    };
+
+    private static final Render nullRender = new Render() {
+        @Override
+        public void doRender(Entity p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_) {}
+
+        @Override
+        protected ResourceLocation getEntityTexture(Entity p_110775_1_) {
+            return null;
+        }
+    };
 
     @Override
     public GuiScreen getCurrentScreen() {
