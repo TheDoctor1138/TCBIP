@@ -13,16 +13,19 @@ import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraftforge.common.util.ForgeDirection;
+import td1138.bip.api.blocks.BlockSwitch;
 import td1138.bip.api.blocks.TileSwitch;
 import td1138.bip.blocks.TCBlocks;
 import td1138.bip.blocks.blockSwitch.BlockBR_2_Aspect_Signal;
-import train.common.api.blocks.BlockSwitch;
+import train.common.api.blocks.BlockDynamic;
+import train.common.tile.TileSignal;
+import train.common.tile.TileTCRail;
 
 import java.util.Random;
 
 public class TileBR_2_Aspect_Signal extends TileSwitch {
 
-    public int state = 1;// 0=red 1=green
+    public int state = 0;// 0=green 1=yellow
     private int updateTicks = 0;
     private static Random rand = new Random();
 

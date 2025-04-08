@@ -12,13 +12,14 @@ import net.minecraftforge.client.MinecraftForgeClient;
 import org.lwjgl.opengl.GL11;
 import fexcraft.tmt.slim.Tessellator;
 import td1138.bip.library.BlockIDs;
+import td1138.bip.library.TCBIPInfo;
 import td1138.bip.models.renderSwitch.models.ModelBR_2_Aspect_Signal;
 import train.client.render.renderSwitch.models.ModelsignalSpanish;
 import train.common.library.Info;
 
 public class ItemRenderBR_2_Aspect_Signal implements IItemRenderer {
     private static final ModelBR_2_Aspect_Signal modelSwitch = new ModelBR_2_Aspect_Signal();
-    private static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation,Info.modelTexPrefix + "BR_2_Aspect_Signal_Green.png");
+    private static final ResourceLocation texture = new ResourceLocation(TCBIPInfo.resourceLocation,Info.modelTexPrefix + "BR_2_Aspect_Signal_Green.png");
     private Object IIconRegister;
     private Object IItemRenderer;
     private IIcon itemIcon;
@@ -40,7 +41,7 @@ public class ItemRenderBR_2_Aspect_Signal implements IItemRenderer {
 
     @Override
     public void renderItem(IItemRenderer.ItemRenderType type, ItemStack item, Object... data) {
-        Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "BR_2_Aspect_Signal_Green.png"));
+        Tessellator.bindTexture(new ResourceLocation(TCBIPInfo.resourceLocation, TCBIPInfo.modelTexPrefix + "BR_2_Aspect_Signal_Green.png"));
         switch (type) {
             case ENTITY: {
                 renderSwitch(0f, 0f, 0f, 1f);
@@ -68,7 +69,7 @@ public class ItemRenderBR_2_Aspect_Signal implements IItemRenderer {
 
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
-        this.itemIcon = iconRegister.registerIcon(Info.modID.toLowerCase() + ":BR_2_Aspect_Signal");
+        this.itemIcon = iconRegister.registerIcon(TCBIPInfo.modID.toLowerCase() + ":BR_2_Aspect_Signal");
     }
 
     /*

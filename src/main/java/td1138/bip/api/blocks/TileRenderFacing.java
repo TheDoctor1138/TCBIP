@@ -210,9 +210,9 @@ public class TileRenderFacing extends TileEntity {
 
 
     @Override
-    public void writeToNBT(NBTTagCompound tag){
-        super.writeToNBT(tag);
-        tag.setInteger("f", facing);
+    public void writeToNBT(NBTTagCompound nbtTagCompound){
+        super.writeToNBT(nbtTagCompound);
+        nbtTagCompound.setInteger("f", facing);
     }
 
     @Override

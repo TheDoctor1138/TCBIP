@@ -11,7 +11,7 @@ import net.minecraft.item.Item;
 import train.common.api.IItemIDs;
 
 public enum ItemIDs implements IItemIDs {
-	BIPRecipeBook("ItemRecipeBook", "item_book_black", 1),
+	RecipeBook("ItemRecipeBook", "item_book_black", 1),
 	BR_2_Aspect_Signal("ItemTCRail", "BR_2_Aspect_Signal", 2),
 	;
 

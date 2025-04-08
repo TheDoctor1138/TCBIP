@@ -20,16 +20,16 @@ public class TCBIPItems {
         loadItems();
     }
 
-    public static Item BIPRecipeBook = new ItemRecipeBook();
+    public static Item RecipeBook = new ItemRecipeBook();
     public static Item itemBR_2_Aspect_Signal = new ItemBR_2_Aspect_Signal(null);
 
     private static void loadItems() {
-        ItemIDs.BIPRecipeBook.item = new td1138.bip.items.ItemRecipeBook();
+        ItemIDs.RecipeBook.item = new td1138.bip.items.ItemRecipeBook();
         ItemIDs.BR_2_Aspect_Signal.item = new td1138.bip.items.ItemBR_2_Aspect_Signal(null);
     }
 
     public static void registerItems() {
-        TraincraftRegistry.RegisterItem(BIPRecipeBook, TCBIPInfo.modID, "BIPRecipeBook", TCBIP.tabBIP);
+        TraincraftRegistry.RegisterItem(RecipeBook, TCBIPInfo.modID, "RecipeBook", TCBIP.tabBIP);
         TraincraftRegistry.RegisterItem(itemBR_2_Aspect_Signal, TCBIPInfo.modID, "BR_2_Aspect_Signal", TCBIP.tabBIP);
     }
 }

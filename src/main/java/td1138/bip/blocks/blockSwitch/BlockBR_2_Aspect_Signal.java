@@ -15,6 +15,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import td1138.bip.api.blocks.BlockSwitch;
+import td1138.bip.library.BlockIDs;
 import td1138.bip.tile.switchStand.TileBR_2_Aspect_Signal;
 import train.common.Traincraft;
 import train.common.api.blocks.BlockDynamic;
@@ -57,7 +58,7 @@ public class BlockBR_2_Aspect_Signal extends BlockSwitch {
     public TileEntity createTileEntity(World world, int metadata) { return new TileBR_2_Aspect_Signal(); }
 
     @Override
-    public TileEntity createNewTileEntity(World world, int metadata) { return new TileBR_2_Aspect_Signal(); }
+    public TileEntity createNewTileEntity(World world, int metadata) { return new TileBR_2_Aspect_Signal(this); }
 
     @Override
     public int getRenderType() {
@@ -223,12 +224,6 @@ public class BlockBR_2_Aspect_Signal extends BlockSwitch {
     /**
      * Can this block provide power. Only wire currently seems to have this change based on its state.
      */
-
-
-
-    @Override
-    public IIcon getIcon(int i, int j) {
-        return texture;
-    }
+    
 }
 

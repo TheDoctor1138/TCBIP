@@ -5,6 +5,7 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import td1138.bip.blocks.TCBlocks;
@@ -14,6 +15,7 @@ import td1138.bip.entities.trains.*;
 import td1138.bip.items.TCBIPItems;
 import td1138.bip.library.TCBIPInfo;
 import td1138.bip.recipes.TCBIPRecipeHandler;
+import td1138.bip.tile.switchStand.TileBR_2_Aspect_Signal;
 import train.common.api.AbstractTrains;
 import train.common.core.CreativeTabTraincraft;
 import train.common.core.handlers.CraftingHandler;
@@ -55,6 +57,7 @@ public class TCBIP {
 		FMLCommonHandler.instance().bus().register(new CraftingHandler());
 
 		proxy.registerTileEntities();
+		GameRegistry.registerTileEntity(TileBR_2_Aspect_Signal.class, "TileBR_2_Aspect_Signal");
 		proxy.registerBookHandler();
 		PacketHandler.init();
 		proxy.registerRenderInformation();

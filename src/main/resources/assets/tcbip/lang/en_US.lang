@@ -40,7 +40,6 @@ item.tcbip:minecartHornby060E2.name=Hornby 0-6-0 E2
 item.tcbip:minecart4WheeledCoach.name=4 Wheeled Coach
 
 <!-- Entities -->
-entity.tc.:RecipeBook.name=BIP Recipe Book
 entity.tc.:BR 2 Aspect Signal.name=BR 2 Aspect Signal
 entity.tc.:SNCBM6.name=NMBS M6 Coach
 entity.tc.:SNCBM6Tail.name=NMBS M6 Tail

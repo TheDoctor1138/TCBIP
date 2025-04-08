@@ -16,7 +16,7 @@ import train.common.wellcar.ItemFortyFootContainer;
 
 public enum BlockIDs {
 
-	BR_2_Aspect_Signal(false, ItemBR_2_Aspect_Signal.class),//ItemBR_2_Aspect_Signal.class
+	BR_2_Aspect_Signal(true, ItemBR_2_Aspect_Signal.class),//ItemBR_2_Aspect_Signal.class
 
 
 	;

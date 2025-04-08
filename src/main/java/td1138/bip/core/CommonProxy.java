@@ -118,7 +118,7 @@ public class CommonProxy implements IGuiHandler {
     }
 
     public void registerTileEntities() {
-        GameRegistry.registerTileEntity(TileBR_2_Aspect_Signal.class, "TileBR_2_Aspect_Signal");
+    //    GameRegistry.registerTileEntity(TileBR_2_Aspect_Signal.class, "TileBR_2_Aspect_Signal");
     }
 
     public static final TileEntitySpecialRenderer specialRenderer = new TileEntitySpecialRenderer() {

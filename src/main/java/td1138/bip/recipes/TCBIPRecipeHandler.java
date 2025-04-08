@@ -72,7 +72,7 @@ public class TCBIPRecipeHandler  {
             ironingot = (ItemStack)var1.next();
         }
 
-        GameRegistry.addRecipe(new ItemStack(TCBIPItems.BIPRecipeBook, 1),  "TTT", "TBT", "TTT", Character.valueOf('T'), Blocks.rail, Character.valueOf('B'), Items.book );
+        GameRegistry.addRecipe(new ItemStack(TCBIPItems.RecipeBook, 1),  "TTT", "TBT", "TTT", Character.valueOf('T'), Blocks.rail, Character.valueOf('B'), Items.book );
     }
 
     public static void initItemRecipes() {
@@ -111,7 +111,7 @@ public class TCBIPRecipeHandler  {
             plankItem = (ItemStack)var10.next();
         }
 
-        TrainCraftingManager.instance.addRecipe(new ItemStack(TCBIPItems.BIPRecipeBook, 1),  "TTT", "TBT", "TTT", Character.valueOf('T'), Blocks.rail, Character.valueOf('B'), Items.book );
+        TrainCraftingManager.instance.addRecipe(new ItemStack(TCBIPItems.RecipeBook, 1),  "TTT", "TBT", "TTT", Character.valueOf('T'), Blocks.rail, Character.valueOf('B'), Items.book );
 
 
     }

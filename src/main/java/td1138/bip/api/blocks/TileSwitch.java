@@ -42,12 +42,12 @@ public class TileSwitch extends TileRenderFacing {
     public int getStrength(int index){return strength[index];}
 
     @Override
-    public void writeToNBT(NBTTagCompound tag){
-        super.writeToNBT(tag);
+    public void writeToNBT(NBTTagCompound nbtTagCompound){
+        super.writeToNBT(nbtTagCompound);
         if(strength.length<bladeCount()){
             strength =new int[bladeCount()];
         }
-        tag.setIntArray("e", strength);
+        nbtTagCompound.setIntArray("e", strength);
     }
 
     @Override
