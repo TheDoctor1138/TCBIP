@@ -15,20 +15,20 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import td1138.bip.TCBIP;
+import td1138.bip.api.blocks.BlockDynamic;
 import td1138.bip.api.blocks.BlockSwitch;
-import td1138.bip.library.BlockIDs;
 import td1138.bip.tile.switchStand.TileBR_2_Aspect_Signal;
-import train.common.Traincraft;
-import train.common.api.blocks.BlockDynamic;
-import train.common.api.blocks.BlockSignal;
+import td1138.bip.tile.switchStand.TileBR_3_Aspect_Signal;
+import train.common.tile.switchStand.TileSpeedSign;
 
 import java.util.List;
 import java.util.Random;
 
-public class BlockBR_2_Aspect_Signal extends BlockSwitch {
+public class BlockBR_3_Aspect_Signal extends BlockDynamic {
     private IIcon texture;
+    private int skinstate = 0;
 
-    public BlockBR_2_Aspect_Signal() {
+    public BlockBR_3_Aspect_Signal() {
         super(Material.rock,0);
         setCreativeTab(TCBIP.tabBIP);
         //this.setTickRandomly(true);
@@ -56,10 +56,10 @@ public class BlockBR_2_Aspect_Signal extends BlockSwitch {
     }
 
     @Override
-    public TileEntity createTileEntity(World world, int metadata) { return new TileBR_2_Aspect_Signal(); }
+    public TileEntity createTileEntity(World world, int metadata) { return new TileBR_3_Aspect_Signal(); }
 
     @Override
-    public TileEntity createNewTileEntity(World world, int metadata) { return new TileBR_2_Aspect_Signal(this); }
+    public TileEntity createNewTileEntity(World world, int metadata) { return new TileBR_3_Aspect_Signal(); }
 
     @Override
     public int getRenderType() {
@@ -69,11 +69,11 @@ public class BlockBR_2_Aspect_Signal extends BlockSwitch {
     @Override
     public void onBlockAdded(World world, int i, int j, int k) {
         super.onBlockAdded(world, i, j, k);
-        TileBR_2_Aspect_Signal te = (TileBR_2_Aspect_Signal) world.getTileEntity(i, j, k);
+        TileBR_3_Aspect_Signal te = (TileBR_3_Aspect_Signal) world.getTileEntity(i, j, k);
 
         if (world.isBlockIndirectlyGettingPowered(i, j, k)) {
 
-            te.state = 1;
+            te.skinstate = 1;
         }
         /* int l = world.getBlockMetadata(i, j, k); if (l == 2) {
          *
@@ -104,10 +104,10 @@ public class BlockBR_2_Aspect_Signal extends BlockSwitch {
     @Override
     public void onBlockPlacedBy(World world, int i, int j, int k, EntityLivingBase entityliving, ItemStack stack) {
         super.onBlockPlacedBy(world, i, j, k, entityliving, stack);
-        if (!(world.getTileEntity(i, j, k) instanceof TileBR_2_Aspect_Signal)) {
+        if (!(world.getTileEntity(i, j, k) instanceof TileBR_3_Aspect_Signal)) {
             return;
         }
-        TileBR_2_Aspect_Signal te = (TileBR_2_Aspect_Signal) world.getTileEntity(i, j, k);
+        TileBR_3_Aspect_Signal te = (TileBR_3_Aspect_Signal) world.getTileEntity(i, j, k);
         if (te != null) {
             int dir = MathHelper.floor_double((double) ((entityliving.rotationYaw * 4F) / 360F) + 0.5D) & 3;
             te.setFacing(ForgeDirection.getOrientation(dir == 0 ? 2 : dir == 1 ? 5 : dir == 2 ? 3 : 4));
@@ -117,9 +117,13 @@ public class BlockBR_2_Aspect_Signal extends BlockSwitch {
 
 
     @Override
-    public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, int par6, float par7, float par8, float par9) {
-        updateTick(world, i, j, k);
-        return true;
+    public boolean onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_) {
+        TileBR_3_Aspect_Signal te = (TileBR_3_Aspect_Signal) p_149727_1_.getTileEntity(p_149727_2_, p_149727_3_, p_149727_4_);
+        te.increaseSkinState();
+        p_149727_1_.markBlockForUpdate(p_149727_2_, p_149727_3_, p_149727_4_);
+
+
+        return super.onBlockActivated(p_149727_1_, p_149727_2_, p_149727_3_, p_149727_4_, p_149727_5_, p_149727_6_, p_149727_7_, p_149727_8_, p_149727_9_);
     }
 
 
@@ -194,7 +198,7 @@ public class BlockBR_2_Aspect_Signal extends BlockSwitch {
     @Override
     public void onNeighborBlockChange(World world, int i, int j, int k, Block l) {
 
-        TileBR_2_Aspect_Signal te = (TileBR_2_Aspect_Signal) world.getTileEntity(i, j, k);
+        TileBR_3_Aspect_Signal te = (TileBR_3_Aspect_Signal) world.getTileEntity(i, j, k);
         if (te == null)
             return;
         if (te.getState() == 1 && !world.isBlockIndirectlyGettingPowered(i, j, k)) {
@@ -208,16 +212,16 @@ public class BlockBR_2_Aspect_Signal extends BlockSwitch {
 
     public void updateTick(World world, int i, int j, int k) {
 
-        TileBR_2_Aspect_Signal te = (TileBR_2_Aspect_Signal) world.getTileEntity(i, j, k);
+        TileBR_3_Aspect_Signal te = (TileBR_3_Aspect_Signal) world.getTileEntity(i, j, k);
         if (te == null)
             return;
         //te.rot = l;
         // int l = world.getBlockMetadata(i, j, k);
-        if (te.state == 1 && !world.isBlockIndirectlyGettingPowered(i, j, k)) {
-            te.state = 0;
+        if (te.skinstate == 1 && !world.isBlockIndirectlyGettingPowered(i, j, k)) {
+            te.skinstate = 0;
         }
-        if (te.state == 0 && world.isBlockIndirectlyGettingPowered(i, j, k)) {
-            te.state = 1;
+        if (te.skinstate == 0 && world.isBlockIndirectlyGettingPowered(i, j, k)) {
+            te.skinstate = 1;
         }
     }
 

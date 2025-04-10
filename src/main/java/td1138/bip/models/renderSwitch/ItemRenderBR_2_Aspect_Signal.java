@@ -11,6 +11,7 @@ import net.minecraftforge.client.IItemRenderer;
 import net.minecraftforge.client.MinecraftForgeClient;
 import org.lwjgl.opengl.GL11;
 import fexcraft.tmt.slim.Tessellator;
+import td1138.bip.blocks.blockSwitch.BlockBR_2_Aspect_Signal;
 import td1138.bip.library.BlockIDs;
 import td1138.bip.library.TCBIPInfo;
 import td1138.bip.models.renderSwitch.models.ModelBR_2_Aspect_Signal;
@@ -19,7 +20,7 @@ import train.common.library.Info;
 
 public class ItemRenderBR_2_Aspect_Signal implements IItemRenderer {
     private static final ModelBR_2_Aspect_Signal modelSwitch = new ModelBR_2_Aspect_Signal();
-    private static final ResourceLocation texture = new ResourceLocation(TCBIPInfo.resourceLocation,Info.modelTexPrefix + "BR_2_Aspect_Signal_Green.png");
+    private static final ResourceLocation texture = new ResourceLocation(TCBIPInfo.resourceLocation,TCBIPInfo.modelTexPrefix + "BR_2_Aspect_Signal_Green.png");
     private Object IIconRegister;
     private Object IItemRenderer;
     private IIcon itemIcon;
@@ -56,7 +57,6 @@ public class ItemRenderBR_2_Aspect_Signal implements IItemRenderer {
                 return;
             }
             case INVENTORY: {
-                MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_2_Aspect_Signal.block), (net.minecraftforge.client.IItemRenderer) IItemRenderer);
                 renderSwitch(0f, 0f, 0f, 1f);
 
                 return;
@@ -69,7 +69,7 @@ public class ItemRenderBR_2_Aspect_Signal implements IItemRenderer {
 
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
-        this.itemIcon = iconRegister.registerIcon(TCBIPInfo.modID.toLowerCase() + ":BR_2_Aspect_Signal");
+        this.itemIcon = iconRegister.registerIcon(TCBIPInfo.modID.toLowerCase() + ":br_2_aspect_signal");
     }
 
     /*

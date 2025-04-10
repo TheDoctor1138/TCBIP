@@ -2,12 +2,9 @@ package td1138.bip.core;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.IGuiHandler;
-import cpw.mods.fml.common.registry.GameRegistry;
 import ebf.tim.entities.EntitySeat;
-import ebf.tim.gui.GUISeatManager;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.Entity;
@@ -20,29 +17,22 @@ import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.MinecraftForge;
 import org.lwjgl.opengl.GL11;
-import td1138.bip.blocks.blockSwitch.BlockBR_2_Aspect_Signal;
 import td1138.bip.gui.GuiRecipeBook;
 import td1138.bip.library.BlockIDs;
 import td1138.bip.library.GuiIDs;
-import td1138.bip.models.renderSwitch.ItemRenderBR_2_Aspect_Signal;
-import td1138.bip.models.renderSwitch.RenderBR_2_Aspect_Signal;
+import td1138.bip.models.blocks.ItemRenderBR_Modern_Buffer;
+import td1138.bip.models.blocks.RenderBR_Modern_Buffer;
+import td1138.bip.models.renderSwitch.*;
+import td1138.bip.tile.TileBR_Modern_Buffer;
 import td1138.bip.tile.switchStand.TileBR_2_Aspect_Signal;
+import td1138.bip.tile.switchStand.TileBR_3_Aspect_Signal;
+import td1138.bip.tile.switchStand.TileBR_4_Aspect_Signal;
 import train.common.Traincraft;
 import train.common.api.EntityRollingStock;
-import train.common.api.Freight;
-import train.common.api.LiquidTank;
-import train.common.api.Tender;
-import train.common.containers.*;
 import train.common.core.handlers.ChunkEvents;
 import train.common.core.handlers.WorldEvents;
 import train.common.entity.digger.EntityRotativeDigger;
-import train.common.entity.rollingStockOld.EntityJukeBoxCart;
-import train.common.entity.rollingStockOld.EntityTracksBuilder;
 import train.common.entity.zeppelin.AbstractZeppelin;
-import train.common.inventory.*;
-import train.common.mtc.*;
-import train.common.tile.*;
-import train.common.tile.switchStand.*;
 
 public class CommonProxy implements IGuiHandler {
     @Override
@@ -113,12 +103,21 @@ public class CommonProxy implements IGuiHandler {
     public void registerBookHandler() {}
 
     public void registerRenderInformation() {
+        ClientRegistry.bindTileEntitySpecialRenderer(TileBR_Modern_Buffer.class, new RenderBR_Modern_Buffer());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_Modern_Buffer.block), new ItemRenderBR_Modern_Buffer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileBR_2_Aspect_Signal.class, new RenderBR_2_Aspect_Signal());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_2_Aspect_Signal.block), new ItemRenderBR_2_Aspect_Signal());
+        ClientRegistry.bindTileEntitySpecialRenderer(TileBR_3_Aspect_Signal.class, new RenderBR_3_Aspect_Signal());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_3_Aspect_Signal.block), new ItemRenderBR_3_Aspect_Signal());
+        ClientRegistry.bindTileEntitySpecialRenderer(TileBR_4_Aspect_Signal.class, new RenderBR_4_Aspect_Signal());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_4_Aspect_Signal.block), new ItemRenderBR_4_Aspect_Signal());
     }
 
     public void registerTileEntities() {
-    //    GameRegistry.registerTileEntity(TileBR_2_Aspect_Signal.class, "TileBR_2_Aspect_Signal");
+        //    GameRegistry.registerTileEntity(TileBR_Modern_Buffer.class, "TileBR_Modern_Buffer");
+        //    GameRegistry.registerTileEntity(TileBR_2_Aspect_Signal.class, "TileBR_2_Aspect_Signal");
+        //    GameRegistry.registerTileEntity(TileBR_3_Aspect_Signal.class, "TileBR_3_Aspect_Signal");
+        //    GameRegistry.registerTileEntity(TileBR_4_Aspect_Signal.class, "TileBR_4_Aspect_Signal");
     }
 
     public static final TileEntitySpecialRenderer specialRenderer = new TileEntitySpecialRenderer() {

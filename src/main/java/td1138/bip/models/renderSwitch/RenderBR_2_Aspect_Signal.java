@@ -14,8 +14,8 @@ import train.common.tile.switchStand.TilesignalSpanish;
 
 public class RenderBR_2_Aspect_Signal extends TileEntitySpecialRenderer {
     static final ModelBR_2_Aspect_Signal modelBR_2_Aspect_Signal = new ModelBR_2_Aspect_Signal();
-        private static final ResourceLocation texture = new ResourceLocation(TCBIPInfo.resourceLocation,Info.modelTexPrefix + "BR_2_Aspect_Signal_Green.png");
-    private static final ResourceLocation texture2 = new ResourceLocation(TCBIPInfo.resourceLocation, Info.modelTexPrefix + "BR_2_Aspect_Signal_Yellow.png");
+        private static final ResourceLocation texture = new ResourceLocation(TCBIPInfo.resourceLocation,TCBIPInfo.modelTexPrefix + "BR_2_Aspect_Signal_Green.png");
+    private static final ResourceLocation texture2 = new ResourceLocation(TCBIPInfo.resourceLocation, TCBIPInfo.modelTexPrefix + "BR_2_Aspect_Signal_Yellow.png");
     @Override
     public void renderTileEntityAt(TileEntity tileEntity, double x, double y, double z, float tick) {
         boolean state=((TileBR_2_Aspect_Signal) tileEntity).state == 1;

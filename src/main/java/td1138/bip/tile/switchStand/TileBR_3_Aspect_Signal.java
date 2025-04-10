@@ -7,47 +7,57 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.network.NetworkManager;
-import net.minecraft.network.Packet;
-import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraftforge.common.util.ForgeDirection;
-import td1138.bip.api.blocks.BlockSwitch;
 import td1138.bip.api.blocks.TileSwitch;
 import td1138.bip.blocks.TCBlocks;
 import td1138.bip.blocks.blockSwitch.BlockBR_2_Aspect_Signal;
-import train.common.api.blocks.BlockDynamic;
-import train.common.tile.TileSignal;
-import train.common.tile.TileTCRail;
+import td1138.bip.blocks.blockSwitch.BlockBR_3_Aspect_Signal;
 
 import java.util.Random;
 
-public class TileBR_2_Aspect_Signal extends TileSwitch {
+public class TileBR_3_Aspect_Signal extends TileSwitch {
 
-    public int state = 0;// 0=green 1=yellow
+    public int skinstate = 2;// 0=green 1=yellow 2=red
     private int updateTicks = 0;
     private static Random rand = new Random();
 
-    public TileBR_2_Aspect_Signal(){
+    public TileBR_3_Aspect_Signal(){
     }
-    public TileBR_2_Aspect_Signal(BlockBR_2_Aspect_Signal block){
+    public TileBR_3_Aspect_Signal(BlockBR_3_Aspect_Signal block){
         host = block;
+    }
+    public void setSkinstate(int skinstate) {
+        this.skinstate = skinstate;
+        worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
+
+    }
+
+    public int getSkinstate() {
+        return skinstate;
     }
 
     public void setState(int st){
-        state = st;
+        skinstate = st;
         worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
     }
 
     public int getState(){
-       return state;
+       return skinstate;
+    }
+
+    public void increaseSkinState(){
+        if (skinstate >= 4){
+            skinstate = 0;
+        } else {
+            skinstate++;
+        }
+        worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
     }
 
     @Override
     public void readFromNBT(NBTTagCompound tag){
         super.readFromNBT(tag);
-        state = tag.getInteger("state");
+        skinstate = tag.getInteger("state");
     }
 
     @Override
@@ -63,7 +73,7 @@ public class TileBR_2_Aspect_Signal extends TileSwitch {
                 if (!this.worldObj.isAirBlock(this.xCoord, this.yCoord + 1, this.zCoord)) {
                     Block block = this.worldObj.getBlock(this.xCoord, this.yCoord + 1, this.zCoord);
                     if (block != null) {
-                        EntityItem entityitem = new EntityItem(worldObj, this.xCoord, this.yCoord + 1, this.zCoord, new ItemStack(Item.getItemFromBlock(TCBlocks.BR_2_Aspect_Signal), 1));
+                        EntityItem entityitem = new EntityItem(worldObj, this.xCoord, this.yCoord + 1, this.zCoord, new ItemStack(Item.getItemFromBlock(TCBlocks.BR_3_Aspect_Signal), 1));
                         float f3 = 0.05F;
                         entityitem.motionX = (float) rand.nextGaussian() * f3;
                         entityitem.motionY = (float) rand.nextGaussian() * f3 + 0.2F;

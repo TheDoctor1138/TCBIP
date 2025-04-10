@@ -12,7 +12,10 @@ import train.common.api.IItemIDs;
 
 public enum ItemIDs implements IItemIDs {
 	RecipeBook("ItemRecipeBook", "item_book_black", 1),
-	BR_2_Aspect_Signal("ItemTCRail", "BR_2_Aspect_Signal", 2),
+	BR_Modern_Buffer("ItemTCRail", "br_modern_buffer", 2),
+	BR_2_Aspect_Signal("ItemTCRail", "br_2_aspect_signal", 2),
+	BR_3_Aspect_Signal("ItemTCRail", "br_3_aspect_signal", 2),
+	BR_4_Aspect_Signal("ItemTCRail", "br_4_aspect_signal", 2),
 	;
 
 	public Item item;

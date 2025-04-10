@@ -14,6 +14,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
+import td1138.bip.TCBIP;
 import td1138.bip.api.blocks.BlockSwitch;
 import td1138.bip.library.BlockIDs;
 import td1138.bip.tile.switchStand.TileBR_2_Aspect_Signal;
@@ -29,7 +30,7 @@ public class BlockBR_2_Aspect_Signal extends BlockSwitch {
 
     public BlockBR_2_Aspect_Signal() {
         super(Material.rock,0);
-        setCreativeTab(Traincraft.tcTab);
+        setCreativeTab(TCBIP.tabBIP);
         //this.setTickRandomly(true);
         //this.setBlockBounds(0.5F , 0.0F, 0.5F , 0.5F ,  2.0F, 0.5F);
     }

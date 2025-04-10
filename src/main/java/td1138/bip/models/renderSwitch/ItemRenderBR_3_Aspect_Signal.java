@@ -2,47 +2,42 @@ package td1138.bip.models.renderSwitch;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import fexcraft.tmt.slim.Tessellator;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
-import net.minecraftforge.client.MinecraftForgeClient;
 import org.lwjgl.opengl.GL11;
-import fexcraft.tmt.slim.Tessellator;
-import td1138.bip.blocks.blockSwitch.BlockBR_2_Aspect_Signal;
-import td1138.bip.library.BlockIDs;
 import td1138.bip.library.TCBIPInfo;
 import td1138.bip.models.renderSwitch.models.ModelBR_2_Aspect_Signal;
-import train.client.render.renderSwitch.models.ModelsignalSpanish;
-import train.common.library.Info;
+import td1138.bip.models.renderSwitch.models.ModelBR_3_Aspect_Signal;
 
-public class ItemRenderBR_2_Aspect_Signal implements IItemRenderer {
-    private static final ModelBR_2_Aspect_Signal modelSwitch = new ModelBR_2_Aspect_Signal();
-    private static final ResourceLocation texture = new ResourceLocation(TCBIPInfo.resourceLocation,TCBIPInfo.modelTexPrefix + "BR_2_Aspect_Signal_Green.png");
+public class ItemRenderBR_3_Aspect_Signal implements IItemRenderer {
+    private static final ModelBR_3_Aspect_Signal modelSwitch = new ModelBR_3_Aspect_Signal();
+    private static final ResourceLocation texture = new ResourceLocation(TCBIPInfo.resourceLocation,TCBIPInfo.modelTexPrefix + "BR_3_Aspect_Signal_Green.png");
     private Object IIconRegister;
     private Object IItemRenderer;
     private IIcon itemIcon;
 
-    public ItemRenderBR_2_Aspect_Signal() {
+    public ItemRenderBR_3_Aspect_Signal() {
     }
 
 
     @Override
-    public boolean handleRenderType(ItemStack item, IItemRenderer.ItemRenderType type) {
+    public boolean handleRenderType(ItemStack item, ItemRenderType type) {
             return true;
     }
 
     @Override
-    public boolean shouldUseRenderHelper(IItemRenderer.ItemRenderType type, ItemStack item, IItemRenderer.ItemRendererHelper helper) {
+    public boolean shouldUseRenderHelper(ItemRenderType type, ItemStack item, ItemRendererHelper helper) {
         return true;
     }
 
 
     @Override
-    public void renderItem(IItemRenderer.ItemRenderType type, ItemStack item, Object... data) {
-        Tessellator.bindTexture(new ResourceLocation(TCBIPInfo.resourceLocation, TCBIPInfo.modelTexPrefix + "BR_2_Aspect_Signal_Green.png"));
+    public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
+        Tessellator.bindTexture(new ResourceLocation(TCBIPInfo.resourceLocation, TCBIPInfo.modelTexPrefix + "BR_3_Aspect_Signal_Green.png"));
         switch (type) {
             case ENTITY: {
                 renderSwitch(0f, 0f, 0f, 1f);
@@ -69,7 +64,7 @@ public class ItemRenderBR_2_Aspect_Signal implements IItemRenderer {
 
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
-        this.itemIcon = iconRegister.registerIcon(TCBIPInfo.modID.toLowerCase() + ":BR_2_Aspect_Signal");
+        this.itemIcon = iconRegister.registerIcon(TCBIPInfo.modID.toLowerCase() + ":br_3_aspect_signal");
     }
 
     /*

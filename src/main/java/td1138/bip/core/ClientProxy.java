@@ -1,14 +1,10 @@
 package td1138.bip.core;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
-import cpw.mods.fml.client.registry.RenderingRegistry;
-import cpw.mods.fml.common.FMLCommonHandler;
-import ebf.tim.entities.EntitySeat;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.IItemRenderer;
 import net.minecraftforge.client.MinecraftForgeClient;
 import org.lwjgl.opengl.GL11;
 import td1138.bip.core.handlers.RecipeBookHandler;
@@ -21,22 +17,13 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import td1138.bip.library.BlockIDs;
 import td1138.bip.library.GuiIDs;
-import td1138.bip.models.renderSwitch.ItemRenderBR_2_Aspect_Signal;
-import td1138.bip.models.renderSwitch.RenderBR_2_Aspect_Signal;
+import td1138.bip.models.blocks.ItemRenderBR_Modern_Buffer;
+import td1138.bip.models.blocks.RenderBR_Modern_Buffer;
+import td1138.bip.models.renderSwitch.*;
+import td1138.bip.tile.TileBR_Modern_Buffer;
 import td1138.bip.tile.switchStand.TileBR_2_Aspect_Signal;
-import train.client.core.handlers.ClientTickHandler;
-import train.client.render.*;
-import train.client.render.renderSwitch.*;
-import train.common.api.EntityBogie;
-import train.common.api.EntityRollingStock;
-import train.common.blocks.TCBlocks;
-import train.common.entity.CollisionBox;
-import train.common.entity.digger.EntityRotativeDigger;
-import train.common.entity.digger.EntityRotativeWheel;
-import train.common.entity.zeppelin.EntityZeppelinOneBalloon;
-import train.common.entity.zeppelin.EntityZeppelinTwoBalloons;
-import train.common.tile.*;
-import train.common.tile.switchStand.*;
+import td1138.bip.tile.switchStand.TileBR_3_Aspect_Signal;
+import td1138.bip.tile.switchStand.TileBR_4_Aspect_Signal;
 
 import java.util.Calendar;
 
@@ -126,14 +113,26 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void registerTileEntities() {
 
+        ClientRegistry.bindTileEntitySpecialRenderer(TileBR_Modern_Buffer.class, new RenderBR_Modern_Buffer());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_Modern_Buffer.block), new ItemRenderBR_Modern_Buffer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileBR_2_Aspect_Signal.class, new RenderBR_2_Aspect_Signal());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_2_Aspect_Signal.block), new ItemRenderBR_2_Aspect_Signal());
+        ClientRegistry.bindTileEntitySpecialRenderer(TileBR_3_Aspect_Signal.class, new RenderBR_3_Aspect_Signal());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_3_Aspect_Signal.block), new ItemRenderBR_3_Aspect_Signal());
+        ClientRegistry.bindTileEntitySpecialRenderer(TileBR_4_Aspect_Signal.class, new RenderBR_4_Aspect_Signal());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_4_Aspect_Signal.block), new ItemRenderBR_4_Aspect_Signal());
     }
 
     @Override
     public void registerRenderInformation() {
+        ClientRegistry.bindTileEntitySpecialRenderer(TileBR_Modern_Buffer.class, new RenderBR_Modern_Buffer());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_Modern_Buffer.block), new ItemRenderBR_Modern_Buffer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileBR_2_Aspect_Signal.class, new RenderBR_2_Aspect_Signal());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_2_Aspect_Signal.block), new ItemRenderBR_2_Aspect_Signal());
+        ClientRegistry.bindTileEntitySpecialRenderer(TileBR_3_Aspect_Signal.class, new RenderBR_3_Aspect_Signal());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_3_Aspect_Signal.block), new ItemRenderBR_3_Aspect_Signal());
+        ClientRegistry.bindTileEntitySpecialRenderer(TileBR_4_Aspect_Signal.class, new RenderBR_4_Aspect_Signal());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_4_Aspect_Signal.block), new ItemRenderBR_4_Aspect_Signal());
     }
 
 }

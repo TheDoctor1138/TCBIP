@@ -7,13 +7,10 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemBlock;
 import td1138.bip.TCBIP;
 import td1138.bip.library.TCBIPInfo;
-import train.common.Traincraft;
-import train.common.items.ItemSignal;
-import train.common.library.Info;
 
-public class ItemBR_2_Aspect_Signal extends ItemBlock {
+public class ItemBR_3_Aspect_Signal extends ItemBlock {
 
-    public ItemBR_2_Aspect_Signal(Block id) {
+    public ItemBR_3_Aspect_Signal(Block id) {
         super(id);
         maxStackSize = 64;
         setCreativeTab(TCBIP.tabBIP);
@@ -21,7 +18,7 @@ public class ItemBR_2_Aspect_Signal extends ItemBlock {
 
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
-        this.itemIcon = iconRegister.registerIcon(TCBIPInfo.modID + ":br_2_aspect_signal");
+        this.itemIcon = iconRegister.registerIcon(TCBIPInfo.modID + ":br_3_aspect_signal");
     }
 
 
