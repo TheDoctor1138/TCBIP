@@ -27,6 +27,7 @@ import td1138.bip.tile.TileBR_Modern_Buffer;
 import td1138.bip.tile.switchStand.TileBR_2_Aspect_Signal;
 import td1138.bip.tile.switchStand.TileBR_3_Aspect_Signal;
 import td1138.bip.tile.switchStand.TileBR_4_Aspect_Signal;
+import td1138.bip.tile.switchStand.TileBR_UK_SpeedSign;
 import train.common.Traincraft;
 import train.common.api.EntityRollingStock;
 import train.common.core.handlers.ChunkEvents;
@@ -103,6 +104,8 @@ public class CommonProxy implements IGuiHandler {
     public void registerBookHandler() {}
 
     public void registerRenderInformation() {
+        ClientRegistry.bindTileEntitySpecialRenderer(TileBR_UK_SpeedSign.class, new RenderBR_UK_SpeedSign());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_UK_SpeedSign.block), new ItemRenderBR_UK_SpeedSign());
         ClientRegistry.bindTileEntitySpecialRenderer(TileBR_Modern_Buffer.class, new RenderBR_Modern_Buffer());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_Modern_Buffer.block), new ItemRenderBR_Modern_Buffer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileBR_2_Aspect_Signal.class, new RenderBR_2_Aspect_Signal());
@@ -114,6 +117,7 @@ public class CommonProxy implements IGuiHandler {
     }
 
     public void registerTileEntities() {
+        //    GameRegistry.registerTileEntity(TileBR_UK_SpeedSign.class, "TileBR_UK_SpeedSign");
         //    GameRegistry.registerTileEntity(TileBR_Modern_Buffer.class, "TileBR_Modern_Buffer");
         //    GameRegistry.registerTileEntity(TileBR_2_Aspect_Signal.class, "TileBR_2_Aspect_Signal");
         //    GameRegistry.registerTileEntity(TileBR_3_Aspect_Signal.class, "TileBR_3_Aspect_Signal");

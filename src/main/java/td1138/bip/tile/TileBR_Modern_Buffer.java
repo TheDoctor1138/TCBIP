@@ -16,6 +16,8 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TileBR_Modern_Buffer extends TileEntity {
 
+	public int state = 2;
+
 	private int facingMeta;
 
 	public TileBR_Modern_Buffer() {
@@ -25,6 +27,11 @@ public class TileBR_Modern_Buffer extends TileEntity {
 	public  TileBR_Modern_Buffer(int meta){
 		
 		this.facingMeta = meta;
+	}
+
+	public void getState(int st) {
+		state = st;
+		worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
 	}
 
 	public Entity getFacing() { return null; }
@@ -37,7 +44,6 @@ public class TileBR_Modern_Buffer extends TileEntity {
 	public void readFromNBT(NBTTagCompound nbtTag) {
 
 		super.readFromNBT(nbtTag);
-
 		facingMeta = nbtTag.getByte("Orientation");
 	}
 
@@ -45,7 +51,6 @@ public class TileBR_Modern_Buffer extends TileEntity {
 	public void writeToNBT(NBTTagCompound nbtTag) {
 
 		super.writeToNBT(nbtTag);
-
 		nbtTag.setByte("Orientation", (byte) facingMeta);
 	}
 

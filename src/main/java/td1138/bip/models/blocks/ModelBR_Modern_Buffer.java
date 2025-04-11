@@ -10,6 +10,7 @@
 package td1138.bip.models.blocks; //Path where the model is located
 
 import fexcraft.tmt.slim.ModelBase;
+import fexcraft.tmt.slim.ModelConverter;
 import fexcraft.tmt.slim.ModelRendererTurbo;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -20,7 +21,7 @@ import org.lwjgl.opengl.GL11;
 import train.client.render.CustomModelRenderer;
 import train.common.library.Info;
 
-public class ModelBR_Modern_Buffer extends ModelBase //Same as Filename
+public class ModelBR_Modern_Buffer extends ModelConverter //Same as Filename
 {
 	int textureX = 512;
 	int textureY = 512;
@@ -45,8 +46,6 @@ public class ModelBR_Modern_Buffer extends ModelBase //Same as Filename
 
 		translateAll(0F, 0F, 0F);
 
-
-		flipAll();
 
 		track =  AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_normal.obj"));
 
@@ -194,17 +193,17 @@ public class ModelBR_Modern_Buffer extends ModelBase //Same as Filename
 		bodyModel[24].addShapeBox(0F, 0F, 0F, 1, 1, 3, 0F,0F, 0.2F, -0.5F, -0.5F, 0.2F, -0.5F, -0.5F, 0.2F, -1F, 0F, 0.2F, -1F, 0F, -0.3F, -0.5F, -0.5F, -0.3F, -0.5F, -0.5F, -0.3F, -1F, 0F, -0.3F, -1F); // Lamp
 		bodyModel[24].setRotationPoint(-4F, -4.2F, 1F);
 	}
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5, int meta) {
+	public void render(float f5, int meta) {
 		if (meta != -1) {
 			switch (meta) {
 				case 0:
-					GL11.glRotatef(0.0F, 0.0F, 0.0F, 0.0F);
+					GL11.glRotatef(0.0F, 0.0F, -1.0F, 0.0F);
 				case 1:
-					GL11.glRotatef(0.0F, 0.0F, 0.0F, 0.0F);
+					GL11.glRotatef(0.0F, 0.0F, -1.0F, 0.0F);
 				case 2:
-					GL11.glRotatef(0.0F, 0.0F, 0.0F, 0.0F);
+					GL11.glRotatef(0.0F, 0.0F, -1.0F, 0.0F);
 				case 3:
-					GL11.glRotatef(0.0F, 0.0F, 0.0F, 0.0F);
+					GL11.glRotatef(0.0F, 0.0F, -1.0F, 0.0F);
 			}
 		}
 		for (int i = 0; i < 25; i++) {

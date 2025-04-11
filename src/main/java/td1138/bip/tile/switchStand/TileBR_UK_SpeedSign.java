@@ -6,17 +6,17 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.util.AxisAlignedBB;
-import td1138.bip.blocks.blockSwitch.BlockBR_3_Aspect_Signal;
+import td1138.bip.blocks.blockSwitch.BlockBR_UK_SpeedSign;
 import train.common.api.blocks.TileRenderFacing;
 import train.common.blocks.blockSwitch.BlockSpeedSign;
 
-public class TileBR_3_Aspect_Signal extends TileRenderFacing {
+public class TileBR_UK_SpeedSign extends TileRenderFacing {
 
 	private int skinstate;
 
-	public TileBR_3_Aspect_Signal(){
+	public TileBR_UK_SpeedSign(){
 	}
-	public TileBR_3_Aspect_Signal(BlockBR_3_Aspect_Signal block){
+	public TileBR_UK_SpeedSign(BlockBR_UK_SpeedSign block){
 		host = block;
 	}
 	public void setSkinstate(int skinstate) {
@@ -30,7 +30,7 @@ public class TileBR_3_Aspect_Signal extends TileRenderFacing {
 	}
 
 	public void increaseSkinState(){
-		if (skinstate >= 2){
+		if (skinstate >= 29){
 			skinstate = 0;
 		} else {
 			skinstate++;

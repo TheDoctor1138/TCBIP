@@ -12,17 +12,17 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
-import td1138.bip.tile.switchStand.TileBR_3_Aspect_Signal;
 import td1138.bip.tile.switchStand.TileBR_4_Aspect_Signal;
+import td1138.bip.tile.switchStand.TileBR_UK_SpeedSign;
 import train.common.api.blocks.BlockDynamic;
 
 import java.util.List;
 
-public class BlockBR_4_Aspect_Signal extends BlockDynamic {
+public class BlockBR_UK_SpeedSign extends BlockDynamic {
 	private IIcon texture;
 	private int skinstate = 0;
 
-	public BlockBR_4_Aspect_Signal() {
+	public BlockBR_UK_SpeedSign() {
 		super(Material.iron, 0);
 		this.setTickRandomly(true);
 		setBlockBounds(0.2F,0.0F,0.2F,0.8F,1F,0.8F);
@@ -53,7 +53,7 @@ public class BlockBR_4_Aspect_Signal extends BlockDynamic {
 	@Override
 	public void onBlockPlacedBy(World world, int i, int j, int k, EntityLivingBase entityliving, ItemStack stack) {
 		super.onBlockPlacedBy(world, i, j, k, entityliving, stack);
-		TileBR_4_Aspect_Signal te = (TileBR_4_Aspect_Signal) world.getTileEntity(i, j, k);
+		TileBR_UK_SpeedSign te = (TileBR_UK_SpeedSign) world.getTileEntity(i, j, k);
 		if (te != null) {
 			int dir = MathHelper.floor_double((double) ((entityliving.rotationYaw * 4F) / 360F) + 0.5D) & 3;
 			te.setFacing(ForgeDirection.getOrientation(dir == 0 ? 2 : dir == 1 ? 5 : dir == 2 ? 3 : 4));
@@ -66,7 +66,7 @@ public class BlockBR_4_Aspect_Signal extends BlockDynamic {
 
 	@Override
 	public boolean onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_) {
-		TileBR_4_Aspect_Signal te = (TileBR_4_Aspect_Signal) p_149727_1_.getTileEntity(p_149727_2_, p_149727_3_, p_149727_4_);
+		TileBR_UK_SpeedSign te = (TileBR_UK_SpeedSign) p_149727_1_.getTileEntity(p_149727_2_, p_149727_3_, p_149727_4_);
 		te.increaseSkinState();
 		p_149727_1_.markBlockForUpdate(p_149727_2_, p_149727_3_, p_149727_4_);
 
@@ -75,11 +75,11 @@ public class BlockBR_4_Aspect_Signal extends BlockDynamic {
 	}
 
 	@Override
-	public TileEntity createTileEntity(World world, int metadata) { return new TileBR_4_Aspect_Signal();
+	public TileEntity createTileEntity(World world, int metadata) { return new TileBR_UK_SpeedSign();
 	}
 
 	@Override
-	public TileEntity createNewTileEntity(World world, int metadata) { return new TileBR_4_Aspect_Signal();
+	public TileEntity createNewTileEntity(World world, int metadata) { return new TileBR_UK_SpeedSign();
 	}
 
 

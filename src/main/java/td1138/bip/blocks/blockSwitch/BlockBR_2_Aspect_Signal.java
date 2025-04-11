@@ -41,6 +41,9 @@ public class BlockBR_2_Aspect_Signal extends BlockSwitch {
     }
 
     @Override
+    public float[] hitboxShape(){return new float[]{0.2f,0,0.2f,0.8f,1f,0.8f};}
+
+    @Override
     public boolean hasTileEntity(int metadata) {
         return true;
     }

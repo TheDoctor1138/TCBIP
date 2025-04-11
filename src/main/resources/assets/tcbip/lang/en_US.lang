@@ -3,10 +3,11 @@
 <!-- ## Save the file the same way this file was saved but replace "en_US" with appropriate language name ## -->
 
 <!-- Blocks -->
+tile.tcbip:BR_UK_SpeedSign.name=BR UK Speed Sign
 tile.tcbip:BR_Modern_Buffer.name=BR Modern Buffer
-tile.tc:BR_2_Aspect_Signal.name=BR 2 Aspect Signal
-tile.tc:BR_3_Aspect_Signal.name=BR 3 Aspect Signal
-tile.tc:BR_4_Aspect_Signal.name=BR 4 Aspect Signal
+tile.tcbip:BR_2_Aspect_Signal.name=BR 2 Aspect Signal
+tile.tcbip:BR_3_Aspect_Signal.name=BR 3 Aspect Signal
+tile.tcbip:BR_4_Aspect_Signal.name=BR 4 Aspect Signal
 
 <!-- Items -->
 item.RecipeBook.name=BIP Recipe Book
@@ -43,6 +44,7 @@ item.tcbip:minecartHornby060E2.name=Hornby 0-6-0 E2
 item.tcbip:minecart4WheeledCoach.name=4 Wheeled Coach
 
 <!-- Entities -->
+entity.tc.:BR UK Speed Sign.name=BR UK Speed Sign
 entity.tc.:BR Modern Buffer.name=BR Modern Buffer
 entity.tc.:BR 2 Aspect Signal.name=BR 2 Aspect Signal
 entity.tc.:BR 3 Aspect Signal.name=BR 3 Aspect Signal

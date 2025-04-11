@@ -24,6 +24,7 @@ import td1138.bip.tile.TileBR_Modern_Buffer;
 import td1138.bip.tile.switchStand.TileBR_2_Aspect_Signal;
 import td1138.bip.tile.switchStand.TileBR_3_Aspect_Signal;
 import td1138.bip.tile.switchStand.TileBR_4_Aspect_Signal;
+import td1138.bip.tile.switchStand.TileBR_UK_SpeedSign;
 
 import java.util.Calendar;
 
@@ -113,6 +114,8 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void registerTileEntities() {
 
+        ClientRegistry.bindTileEntitySpecialRenderer(TileBR_UK_SpeedSign.class, new RenderBR_UK_SpeedSign());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_UK_SpeedSign.block), new ItemRenderBR_UK_SpeedSign());
         ClientRegistry.bindTileEntitySpecialRenderer(TileBR_Modern_Buffer.class, new RenderBR_Modern_Buffer());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_Modern_Buffer.block), new ItemRenderBR_Modern_Buffer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileBR_2_Aspect_Signal.class, new RenderBR_2_Aspect_Signal());
@@ -125,6 +128,8 @@ public class ClientProxy extends CommonProxy {
 
     @Override
     public void registerRenderInformation() {
+        ClientRegistry.bindTileEntitySpecialRenderer(TileBR_UK_SpeedSign.class, new RenderBR_UK_SpeedSign());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_UK_SpeedSign.block), new ItemRenderBR_UK_SpeedSign());
         ClientRegistry.bindTileEntitySpecialRenderer(TileBR_Modern_Buffer.class, new RenderBR_Modern_Buffer());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.BR_Modern_Buffer.block), new ItemRenderBR_Modern_Buffer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileBR_2_Aspect_Signal.class, new RenderBR_2_Aspect_Signal());
