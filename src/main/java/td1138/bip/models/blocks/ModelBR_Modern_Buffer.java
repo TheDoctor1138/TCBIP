@@ -9,17 +9,17 @@
 
 package td1138.bip.models.blocks; //Path where the model is located
 
-import fexcraft.tmt.slim.ModelBase;
 import fexcraft.tmt.slim.ModelConverter;
 import fexcraft.tmt.slim.ModelRendererTurbo;
 import net.minecraft.client.Minecraft;
-import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.client.render.CustomModelRenderer;
 import train.common.library.Info;
+
+import java.util.List;
 
 public class ModelBR_Modern_Buffer extends ModelConverter //Same as Filename
 {
@@ -45,6 +45,7 @@ public class ModelBR_Modern_Buffer extends ModelConverter //Same as Filename
 		initbodyModel_1();
 
 		translateAll(0F, 0F, 0F);
+        rotate(initbodyModel_1(),0,0,0);
 
 
 		track =  AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_normal.obj"));
@@ -90,7 +91,7 @@ public class ModelBR_Modern_Buffer extends ModelConverter //Same as Filename
 		box5.setPosition(2F, 0F, -6F);
 	}
 
-	private void initbodyModel_1()
+	private List<ModelRendererTurbo> initbodyModel_1()
 	{
 		bodyModel[0] = new ModelRendererTurbo(this, 89, 1, textureX, textureY); // Box 7
 		bodyModel[1] = new ModelRendererTurbo(this, 105, 1, textureX, textureY); // Box 7
@@ -191,23 +192,23 @@ public class ModelBR_Modern_Buffer extends ModelConverter //Same as Filename
 		bodyModel[23].setRotationPoint(-4F, -5.6F, 1F);
 
 		bodyModel[24].addShapeBox(0F, 0F, 0F, 1, 1, 3, 0F,0F, 0.2F, -0.5F, -0.5F, 0.2F, -0.5F, -0.5F, 0.2F, -1F, 0F, 0.2F, -1F, 0F, -0.3F, -0.5F, -0.5F, -0.3F, -0.5F, -0.5F, -0.3F, -1F, 0F, -0.3F, -1F); // Lamp
-		bodyModel[24].setRotationPoint(-4F, -4.2F, 1F);
+		bodyModel[24].setRotationPoint(-4F, -4.2F, 1F);;
+		return null;
 	}
 	public void render(float f5, int meta) {
 		if (meta != -1) {
 			switch (meta) {
 				case 0:
-					GL11.glRotatef(0.0F, 0.0F, -1.0F, 0.0F);
+					GL11.glRotatef(0.0F, 0.0F, 0.0F, 0.0F);
 				case 1:
-					GL11.glRotatef(0.0F, 0.0F, -1.0F, 0.0F);
+					GL11.glRotatef(0.0F, 0.0F, 0.0F, 0.0F);
 				case 2:
-					GL11.glRotatef(0.0F, 0.0F, -1.0F, 0.0F);
+					GL11.glRotatef(0.0F, 0.0F, 0.0F, 0.0F);
 				case 3:
-					GL11.glRotatef(0.0F, 0.0F, -1.0F, 0.0F);
+					GL11.glRotatef(0.0F, 0.0F, 0.0F, 0.0F);
 			}
 		}
 		for (int i = 0; i < 25; i++) {
-
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("Lamp")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);
@@ -221,18 +222,7 @@ public class ModelBR_Modern_Buffer extends ModelConverter //Same as Filename
 			}
 		}
 
-		box.render(f5);
-		box0.render(f5);
-		box1.render(f5);
-		box10.render(f5);
-		box2.render(f5);
-		box3.render(f5);
-		box35.render(f5);
-		// box4.render(f5);
-		box5.render(f5);
-
 		GL11.glPushMatrix();
-		GL11.glRotatef(0, 0, 0, 0);
 		fexcraft.tmt.slim.Tessellator
 				.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
 		GL11.glColor4f(1, 1, 1, 1);
@@ -250,7 +240,6 @@ public class ModelBR_Modern_Buffer extends ModelConverter //Same as Filename
 		box35.render(f5);
 		// box4.render(f5);
 		box5.render(f5);
-		GL11.glRotatef(0, 0, 0, 0);
 		fexcraft.tmt.slim.Tessellator
 				.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
 		GL11.glColor4f(1, 1, 1, 1);

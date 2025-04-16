@@ -7,6 +7,7 @@
 
 package td1138.bip.models.blocks;
 
+import fexcraft.tmt.slim.Tessellator;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.tileentity.TileEntity;
@@ -14,6 +15,12 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import td1138.bip.library.TCBIPInfo;
 import td1138.bip.tile.TileBR_Modern_Buffer;
+import td1138.bip.models.blocks.ModelBR_Modern_Buffer;
+import td1138.bip.tile.switchStand.TileBR_2_Aspect_Signal;
+import train.common.tile.TileAmericanStopper;
+
+import static javax.swing.SwingConstants.EAST;
+import static javax.swing.SwingConstants.WEST;
 
 public class RenderBR_Modern_Buffer extends TileEntitySpecialRenderer {
 
@@ -23,12 +30,14 @@ public class RenderBR_Modern_Buffer extends TileEntitySpecialRenderer {
     public RenderBR_Modern_Buffer() {
     }
 
-    public void render(TileEntity tile, double x, double y, double z) {
-        fexcraft.tmt.slim.Tessellator.bindTexture(texture);
+    public void render(TileEntity var1, double x, double y, double z) {
         GL11.glPushMatrix();
-        GL11.glRotated(0,0,-1,0);
-        GL11.glTranslatef((float) x + 0.5f, (float) y, (float) z + 0.5f);
-        modelBR_Modern_Buffer.render(0.0625F, ((TileBR_Modern_Buffer) tile).getFacing());
+
+        GL11.glTranslated(x, y, z);
+        fexcraft.tmt.slim.Tessellator.bindTexture(texture);
+        GL11.glTranslatef(0.5F, 0.0F, 0.5F);
+        GL11.glRotated(180,0,-1,0);
+        modelBR_Modern_Buffer.render(0.0625F, ((TileBR_Modern_Buffer) var1).getFacing());
 
         GL11.glPopMatrix();
     }
@@ -37,7 +46,7 @@ public class RenderBR_Modern_Buffer extends TileEntitySpecialRenderer {
     }
 
     @Override
-    public void renderTileEntityAt(TileEntity tile, double x, double y, double z, float var8) {
-        render(tile, x, y, z);
+    public void renderTileEntityAt(TileEntity var1, double var2, double var4, double var6, float var8) {
+        render(var1, var2, var4, var6);
     }
 }

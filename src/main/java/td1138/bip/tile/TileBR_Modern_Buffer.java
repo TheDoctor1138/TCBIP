@@ -13,6 +13,8 @@ import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
+import td1138.bip.blocks.BlockBR_Modern_Buffer;
+import td1138.bip.blocks.blockSwitch.BlockBR_2_Aspect_Signal;
 
 public class TileBR_Modern_Buffer extends TileEntity {
 
@@ -34,10 +36,8 @@ public class TileBR_Modern_Buffer extends TileEntity {
 		worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
 	}
 
-	public Entity getFacing() { return null; }
-
-	public void setFacing(int facing) {
-		this.facingMeta = facing;
+	public int getState(){
+		return state;
 	}
 
 	@Override
@@ -67,5 +67,13 @@ public class TileBR_Modern_Buffer extends TileEntity {
 	public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt){
 		this.readFromNBT(pkt.func_148857_g());
 		super.onDataPacket(net, pkt);
+	}
+
+	public int getFacing() {
+		return facingMeta;
+	}
+
+	public void setFacing(int facing) {
+		this.facingMeta = facing;
 	}
 }
