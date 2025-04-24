@@ -4,6 +4,7 @@
 
 <!-- Blocks -->
 tile.tcbip:BR_UK_SpeedSign.name=BR UK Speed Sign
+tile.tcbip:BR_UK_SpeedSign_EPS.name=BR UK Speed Sign EPS
 tile.tcbip:BR_Modern_Buffer.name=BR Modern Buffer
 tile.tcbip:BR_2_Aspect_Signal.name=BR 2 Aspect Signal
 tile.tcbip:BR_3_Aspect_Signal.name=BR 3 Aspect Signal
@@ -45,6 +46,7 @@ item.tcbip:minecart4WheeledCoach.name=4 Wheeled Coach
 
 <!-- Entities -->
 entity.tc.:BR UK Speed Sign.name=BR UK Speed Sign
+entity.tc.:BR UK Speed Sign EPS.name=BR UK Speed Sign EPS
 entity.tc.:BR Modern Buffer.name=BR Modern Buffer
 entity.tc.:BR 2 Aspect Signal.name=BR 2 Aspect Signal
 entity.tc.:BR 3 Aspect Signal.name=BR 3 Aspect Signal

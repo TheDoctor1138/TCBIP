@@ -13,10 +13,7 @@ import td1138.bip.entities.trains.*;
 import td1138.bip.library.TCBIPInfo;
 import td1138.bip.recipes.TCBIPRecipeHandler;
 import td1138.bip.tile.TileBR_Modern_Buffer;
-import td1138.bip.tile.switchStand.TileBR_2_Aspect_Signal;
-import td1138.bip.tile.switchStand.TileBR_3_Aspect_Signal;
-import td1138.bip.tile.switchStand.TileBR_4_Aspect_Signal;
-import td1138.bip.tile.switchStand.TileBR_UK_SpeedSign;
+import td1138.bip.tile.switchStand.*;
 import train.common.api.AbstractTrains;
 import train.common.core.CreativeTabTraincraft;
 import train.common.core.handlers.CraftingHandler;
@@ -59,6 +56,7 @@ public class TCBIP {
 
 		proxy.registerTileEntities();
 		GameRegistry.registerTileEntity(TileBR_UK_SpeedSign.class, "TileBR_UK_SpeedSign");
+		GameRegistry.registerTileEntity(TileBR_UK_SpeedSign_EPS.class, "TileBR_UK_SpeedSign_EPS");
 		GameRegistry.registerTileEntity(TileBR_Modern_Buffer.class, "TileBR_Modern_Buffer");
 		GameRegistry.registerTileEntity(TileBR_2_Aspect_Signal.class, "TileBR_2_Aspect_Signal");
 		GameRegistry.registerTileEntity(TileBR_3_Aspect_Signal.class, "TileBR_3_Aspect_Signal");
