@@ -69,33 +69,10 @@ public class BlockBR_Modern_Buffer extends BlockContainer {
 	@Override
 	public void onBlockPlacedBy(World world, int par2, int par3, int par4, EntityLivingBase living, ItemStack stack) {
 		TileBR_Modern_Buffer te = (TileBR_Modern_Buffer) world.getTileEntity(par2, par3, par4);
-		int var6 = MathHelper.floor_double(living.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
-		int var7 = world.getBlockMetadata(par2, par3, par4) >> 2;
-		++var6;
-		var6 %= 4;
-
-		if (var6 == 0) {
-			if (te != null) {
-				te.setFacing(2 | var7 << 2);
-			}
-		}
-
-		if (var6 == 1) {
-			if (te != null) {
-				te.setFacing(3 | var7 << 2);
-			}
-		}
-
-		if (var6 == 2) {
-			if (te != null) {
-				te.setFacing(0 | var7 << 2);
-			}
-		}
-
-		if (var6 == 3) {
-			if (te != null) {
-				te.setFacing(1 | var7 << 2);
-			}
+		if (te != null) {
+			int dir = MathHelper.floor_double((living.rotationYaw * 8f) / 360.0F + 0.5D) & 7;
+			te.setDiagonalFacing(dir);
+			world.markBlockForUpdate(par2, par3, par4);
 		}
 	}
 

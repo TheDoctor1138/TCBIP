@@ -12,9 +12,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
 import org.lwjgl.opengl.GL11;
 import td1138.bip.library.TCBIPInfo;
-import td1138.bip.models.blocks.ModelBR_Modern_Buffer;
-import train.client.render.models.blocks.ModelAmericanStopper;
-import train.common.library.Info;
 
 public class ItemRenderBR_Modern_Buffer implements IItemRenderer {
     private static final ResourceLocation texture = new ResourceLocation(TCBIPInfo.resourceLocation, TCBIPInfo.modelTexPrefix + "BR_Modern_Buffer_Red.png");
@@ -41,15 +38,27 @@ public class ItemRenderBR_Modern_Buffer implements IItemRenderer {
                 break;
             }
             case EQUIPPED: {
-                renderBR_Modern_Buffer(0F, 0.4F, 0F, 0.0F);
+                GL11.glPushMatrix();
+                GL11.glRotatef(180,3f,0f,0f);
+                GL11.glRotatef(0,0f,-1f,0f);
+                renderBR_Modern_Buffer(0.5F, -1.25F, -0.5F, 0.0F);
+                GL11.glPopMatrix();
                 break;
             }
             case EQUIPPED_FIRST_PERSON: {
-                renderBR_Modern_Buffer(0F, 0.4F, 0F, 0.0F);
+                GL11.glPushMatrix();
+                GL11.glRotatef(180,3f,0f,0f);
+                GL11.glRotatef(0,0f,-1f,0f);
+                renderBR_Modern_Buffer(0.1F, -1.25F, -0.5F, 0.0F);
+                GL11.glPopMatrix();
                 return;
             }
             case INVENTORY: {
+                GL11.glPushMatrix();
+                GL11.glRotatef(180,3f,0f,0f);
+                GL11.glRotatef(90,0f,-1f,0f);
                 renderBR_Modern_Buffer(1F, 0.65F, 1F, 0.0F);
+                GL11.glPopMatrix();
                 break;
             }
             default:

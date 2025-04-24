@@ -44,15 +44,27 @@ public class ItemRenderBR_UK_SpeedSign implements IItemRenderer {
                 return;
             }
             case EQUIPPED: {
-                renderSwitch(0.2f, 1f, 1f, 1f);
+                GL11.glPushMatrix();
+                GL11.glRotatef(-45,1f,0f,0f);
+                GL11.glRotatef(90,0f,1f,0f);
+                renderSwitch(-1f, 1f, 0.7f, 1.5f);
+                GL11.glPopMatrix();
                 return;
             }
             case EQUIPPED_FIRST_PERSON: {
-                renderSwitch(0, 0, 0, 1f);
+                GL11.glPushMatrix();
+                GL11.glRotatef(-105,0.5f,2f,0f);
+                GL11.glRotatef(105,0f,2.5f,0f);
+                renderSwitch(0.2f, 1.2f, 0.8f, 1.3f);
+                GL11.glPopMatrix();
                 return;
             }
             case INVENTORY: {
-                renderSwitch(0f, 0f, 0f, 1f);
+                GL11.glPushMatrix();
+                GL11.glRotatef(90,0f,1f,0f);
+                GL11.glRotatef(90,0f,1f,0f);
+                renderSwitch(0f, 0f, 0f, 1.5f);
+                GL11.glPopMatrix();
 
                 return;
             }

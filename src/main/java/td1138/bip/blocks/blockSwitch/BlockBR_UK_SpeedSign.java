@@ -55,8 +55,8 @@ public class BlockBR_UK_SpeedSign extends BlockDynamic {
 		super.onBlockPlacedBy(world, i, j, k, entityliving, stack);
 		TileBR_UK_SpeedSign te = (TileBR_UK_SpeedSign) world.getTileEntity(i, j, k);
 		if (te != null) {
-			int dir = MathHelper.floor_double((double) ((entityliving.rotationYaw * 4F) / 360F) + 0.5D) & 3;
-			te.setFacing(ForgeDirection.getOrientation(dir == 0 ? 2 : dir == 1 ? 5 : dir == 2 ? 3 : 4));
+			int dir = MathHelper.floor_double((entityliving.rotationYaw * 8f) / 360.0F + 0.5D ) & 7;
+			te.setDiagonalFacing(dir);
 			te.setSkinstate(0);
 			world.markBlockForUpdate(i, j, k);
 

@@ -38,7 +38,15 @@ public class TileBR_UK_SpeedSign extends TileRenderFacing {
 		worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
 	}
 
+	public TileRenderFacing setDiagonalFacing(int dir){
+		facing = dir;
+		this.markDirty();
+		return this;
+	}
 
+	public int getDiagonalfacing(){
+		return facing;
+	}
 
 	public void readFromNBT(NBTTagCompound nbtTag) {
 		super.readFromNBT(nbtTag);
