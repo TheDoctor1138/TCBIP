@@ -83,10 +83,4 @@ public class BlockBR_Modern_Buffer extends BlockContainer {
 	public TileEntity createNewTileEntity(World world, int meta) {
 		return new TileBR_Modern_Buffer(meta);
 	}
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void registerBlockIcons(IIconRegister iconRegister) {
-		texture = iconRegister.registerIcon(TCBIPInfo.modID.toLowerCase() + ":br_modern_buffer");
-	}
 }

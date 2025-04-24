@@ -7,6 +7,7 @@
 
 package td1138.bip.models.blocks;
 
+import fexcraft.tmt.slim.Tessellator;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
@@ -69,9 +70,9 @@ public class ItemRenderBR_Modern_Buffer implements IItemRenderer {
     private void renderBR_Modern_Buffer(float f, float g, float h, float rotation) {
         fexcraft.tmt.slim.Tessellator.bindTexture(texture);
         GL11.glPushMatrix(); //start
+        BR_Modern_Buffer.render(0.0625F);
         GL11.glTranslatef(f, g, h); //size
         GL11.glRotatef(rotation, f, g, h);
-        BR_Modern_Buffer.render();
         GL11.glPopMatrix(); //end
     }
 }
