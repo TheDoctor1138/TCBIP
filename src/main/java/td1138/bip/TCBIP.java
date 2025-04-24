@@ -3,6 +3,7 @@ package td1138.bip;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import td1138.bip.blocks.TCBlocks;
@@ -34,10 +35,10 @@ public class TCBIP {
 
 	@SidedProxy(clientSide = "td1138.bip.core.ClientProxy", serverSide = "td1138.bip.core.CommonProxy")
 	public static CommonProxy proxy;
-	private Object FMLPreInitializationEvent;
+
 
 	@Mod.EventHandler
-	public void init(cpw.mods.fml.common.event.FMLPreInitializationEvent event) {
+	public void init(FMLInitializationEvent event) {
 
 		tabBIP = new CreativeTabTraincraft("B.I.P.", TCBIPInfo.modID, "trains/bipLogo");
 		TraincraftRegistry.registerTransports("", listSteamTrains());
@@ -65,7 +66,7 @@ public class TCBIP {
 		proxy.registerBookHandler();
 		PacketHandler.init();
 		proxy.registerRenderInformation();
-		proxy.registerEvents(event);
+		//proxy.registerEvents(event);
 
 	}
 

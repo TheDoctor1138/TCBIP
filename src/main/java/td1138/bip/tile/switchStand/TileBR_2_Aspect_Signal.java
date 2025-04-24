@@ -2,79 +2,73 @@ package td1138.bip.tile.switchStand;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.Block;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
-import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraftforge.common.util.ForgeDirection;
-import td1138.bip.api.blocks.BlockSwitch;
-import td1138.bip.api.blocks.TileSwitch;
-import td1138.bip.blocks.TCBlocks;
 import td1138.bip.blocks.blockSwitch.BlockBR_2_Aspect_Signal;
-import train.common.api.blocks.BlockDynamic;
-import train.common.tile.TileSignal;
-import train.common.tile.TileTCRail;
+import train.common.api.blocks.TileRenderFacing;
 
-import java.util.Random;
+public class TileBR_2_Aspect_Signal extends TileRenderFacing {
 
-public class TileBR_2_Aspect_Signal extends TileSwitch {
-
-    public int state = 0;// 0=green 1=yellow
-    private int updateTicks = 0;
-    private static Random rand = new Random();
+    private int skinstate;
 
     public TileBR_2_Aspect_Signal(){
     }
     public TileBR_2_Aspect_Signal(BlockBR_2_Aspect_Signal block){
         host = block;
     }
+    public void setSkinstate(int skinstate) {
+        this.skinstate = skinstate;
+        worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
 
-    public void setState(int st){
-        state = st;
+    }
+
+    public int getSkinstate() {
+        return skinstate;
+    }
+
+    public void increaseSkinState(){
+        if (skinstate >= 1){
+            skinstate = 0;
+        } else {
+            skinstate++;
+        }
         worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
     }
 
-    public int getState(){
-       return state;
-    }
 
-    @Override
-    public void readFromNBT(NBTTagCompound tag){
-        super.readFromNBT(tag);
-        state = tag.getInteger("state");
-    }
 
-    @Override
-    public void updateEntity() {
-        super.updateEntity();
-        updateTicks++;
-
-        /**
-         * Remove any block on top of the wind mill
-         */
-        if (!worldObj.isRemote) {
-            if (updateTicks % 20 == 0) {
-                if (!this.worldObj.isAirBlock(this.xCoord, this.yCoord + 1, this.zCoord)) {
-                    Block block = this.worldObj.getBlock(this.xCoord, this.yCoord + 1, this.zCoord);
-                    if (block != null) {
-                        EntityItem entityitem = new EntityItem(worldObj, this.xCoord, this.yCoord + 1, this.zCoord, new ItemStack(Item.getItemFromBlock(TCBlocks.BR_2_Aspect_Signal), 1));
-                        float f3 = 0.05F;
-                        entityitem.motionX = (float) rand.nextGaussian() * f3;
-                        entityitem.motionY = (float) rand.nextGaussian() * f3 + 0.2F;
-                        entityitem.motionZ = (float) rand.nextGaussian() * f3;
-                        worldObj.spawnEntityInWorld(entityitem);
-                    }
-                    this.worldObj.setBlockToAir(this.xCoord, this.yCoord, this.zCoord);
-                }
-                syncTileEntity();
-            }
+    public void readFromNBT(NBTTagCompound nbtTag) {
+        super.readFromNBT(nbtTag);
+        if(nbtTag.hasKey("skinstate")){
+            skinstate = nbtTag.getInteger("skinstate");
         }
+
+        else {
+            System.out.println("No Skins");
+        }
+
+    }
+
+    @Override
+    public void writeToNBT(NBTTagCompound nbtTag) {
+        super.writeToNBT(nbtTag);
+        nbtTag.setInteger("skinstate", this.skinstate);
+    }
+
+    public S35PacketUpdateTileEntity getDescriptionPacket() {
+
+        NBTTagCompound nbt = new NBTTagCompound();
+        this.writeToNBT(nbt);
+
+        return new S35PacketUpdateTileEntity(this.xCoord, this.yCoord, this.zCoord, 1, nbt);
+    }
+
+    @Override
+    public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt){
+        this.readFromNBT(pkt.func_148857_g());
+        super.onDataPacket(net, pkt);
     }
 
     @SideOnly(Side.CLIENT)

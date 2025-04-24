@@ -20,7 +20,6 @@ import java.util.List;
 
 public class BlockBR_3_Aspect_Signal extends BlockDynamic {
 	private IIcon texture;
-	private int skinstate = 0;
 
 	public BlockBR_3_Aspect_Signal() {
 		super(Material.iron, 0);
@@ -38,12 +37,10 @@ public class BlockBR_3_Aspect_Signal extends BlockDynamic {
 	{
 	}
 
-
 	@Override
 	public boolean renderAsNormalBlock() {
 		return false;
 	}
-
 
 	@Override
 	public boolean isOpaqueCube() {
@@ -82,18 +79,10 @@ public class BlockBR_3_Aspect_Signal extends BlockDynamic {
 	public TileEntity createNewTileEntity(World world, int metadata) { return new TileBR_3_Aspect_Signal();
 	}
 
-
-
 	@Override
 	public int getRenderType() {
 		return -1;
 	}
-
-
-
-
-
-
 
 	public void breakBlock(World p_149749_1_, int p_149749_2_, int p_149749_3_, int p_149749_4_, Block p_149749_5_, int p_149749_6_) {
 		super.breakBlock(p_149749_1_, p_149749_2_, p_149749_3_, p_149749_4_, p_149749_5_, p_149749_6_);
@@ -101,11 +90,6 @@ public class BlockBR_3_Aspect_Signal extends BlockDynamic {
 			p_149749_1_.removeTileEntity(p_149749_2_, p_149749_3_, p_149749_4_);
 		}
 	}
-
-
-
-
-
 
 	@Override
 	public IIcon getIcon(int i, int j) {

@@ -76,26 +76,7 @@ public class RenderBR_3_Aspect_Signal extends TileEntitySpecialRenderer {
 
 
 		if (!skipRender) {
-
-			// tileEntity.getWorldObj().getBlock(tileEntity.xCoord, tileEntity.yCoord, tileEntity.zCoord).isProvidingWeakPower(tileEntity.getWorldObj(), tileEntity.xCoord, tileEntity.yCoord, tileEntity.zCoord, 0) > 0
-
-			/*
-			if (((TileSpeedSign) tileEntity).getSkinstate() == 0) {
-				Tessellator.bindTexture(texture);
-			} else if (((TileSpeedSign) tileEntity).getSkinstate() == 1){
-				Tessellator.bindTexture(texture2);
-			} else if (((TileSpeedSign) tileEntity).getSkinstate() == 2){
-				Tessellator.bindTexture(texture3);
-			} else if (((TileSpeedSign) tileEntity).getSkinstate() == 3) {
-				Tessellator.bindTexture(texture4);
-			}
-
-			 */
-
 			modelBR_3_aspect_signal.render(null, 0, 0, 0, 0, 0, 0.0625f);
-
-
-
 		}
 		GL11.glPopMatrix();
 	}
