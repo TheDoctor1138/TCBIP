@@ -13,6 +13,8 @@ import td1138.bip.entities.trains.*;
 import td1138.bip.library.TCBIPInfo;
 import td1138.bip.recipes.TCBIPRecipeHandler;
 import td1138.bip.tile.TileBR_Modern_Buffer;
+import td1138.bip.tile.TilePlatform_Slab_Diagonal;
+import td1138.bip.tile.TilePlatform_Slab_Diagonal_End;
 import td1138.bip.tile.switchStand.*;
 import train.common.api.AbstractTrains;
 import train.common.core.CreativeTabTraincraft;
@@ -61,6 +63,8 @@ public class TCBIP {
 		GameRegistry.registerTileEntity(TileBR_2_Aspect_Signal.class, "TileBR_2_Aspect_Signal");
 		GameRegistry.registerTileEntity(TileBR_3_Aspect_Signal.class, "TileBR_3_Aspect_Signal");
 		GameRegistry.registerTileEntity(TileBR_4_Aspect_Signal.class, "TileBR_4_Aspect_Signal");
+		GameRegistry.registerTileEntity(TilePlatform_Slab_Diagonal.class, "TilePlatform_Slab_Diagonal");
+		GameRegistry.registerTileEntity(TilePlatform_Slab_Diagonal_End.class, "TilePlatform_Slab_Diagonal_End");
 		proxy.registerBookHandler();
 		PacketHandler.init();
 		proxy.registerRenderInformation();

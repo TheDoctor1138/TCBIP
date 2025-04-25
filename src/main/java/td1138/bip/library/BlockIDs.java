@@ -16,12 +16,14 @@ import train.common.wellcar.ItemFortyFootContainer;
 
 public enum BlockIDs {
 
-	BR_UK_SpeedSign(true, ItemBR_UK_SpeedSign.class),//ItemBR_Modern_Buffer.class
-	BR_UK_SpeedSign_EPS(true, ItemBR_UK_SpeedSign_EPS.class),//ItemBR_Modern_Buffer.class
+	BR_UK_SpeedSign(true, ItemBR_UK_SpeedSign.class),//ItemBR_UK_SpeedSign.class
+	BR_UK_SpeedSign_EPS(true, ItemBR_UK_SpeedSign_EPS.class),//ItemBR_UK_SpeedSign_EPS.class
 	BR_Modern_Buffer(true, ItemBR_Modern_Buffer.class),//ItemBR_Modern_Buffer.class
 	BR_2_Aspect_Signal(true, ItemBR_2_Aspect_Signal.class),//ItemBR_2_Aspect_Signal.class
 	BR_3_Aspect_Signal(true, ItemBR_3_Aspect_Signal.class),//ItemBR_3_Aspect_Signal.class
 	BR_4_Aspect_Signal(true, ItemBR_4_Aspect_Signal.class),//ItemBR_4_Aspect_Signal.class
+	Platform_Slab_Diagonal(true, ItemPlatform_Slab_Diagonal.class),//ItemPlatform_Slab_Diagonal.class
+	Platform_Slab_Diagonal_End(true, ItemPlatform_Slab_Diagonal_End.class),//ItemPlatform_Slab_Diagonal_End.class
 
 
 	;

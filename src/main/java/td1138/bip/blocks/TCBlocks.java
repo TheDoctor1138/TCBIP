@@ -28,6 +28,8 @@ public class TCBlocks {
 	public static Block BR_2_Aspect_Signal = new BlockBR_2_Aspect_Signal().setHardness(1F);
 	public static Block BR_3_Aspect_Signal = new BlockBR_3_Aspect_Signal().setHardness(1F);
 	public static Block BR_4_Aspect_Signal = new BlockBR_4_Aspect_Signal().setHardness(1F);
+	public static Block Platform_Slab_Diagonal = new BlockPlatform_Slab_Diagonal().setHardness(1F);
+	public static Block Platform_Slab_Diagonal_End = new BlockPlatform_Slab_Diagonal_End().setHardness(1F);
 
 
 	public static void loadBlocks() {
@@ -38,6 +40,8 @@ public class TCBlocks {
 		BlockIDs.BR_2_Aspect_Signal.block = new BlockBR_2_Aspect_Signal().setHardness(1F).setResistance(10F).setLightLevel(0.2F).setCreativeTab(TCBIP.tabBIP).setStepSound(Block.soundTypeMetal);
 		BlockIDs.BR_3_Aspect_Signal.block = new BlockBR_3_Aspect_Signal().setHardness(1F).setResistance(10F).setLightLevel(0.2F).setCreativeTab(TCBIP.tabBIP).setStepSound(Block.soundTypeMetal);
 		BlockIDs.BR_4_Aspect_Signal.block = new BlockBR_4_Aspect_Signal().setHardness(1F).setResistance(10F).setLightLevel(0.2F).setCreativeTab(TCBIP.tabBIP).setStepSound(Block.soundTypeMetal);
+		BlockIDs.Platform_Slab_Diagonal.block = new BlockPlatform_Slab_Diagonal().setHardness(1F).setResistance(10F).setLightLevel(0.2F).setCreativeTab(TCBIP.tabBIP).setStepSound(Block.soundTypeMetal);
+		BlockIDs.Platform_Slab_Diagonal_End.block = new BlockPlatform_Slab_Diagonal_End().setHardness(1F).setResistance(10F).setLightLevel(0.2F).setCreativeTab(TCBIP.tabBIP).setStepSound(Block.soundTypeMetal);
 	}
 
 	public static void registerBlocks() {
@@ -61,5 +65,7 @@ public class TCBlocks {
 		BlockIDs.BR_2_Aspect_Signal.block.setHarvestLevel("pickaxe",1);
 		BlockIDs.BR_3_Aspect_Signal.block.setHarvestLevel("pickaxe",1);
 		BlockIDs.BR_4_Aspect_Signal.block.setHarvestLevel("pickaxe",1);
+		BlockIDs.Platform_Slab_Diagonal.block.setHarvestLevel("pickaxe",1);
+		BlockIDs.Platform_Slab_Diagonal_End.block.setHarvestLevel("pickaxe",1);
 	}
 }
