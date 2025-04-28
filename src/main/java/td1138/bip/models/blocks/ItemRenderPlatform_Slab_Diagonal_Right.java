@@ -10,16 +10,15 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
 import org.lwjgl.opengl.GL11;
 import td1138.bip.library.TCBIPInfo;
-import td1138.bip.models.renderSwitch.models.ModelBR_UK_SpeedSign;
 
-public class ItemRenderPlatform_Slab_Diagonal implements IItemRenderer {
-    private static final ModelPlatform_Slab_Diagonal modelSwitch = new ModelPlatform_Slab_Diagonal();
-    private static final ResourceLocation texture = new ResourceLocation(TCBIPInfo.resourceLocation,TCBIPInfo.modelTexPrefix + "Platform_Slab_Diagonal.png");
+public class ItemRenderPlatform_Slab_Diagonal_Right implements IItemRenderer {
+    private static final ModelPlatform_Slab_Diagonal_Right modelSwitch = new ModelPlatform_Slab_Diagonal_Right();
+    private static final ResourceLocation texture = new ResourceLocation(TCBIPInfo.resourceLocation,TCBIPInfo.modelTexPrefix + "Platform_Slab_Diagonal_Right.png");
     private Object IIconRegister;
     private Object IItemRenderer;
     private IIcon itemIcon;
 
-    public ItemRenderPlatform_Slab_Diagonal() {
+    public ItemRenderPlatform_Slab_Diagonal_Right() {
     }
 
 
@@ -36,7 +35,7 @@ public class ItemRenderPlatform_Slab_Diagonal implements IItemRenderer {
 
     @Override
     public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
-        Tessellator.bindTexture(new ResourceLocation(TCBIPInfo.resourceLocation, TCBIPInfo.modelTexPrefix + "Platform_Slab_Diagonal.png"));
+        Tessellator.bindTexture(new ResourceLocation(TCBIPInfo.resourceLocation, TCBIPInfo.modelTexPrefix + "Platform_Slab_Diagonal_Right.png"));
         switch (type) {
             case ENTITY: {
                 renderSwitch(0f, 0f, 0f, 1f);
@@ -75,7 +74,7 @@ public class ItemRenderPlatform_Slab_Diagonal implements IItemRenderer {
 
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
-        this.itemIcon = iconRegister.registerIcon(TCBIPInfo.modID.toLowerCase() + ":platform_slab_diagonal");
+        this.itemIcon = iconRegister.registerIcon(TCBIPInfo.modID.toLowerCase() + ":platform_slab");
     }
 
     /*

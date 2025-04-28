@@ -12,13 +12,13 @@ import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import train.common.api.blocks.TileRenderFacing;
 
-public class TilePlatform_Slab_Diagonal extends TileRenderFacing {
+public class TilePlatform_Slab_Diagonal_Left extends TileRenderFacing {
 
-	public TilePlatform_Slab_Diagonal() {
+	public TilePlatform_Slab_Diagonal_Left() {
 		//facingMeta = this.getBlockMetadata(); // Changed from this.blockMetadata to the method call to avoid receiving invalid Metadata.
 	}
 
-	public TilePlatform_Slab_Diagonal(int meta){
+	public TilePlatform_Slab_Diagonal_Left(int meta){
 		
 		this.facing = meta;
 	}

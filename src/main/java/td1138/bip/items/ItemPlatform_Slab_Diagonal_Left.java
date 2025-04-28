@@ -8,9 +8,9 @@ import net.minecraft.item.ItemBlock;
 import td1138.bip.TCBIP;
 import td1138.bip.library.TCBIPInfo;
 
-public class ItemPlatform_Slab_Diagonal extends ItemBlock {
+public class ItemPlatform_Slab_Diagonal_Left extends ItemBlock {
 
-    public ItemPlatform_Slab_Diagonal(Block id) {
+    public ItemPlatform_Slab_Diagonal_Left(Block id) {
         super(id);
         maxStackSize = 64;
         setCreativeTab(TCBIP.tabBIP);
@@ -18,7 +18,7 @@ public class ItemPlatform_Slab_Diagonal extends ItemBlock {
 
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
-        this.itemIcon = iconRegister.registerIcon(TCBIPInfo.modID + ":platform_slab_diagonal");
+        this.itemIcon = iconRegister.registerIcon(TCBIPInfo.modID + ":platform_slab");
     }
 
 

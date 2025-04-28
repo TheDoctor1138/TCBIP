@@ -6,11 +6,11 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import td1138.bip.library.TCBIPInfo;
-import td1138.bip.tile.TilePlatform_Slab_Diagonal_End;
+import td1138.bip.tile.TilePlatform_Slab_Diagonal_Left;
 
-public class RenderPlatform_Slab_Diagonal_End extends TileEntitySpecialRenderer {
-    static final ModelPlatform_Slab_Diagonal_End modelPlatform_Slab_Diagonal_End = new ModelPlatform_Slab_Diagonal_End();
-    private static final ResourceLocation texture = new ResourceLocation(TCBIPInfo.resourceLocation, TCBIPInfo.modelTexPrefix + "Platform_Slab_Diagonal_End.png");
+public class RenderPlatform_Slab_Diagonal_Left extends TileEntitySpecialRenderer {
+    static final ModelPlatform_Slab_Diagonal_Left modelPlatform_Slab_Diagonal_Left = new ModelPlatform_Slab_Diagonal_Left();
+    private static final ResourceLocation texture = new ResourceLocation(TCBIPInfo.resourceLocation, TCBIPInfo.modelTexPrefix + "Platform_Slab_Diagonal_Left.png");
 
 
     @Override
@@ -21,7 +21,7 @@ public class RenderPlatform_Slab_Diagonal_End extends TileEntitySpecialRenderer 
         GL11.glRotated(180,0,1,0);
         boolean skipRender = false;
 
-        switch (((TilePlatform_Slab_Diagonal_End)tileEntity).getFacing()){
+        switch (((TilePlatform_Slab_Diagonal_Left)tileEntity).getFacing()){
             case NORTH:{
                 GL11.glRotated(180,0,0,1);
                 GL11.glRotated(90,0,1,0);
@@ -52,7 +52,7 @@ public class RenderPlatform_Slab_Diagonal_End extends TileEntitySpecialRenderer 
         }
 
         if (!skipRender) {
-            modelPlatform_Slab_Diagonal_End.render(null, 0, 0, 0, 0, 0, 0.0625f);
+            modelPlatform_Slab_Diagonal_Left.render(null, 0, 0, 0, 0, 0, 0.0625f);
         }
         GL11.glPopMatrix();
     }

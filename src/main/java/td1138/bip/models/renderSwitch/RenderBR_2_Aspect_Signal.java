@@ -42,7 +42,7 @@ public class RenderBR_2_Aspect_Signal extends TileEntitySpecialRenderer {
             case EAST:{
                 GL11.glRotated(180,0,0,1);
                 GL11.glRotated(180,0,1,0);
-                GL11.glTranslated(-0.1875,0,0.325);
+                GL11.glTranslated(-0.1875,0,0.425);
                 break;
             }
             case WEST:{

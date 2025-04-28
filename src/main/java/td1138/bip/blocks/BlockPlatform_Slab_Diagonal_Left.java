@@ -16,16 +16,15 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import td1138.bip.TCBIP;
-import td1138.bip.tile.TileBR_Modern_Buffer;
-import td1138.bip.tile.TilePlatform_Slab_Diagonal;
+import td1138.bip.tile.TilePlatform_Slab_Diagonal_Left;
 
 import static net.minecraftforge.common.util.ForgeDirection.UP;
 
-public class BlockPlatform_Slab_Diagonal extends BlockContainer {
+public class BlockPlatform_Slab_Diagonal_Left extends BlockContainer {
 
 	private IIcon texture;
 
-	public BlockPlatform_Slab_Diagonal() {
+	public BlockPlatform_Slab_Diagonal_Left() {
 		super(Material.iron);
 		setCreativeTab(TCBIP.tabBIP);
 		setBlockBounds(0.0F, 0.0F, 0.0F, 1F, 0.5F, 1F);
@@ -63,7 +62,7 @@ public class BlockPlatform_Slab_Diagonal extends BlockContainer {
 
 	@Override
 	public void onBlockPlacedBy(World world, int par2, int par3, int par4, EntityLivingBase living, ItemStack stack) {
-		TilePlatform_Slab_Diagonal te = (TilePlatform_Slab_Diagonal) world.getTileEntity(par2, par3, par4);
+		TilePlatform_Slab_Diagonal_Left te = (TilePlatform_Slab_Diagonal_Left) world.getTileEntity(par2, par3, par4);
 		if (te != null) {
 			int dir = MathHelper.floor_double((living.rotationYaw * 4f) / 360.0F + 0.5D) & 3;
 			te.setDiagonalFacing(dir);
@@ -72,10 +71,10 @@ public class BlockPlatform_Slab_Diagonal extends BlockContainer {
 	}
 
 	@Override
-	public TileEntity createTileEntity(World world, int metadata) { return new TilePlatform_Slab_Diagonal(); }
+	public TileEntity createTileEntity(World world, int metadata) { return new TilePlatform_Slab_Diagonal_Left(); }
 
 	@Override
 	public TileEntity createNewTileEntity(World world, int meta) {
-		return new TilePlatform_Slab_Diagonal(meta);
+		return new TilePlatform_Slab_Diagonal_Left(meta);
 	}
 }

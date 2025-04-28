@@ -18,8 +18,9 @@ public enum ItemIDs implements IItemIDs {
 	BR_2_Aspect_Signal("ItemTCRail", "br_2_aspect_signal", 2),
 	BR_3_Aspect_Signal("ItemTCRail", "br_3_aspect_signal", 2),
 	BR_4_Aspect_Signal("ItemTCRail", "br_4_aspect_signal", 2),
-	Platform_Slab_Diagonal("ItemBlock", "platform_slab_diagonal", 1),
-	Platform_Slab_Diagonal_End("ItemBlock", "platform_slab_diagonal", 1),
+	Platform_Slab_Diagonal_Left("ItemBlock", "platform_slab", 1),
+	Platform_Slab_Diagonal_Right("ItemBlock", "platform_slab", 1),
+	Platform_Slab_Diagonal_End("ItemBlock", "platform_slab", 1),
 	;
 
 	public Item item;

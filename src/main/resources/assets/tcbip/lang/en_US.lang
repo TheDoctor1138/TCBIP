@@ -9,7 +9,8 @@ tile.tcbip:BR_Modern_Buffer.name=BR Modern Buffer
 tile.tcbip:BR_2_Aspect_Signal.name=BR 2 Aspect Signal
 tile.tcbip:BR_3_Aspect_Signal.name=BR 3 Aspect Signal
 tile.tcbip:BR_4_Aspect_Signal.name=BR 4 Aspect Signal
-tile.tcbip:Platform_Slab_Diagonal.name=Platform Slab Diagonal
+tile.tcbip:Platform_Slab_Diagonal_Left.name=Platform Slab Diagonal Left
+tile.tcbip:Platform_Slab_Diagonal_Right.name=Platform Slab Diagonal Right
 tile.tcbip:Platform_Slab_Diagonal_End.name=Platform Slab Diagonal End
 
 <!-- Items -->
@@ -47,14 +48,6 @@ item.tcbip:minecartHornby060E2.name=Hornby 0-6-0 E2
 item.tcbip:minecart4WheeledCoach.name=4 Wheeled Coach
 
 <!-- Entities -->
-entity.tc.:BR UK Speed Sign.name=BR UK Speed Sign
-entity.tc.:BR UK Speed Sign EPS.name=BR UK Speed Sign EPS
-entity.tc.:BR Modern Buffer.name=BR Modern Buffer
-entity.tc.:BR 2 Aspect Signal.name=BR 2 Aspect Signal
-entity.tc.:BR 3 Aspect Signal.name=BR 3 Aspect Signal
-entity.tc.:BR 4 Aspect Signal.name=BR 4 Aspect Signal
-entity.tc.:Platform Slab Diagonal.name=Platform Slab Diagonal
-entity.tc.:Platform Slab Diagonal End.name=Platform Slab Diagonal End
 entity.tc.:SNCBM6.name=NMBS M6 Coach
 entity.tc.:SNCBM6Tail.name=NMBS M6 Tail
 entity.tc.:NMBS HLE Class18.name=NMBS HLE Class 18

@@ -27,7 +27,8 @@ public class TCBIPItems {
     public static Item itemBR_2_Aspect_Signal = new ItemBR_2_Aspect_Signal(null);
     public static Item itemBR_3_Aspect_Signal = new ItemBR_3_Aspect_Signal(null);
     public static Item itemBR_4_Aspect_Signal = new ItemBR_4_Aspect_Signal(null);
-    public static Item itemPlatform_Slab_Diagonal = new ItemPlatform_Slab_Diagonal(null);
+    public static Item itemPlatform_Slab_Diagonal_Left = new ItemPlatform_Slab_Diagonal_Left(null);
+    public static Item itemPlatform_Slab_Diagonal_Right = new ItemPlatform_Slab_Diagonal_Right(null);
     public static Item itemPlatform_Slab_Diagonal_End = new ItemPlatform_Slab_Diagonal_End(null);
 
     private static void loadItems() {
@@ -38,7 +39,8 @@ public class TCBIPItems {
         ItemIDs.BR_2_Aspect_Signal.item = new td1138.bip.items.ItemBR_2_Aspect_Signal(null);
         ItemIDs.BR_3_Aspect_Signal.item = new td1138.bip.items.ItemBR_3_Aspect_Signal(null);
         ItemIDs.BR_4_Aspect_Signal.item = new td1138.bip.items.ItemBR_4_Aspect_Signal(null);
-        ItemIDs.Platform_Slab_Diagonal.item = new td1138.bip.items.ItemPlatform_Slab_Diagonal(null);
+        ItemIDs.Platform_Slab_Diagonal_Left.item = new td1138.bip.items.ItemPlatform_Slab_Diagonal_Left(null);
+        ItemIDs.Platform_Slab_Diagonal_Right.item = new td1138.bip.items.ItemPlatform_Slab_Diagonal_Right(null);
         ItemIDs.Platform_Slab_Diagonal_End.item = new td1138.bip.items.ItemPlatform_Slab_Diagonal_End(null);
     }
 
@@ -50,7 +52,8 @@ public class TCBIPItems {
         TraincraftRegistry.RegisterItem(itemBR_2_Aspect_Signal, TCBIPInfo.modID, "BR_2_Aspect_Signal", TCBIP.tabBIP);
         TraincraftRegistry.RegisterItem(itemBR_3_Aspect_Signal, TCBIPInfo.modID, "BR_3_Aspect_Signal", TCBIP.tabBIP);
         TraincraftRegistry.RegisterItem(itemBR_4_Aspect_Signal, TCBIPInfo.modID, "BR_4_Aspect_Signal", TCBIP.tabBIP);
-        TraincraftRegistry.RegisterItem(itemPlatform_Slab_Diagonal, TCBIPInfo.modID, "Platform_Slab_Diagonal", TCBIP.tabBIP);
+        TraincraftRegistry.RegisterItem(itemPlatform_Slab_Diagonal_Left, TCBIPInfo.modID, "Platform_Slab_Diagonal_Left", TCBIP.tabBIP);
+        TraincraftRegistry.RegisterItem(itemPlatform_Slab_Diagonal_Right, TCBIPInfo.modID, "Platform_Slab_Diagonal_Right", TCBIP.tabBIP);
         TraincraftRegistry.RegisterItem(itemPlatform_Slab_Diagonal_End, TCBIPInfo.modID, "Platform_Slab_Diagonal_End", TCBIP.tabBIP);
     }
 }

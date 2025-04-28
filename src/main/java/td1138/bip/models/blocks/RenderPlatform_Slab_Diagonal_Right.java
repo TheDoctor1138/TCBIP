@@ -6,14 +6,12 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import td1138.bip.library.TCBIPInfo;
-import td1138.bip.models.blocks.ModelPlatform_Slab_Diagonal;
-import td1138.bip.models.renderSwitch.models.ModelBR_2_Aspect_Signal;
-import td1138.bip.tile.TilePlatform_Slab_Diagonal;
-import td1138.bip.tile.switchStand.TileBR_2_Aspect_Signal;
+import td1138.bip.tile.TilePlatform_Slab_Diagonal_Left;
+import td1138.bip.tile.TilePlatform_Slab_Diagonal_Right;
 
-public class RenderPlatform_Slab_Diagonal extends TileEntitySpecialRenderer {
-    static final ModelPlatform_Slab_Diagonal modelPlatform_Slab_Diagonal = new ModelPlatform_Slab_Diagonal();
-    private static final ResourceLocation texture = new ResourceLocation(TCBIPInfo.resourceLocation, TCBIPInfo.modelTexPrefix + "Platform_Slab_Diagonal.png");
+public class RenderPlatform_Slab_Diagonal_Right extends TileEntitySpecialRenderer {
+    static final ModelPlatform_Slab_Diagonal_Right modelPlatform_Slab_Diagonal_Right = new ModelPlatform_Slab_Diagonal_Right();
+    private static final ResourceLocation texture = new ResourceLocation(TCBIPInfo.resourceLocation, TCBIPInfo.modelTexPrefix + "Platform_Slab_Diagonal_Right.png");
 
 
     @Override
@@ -24,7 +22,7 @@ public class RenderPlatform_Slab_Diagonal extends TileEntitySpecialRenderer {
         GL11.glRotated(180,0,1,0);
         boolean skipRender = false;
 
-        switch (((TilePlatform_Slab_Diagonal)tileEntity).getFacing()){
+        switch (((TilePlatform_Slab_Diagonal_Right)tileEntity).getFacing()){
             case NORTH:{
                 GL11.glRotated(180,0,0,1);
                 GL11.glRotated(90,0,1,0);
@@ -39,14 +37,14 @@ public class RenderPlatform_Slab_Diagonal extends TileEntitySpecialRenderer {
             }
             case EAST:{
                 GL11.glRotated(180,0,0,1);
-                GL11.glRotated(180,0,1,0);
-                GL11.glTranslated(-0.5,0,0.875);
+                GL11.glRotated(0,0,1,0);
+                GL11.glTranslated(-0.5,0,0.125);
                 break;
             }
             case WEST:{
                 GL11.glRotated(180,0,0,1);
-                GL11.glRotated(0,0,1,0);
-                GL11.glTranslated(-0.5,0,0.125);
+                GL11.glRotated(180,0,1,0);
+                GL11.glTranslated(-0.5,0,0.875);
                 break;
             }
             default:{
@@ -55,7 +53,7 @@ public class RenderPlatform_Slab_Diagonal extends TileEntitySpecialRenderer {
         }
 
         if (!skipRender) {
-            modelPlatform_Slab_Diagonal.render(null, 0, 0, 0, 0, 0, 0.0625f);
+            modelPlatform_Slab_Diagonal_Right.render(null, 0, 0, 0, 0, 0, 0.0625f);
         }
         GL11.glPopMatrix();
     }
