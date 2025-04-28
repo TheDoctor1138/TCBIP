@@ -30,6 +30,8 @@ public class TCBIPItems {
     public static Item itemPlatform_Slab_Diagonal_Left = new ItemPlatform_Slab_Diagonal_Left(null);
     public static Item itemPlatform_Slab_Diagonal_Right = new ItemPlatform_Slab_Diagonal_Right(null);
     public static Item itemPlatform_Slab_Diagonal_End = new ItemPlatform_Slab_Diagonal_End(null);
+    public static Item itemPlatform_Slab_End_Left = new ItemPlatform_Slab_End_Left(null);
+    public static Item itemPlatform_Slab_End_Right = new ItemPlatform_Slab_End_Right(null);
 
     private static void loadItems() {
         ItemIDs.RecipeBook.item = new td1138.bip.items.ItemRecipeBook();
@@ -42,6 +44,8 @@ public class TCBIPItems {
         ItemIDs.Platform_Slab_Diagonal_Left.item = new td1138.bip.items.ItemPlatform_Slab_Diagonal_Left(null);
         ItemIDs.Platform_Slab_Diagonal_Right.item = new td1138.bip.items.ItemPlatform_Slab_Diagonal_Right(null);
         ItemIDs.Platform_Slab_Diagonal_End.item = new td1138.bip.items.ItemPlatform_Slab_Diagonal_End(null);
+        ItemIDs.Platform_Slab_End_Left.item = new td1138.bip.items.ItemPlatform_Slab_End_Left(null);
+        ItemIDs.Platform_Slab_End_Right.item = new td1138.bip.items.ItemPlatform_Slab_End_Right(null);
     }
 
     public static void registerItems() {
@@ -55,5 +59,7 @@ public class TCBIPItems {
         TraincraftRegistry.RegisterItem(itemPlatform_Slab_Diagonal_Left, TCBIPInfo.modID, "Platform_Slab_Diagonal_Left", TCBIP.tabBIP);
         TraincraftRegistry.RegisterItem(itemPlatform_Slab_Diagonal_Right, TCBIPInfo.modID, "Platform_Slab_Diagonal_Right", TCBIP.tabBIP);
         TraincraftRegistry.RegisterItem(itemPlatform_Slab_Diagonal_End, TCBIPInfo.modID, "Platform_Slab_Diagonal_End", TCBIP.tabBIP);
+        TraincraftRegistry.RegisterItem(itemPlatform_Slab_End_Left, TCBIPInfo.modID, "Platform_Slab_End_Left", TCBIP.tabBIP);
+        TraincraftRegistry.RegisterItem(itemPlatform_Slab_End_Right, TCBIPInfo.modID, "Platform_Slab_End_Right", TCBIP.tabBIP);
     }
 }

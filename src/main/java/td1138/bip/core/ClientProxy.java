@@ -19,10 +19,7 @@ import td1138.bip.library.BlockIDs;
 import td1138.bip.library.GuiIDs;
 import td1138.bip.models.blocks.*;
 import td1138.bip.models.renderSwitch.*;
-import td1138.bip.tile.TileBR_Modern_Buffer;
-import td1138.bip.tile.TilePlatform_Slab_Diagonal_Left;
-import td1138.bip.tile.TilePlatform_Slab_Diagonal_End;
-import td1138.bip.tile.TilePlatform_Slab_Diagonal_Right;
+import td1138.bip.tile.*;
 import td1138.bip.tile.switchStand.*;
 
 import java.util.Calendar;
@@ -131,6 +128,10 @@ public class ClientProxy extends CommonProxy {
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_Diagonal_Right.block), new ItemRenderPlatform_Slab_Diagonal_Right());
         ClientRegistry.bindTileEntitySpecialRenderer(TilePlatform_Slab_Diagonal_End.class, new RenderPlatform_Slab_Diagonal_End());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_Diagonal_End.block), new ItemRenderPlatform_Slab_Diagonal_End());
+        ClientRegistry.bindTileEntitySpecialRenderer(TilePlatform_Slab_End_Left.class, new RenderPlatform_Slab_End_Left());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_End_Left.block), new ItemRenderPlatform_Slab_End_Left());
+        ClientRegistry.bindTileEntitySpecialRenderer(TilePlatform_Slab_End_Right.class, new RenderPlatform_Slab_End_Right());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_End_Right.block), new ItemRenderPlatform_Slab_End_Right());
     }
 
     @Override
@@ -153,6 +154,10 @@ public class ClientProxy extends CommonProxy {
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_Diagonal_Right.block), new ItemRenderPlatform_Slab_Diagonal_Right());
         ClientRegistry.bindTileEntitySpecialRenderer(TilePlatform_Slab_Diagonal_End.class, new RenderPlatform_Slab_Diagonal_End());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_Diagonal_End.block), new ItemRenderPlatform_Slab_Diagonal_End());
+        ClientRegistry.bindTileEntitySpecialRenderer(TilePlatform_Slab_End_Left.class, new RenderPlatform_Slab_End_Left());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_End_Left.block), new ItemRenderPlatform_Slab_End_Left());
+        ClientRegistry.bindTileEntitySpecialRenderer(TilePlatform_Slab_End_Right.class, new RenderPlatform_Slab_End_Right());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_End_Right.block), new ItemRenderPlatform_Slab_End_Right());
     }
 
 }

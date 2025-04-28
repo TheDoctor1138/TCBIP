@@ -31,6 +31,8 @@ public class TCBlocks {
 	public static Block Platform_Slab_Diagonal_Left = new BlockPlatform_Slab_Diagonal_Left().setHardness(1F);
 	public static Block Platform_Slab_Diagonal_Right = new BlockPlatform_Slab_Diagonal_Right().setHardness(1F);
 	public static Block Platform_Slab_Diagonal_End = new BlockPlatform_Slab_Diagonal_End().setHardness(1F);
+	public static Block Platform_Slab_End_Left = new BlockPlatform_Slab_End_Left().setHardness(1F);
+	public static Block Platform_Slab_End_Right = new BlockPlatform_Slab_End_Right().setHardness(1F);
 
 
 	public static void loadBlocks() {
@@ -44,6 +46,8 @@ public class TCBlocks {
 		BlockIDs.Platform_Slab_Diagonal_Left.block = new BlockPlatform_Slab_Diagonal_Left().setHardness(1F).setResistance(10F).setLightLevel(0.2F).setCreativeTab(TCBIP.tabBIP).setStepSound(Block.soundTypeMetal);
 		BlockIDs.Platform_Slab_Diagonal_Right.block = new BlockPlatform_Slab_Diagonal_Right().setHardness(1F).setResistance(10F).setLightLevel(0.2F).setCreativeTab(TCBIP.tabBIP).setStepSound(Block.soundTypeMetal);
 		BlockIDs.Platform_Slab_Diagonal_End.block = new BlockPlatform_Slab_Diagonal_End().setHardness(1F).setResistance(10F).setLightLevel(0.2F).setCreativeTab(TCBIP.tabBIP).setStepSound(Block.soundTypeMetal);
+		BlockIDs.Platform_Slab_End_Left.block = new BlockPlatform_Slab_End_Left().setHardness(1F).setResistance(10F).setLightLevel(0.2F).setCreativeTab(TCBIP.tabBIP).setStepSound(Block.soundTypeMetal);
+		BlockIDs.Platform_Slab_End_Right.block = new BlockPlatform_Slab_End_Right().setHardness(1F).setResistance(10F).setLightLevel(0.2F).setCreativeTab(TCBIP.tabBIP).setStepSound(Block.soundTypeMetal);
 	}
 
 	public static void registerBlocks() {
@@ -68,6 +72,9 @@ public class TCBlocks {
 		BlockIDs.BR_3_Aspect_Signal.block.setHarvestLevel("pickaxe",1);
 		BlockIDs.BR_4_Aspect_Signal.block.setHarvestLevel("pickaxe",1);
 		BlockIDs.Platform_Slab_Diagonal_Left.block.setHarvestLevel("pickaxe",1);
+		BlockIDs.Platform_Slab_Diagonal_Right.block.setHarvestLevel("pickaxe",1);
 		BlockIDs.Platform_Slab_Diagonal_End.block.setHarvestLevel("pickaxe",1);
+		BlockIDs.Platform_Slab_End_Left.block.setHarvestLevel("pickaxe",1);
+		BlockIDs.Platform_Slab_End_Right.block.setHarvestLevel("pickaxe",1);
 	}
 }
