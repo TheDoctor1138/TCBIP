@@ -48,6 +48,7 @@ public class TCBlocks {
 		BlockIDs.Platform_Slab_Diagonal_End.block = new BlockPlatform_Slab_Diagonal_End().setHardness(1F).setResistance(10F).setLightLevel(0.2F).setCreativeTab(TCBIP.tabBIP).setStepSound(Block.soundTypeMetal);
 		BlockIDs.Platform_Slab_End_Left.block = new BlockPlatform_Slab_End_Left().setHardness(1F).setResistance(10F).setLightLevel(0.2F).setCreativeTab(TCBIP.tabBIP).setStepSound(Block.soundTypeMetal);
 		BlockIDs.Platform_Slab_End_Right.block = new BlockPlatform_Slab_End_Right().setHardness(1F).setResistance(10F).setLightLevel(0.2F).setCreativeTab(TCBIP.tabBIP).setStepSound(Block.soundTypeMetal);
+		BlockIDs.Platform_Slab_10x10_Outside.block = new BlockPlatform_Slab_10x10_Outside().setHardness(1F).setResistance(10F).setLightLevel(0.2F).setCreativeTab(TCBIP.tabBIP).setStepSound(Block.soundTypeMetal);
 	}
 
 	public static void registerBlocks() {

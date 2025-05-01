@@ -14,6 +14,7 @@ tile.tcbip:Platform_Slab_Diagonal_Right.name=Platform Slab Diagonal Right
 tile.tcbip:Platform_Slab_Diagonal_End.name=Platform Slab Diagonal End
 tile.tcbip:Platform_Slab_End_Left.name=Platform Slab End Left
 tile.tcbip:Platform_Slab_End_Right.name=Platform Slab End Right
+tile.tcbip:Platform_Slab_10x10_Outside.name=Platform Slab 10x10 Outside
 
 <!-- Items -->
 item.RecipeBook.name=BIP Recipe Book

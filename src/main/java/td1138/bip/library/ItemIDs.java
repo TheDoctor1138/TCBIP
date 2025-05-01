@@ -23,6 +23,7 @@ public enum ItemIDs implements IItemIDs {
 	Platform_Slab_Diagonal_End("ItemBlock", "platform_slab", 1),
 	Platform_Slab_End_Left("ItemBlock", "platform_slab", 1),
 	Platform_Slab_End_Right("ItemBlock", "platform_slab", 1),
+	Platform_Slab_10x10_Outside("ItemBlock", "platform_slab", 2),
 	;
 
 	public Item item;

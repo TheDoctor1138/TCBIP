@@ -23,10 +23,7 @@ import td1138.bip.library.BlockIDs;
 import td1138.bip.library.GuiIDs;
 import td1138.bip.models.blocks.*;
 import td1138.bip.models.renderSwitch.*;
-import td1138.bip.tile.TileBR_Modern_Buffer;
-import td1138.bip.tile.TilePlatform_Slab_Diagonal_Left;
-import td1138.bip.tile.TilePlatform_Slab_Diagonal_End;
-import td1138.bip.tile.TilePlatform_Slab_Diagonal_Right;
+import td1138.bip.tile.*;
 import td1138.bip.tile.switchStand.*;
 import train.common.Traincraft;
 import train.common.api.EntityRollingStock;
@@ -122,6 +119,8 @@ public class CommonProxy implements IGuiHandler {
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_Diagonal_Right.block), new ItemRenderPlatform_Slab_Diagonal_Right());
         ClientRegistry.bindTileEntitySpecialRenderer(TilePlatform_Slab_Diagonal_End.class, new RenderPlatform_Slab_Diagonal_End());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_Diagonal_End.block), new ItemRenderPlatform_Slab_Diagonal_End());
+        ClientRegistry.bindTileEntitySpecialRenderer(TilePlatform_Slab_10x10_Outside.class, new RenderPlatform_Slab_10x10_Outside());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_10x10_Outside.block), new ItemRenderPlatform_Slab_10x10_Outside());
     }
 
     public void registerTileEntities() {
@@ -134,6 +133,9 @@ public class CommonProxy implements IGuiHandler {
         //    GameRegistry.registerTileEntity(TilePlatform_Slab_Diagonal_Left.class, "TilePlatform_Slab_Diagonal_Left");
         //    GameRegistry.registerTileEntity(TilePlatform_Slab_Diagonal_Right.class, "TilePlatform_Slab_Diagonal_Right");
         //    GameRegistry.registerTileEntity(TilePlatform_Slab_Diagonal_End.class, "TilePlatform_Slab_Diagonal_End");
+        //    GameRegistry.registerTileEntity(TilePlatform_Slab_End_Left.class, "TilePlatform_Slab_End_Left");
+        //    GameRegistry.registerTileEntity(TilePlatform_Slab_End_Right.class, "TilePlatform_Slab_End_Right");
+        //    GameRegistry.registerTileEntity(TilePlatform_Slab_10x10_Outside.class, "TilePlatform_Slab_10x10_Outside");
     }
 
     public static final TileEntitySpecialRenderer specialRenderer = new TileEntitySpecialRenderer() {

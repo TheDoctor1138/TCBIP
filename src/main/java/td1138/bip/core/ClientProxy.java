@@ -132,6 +132,8 @@ public class ClientProxy extends CommonProxy {
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_End_Left.block), new ItemRenderPlatform_Slab_End_Left());
         ClientRegistry.bindTileEntitySpecialRenderer(TilePlatform_Slab_End_Right.class, new RenderPlatform_Slab_End_Right());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_End_Right.block), new ItemRenderPlatform_Slab_End_Right());
+        ClientRegistry.bindTileEntitySpecialRenderer(TilePlatform_Slab_10x10_Outside.class, new RenderPlatform_Slab_10x10_Outside());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_10x10_Outside.block), new ItemRenderPlatform_Slab_10x10_Outside());
     }
 
     @Override
@@ -158,6 +160,8 @@ public class ClientProxy extends CommonProxy {
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_End_Left.block), new ItemRenderPlatform_Slab_End_Left());
         ClientRegistry.bindTileEntitySpecialRenderer(TilePlatform_Slab_End_Right.class, new RenderPlatform_Slab_End_Right());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_End_Right.block), new ItemRenderPlatform_Slab_End_Right());
+        ClientRegistry.bindTileEntitySpecialRenderer(TilePlatform_Slab_10x10_Outside.class, new RenderPlatform_Slab_10x10_Outside());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Platform_Slab_10x10_Outside.block), new ItemRenderPlatform_Slab_10x10_Outside());
     }
 
 }

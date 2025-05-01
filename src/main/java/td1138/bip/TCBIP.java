@@ -66,6 +66,7 @@ public class TCBIP {
 		GameRegistry.registerTileEntity(TilePlatform_Slab_Diagonal_End.class, "TilePlatform_Slab_Diagonal_End");
 		GameRegistry.registerTileEntity(TilePlatform_Slab_End_Left.class, "TilePlatform_Slab_End_Left");
 		GameRegistry.registerTileEntity(TilePlatform_Slab_End_Right.class, "TilePlatform_Slab_End_Right");
+		GameRegistry.registerTileEntity(TilePlatform_Slab_10x10_Outside.class, "TilePlatform_Slab_10x10_Outside");
 		proxy.registerBookHandler();
 		PacketHandler.init();
 		proxy.registerRenderInformation();
