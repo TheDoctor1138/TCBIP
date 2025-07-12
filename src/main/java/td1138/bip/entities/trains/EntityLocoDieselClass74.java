@@ -94,24 +94,11 @@ public class EntityLocoDieselClass74 extends DieselTrain {
         SkinRegistry.addSkin(this.getClass(), TCBIPInfo.modID,"textures/trains/Class_74_Yellow.png", new String[]{}, "Yellow", "Class 74 in BR Blue livery.");
         SkinRegistry.addSkin(this.getClass(), TCBIPInfo.modID,"textures/trains/Class_74_Black.png", new String[]{}, "Black", "Class 74 in BR Blue livery.");
         SkinRegistry.addSkin(this.getClass(), TCBIPInfo.modID,"textures/trains/Class_74_Green.png", new String[]{}, "Green", "Class 74 in BR Blue livery.");
-
-
-        /*
-        //add recolor so current, and register new TransportSkin
-        s = new TransportSkin(TiMSquared.MODID,"textures/train/brigadelok_080.png", "red",
-                "A fictional TransportSkin created for testing the recolor system,\n and the paint bucket TransportSkin selector. \n Might keep it long run\nto pay homage to the development of the mod.")
-        .setRecolorsFrom(0x68939E).setRecolorsTo(0xcc0000);
-        SkinRegistry.addSkin(this.getClass(),s);
-
-        //remove recolors, then set new name and texture
-        s= new TransportSkin(TiMSquared.MODID, "textures/hd/train/brigadelok_080.png", "hd",
-                "Used by Germany in WWI\nas a transport for solders and equipment\nthis incomplete HD TransportSkin was done by LunarTales");
-        SkinRegistry.addSkin(this.getClass(),s);*/
     }
 
     @Override
     public String getDefaultSkin(){
-        return "tcbip:default";
+        return "default";
     }
     /*
      * <h1>Variable Overrides</h1>

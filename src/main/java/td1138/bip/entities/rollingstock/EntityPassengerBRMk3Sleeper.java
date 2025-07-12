@@ -71,6 +71,11 @@ public class EntityPassengerBRMk3Sleeper extends EntityRollingStock implements I
     }
 
     @Override
+    public String getDefaultSkin(){
+        return "default";
+    }
+
+    @Override
     public boolean isReinforced() {
         return false;
     }

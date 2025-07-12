@@ -90,6 +90,11 @@ public class EntityLocoElectricDStockEngine extends ElectricTrain {
                 "Red", "");
     }
 
+    @Override
+    public String getDefaultSkin(){
+        return "default";
+    }
+
     /**
      * <h1>Variable Overrides</h1>
      * We override the functions defined in the super here, to give them different values.

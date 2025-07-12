@@ -61,6 +61,11 @@ public class EntityPassengerSNCBM6 extends EntityRollingStock implements IPassen
     }
 
     @Override
+    public String getDefaultSkin(){
+        return "default";
+    }
+
+    @Override
     public boolean isReinforced() {
         return false;
     }

@@ -104,6 +104,10 @@ public class EntityLocoGWRMogul extends SteamTrain {
                 "Brown", "GWR Mogul 5322 ROD Khaki");
     }
 
+    @Override
+    public String getDefaultSkin(){
+        return "default";
+    }
 
     /**
      * <h2>Max speed</h2>

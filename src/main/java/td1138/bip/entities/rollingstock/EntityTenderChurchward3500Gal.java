@@ -87,6 +87,11 @@ public class EntityTenderChurchward3500Gal extends Tender {
     }
 
     @Override
+    public String getDefaultSkin(){
+        return "default";
+    }
+
+    @Override
     public boolean isReinforced() { return false; }
 
     @Override

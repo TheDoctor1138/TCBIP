@@ -63,6 +63,11 @@ public class EntityPassengerCStockPassenger extends EntityRollingStock implement
     }
 
     @Override
+    public String getDefaultSkin(){
+        return "default";
+    }
+
+    @Override
     public boolean isReinforced() {
         return false;
     }

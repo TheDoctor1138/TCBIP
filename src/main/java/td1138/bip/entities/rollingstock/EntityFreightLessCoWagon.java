@@ -73,6 +73,11 @@ public class EntityFreightLessCoWagon extends Freight implements IInventory {
     }
 
     @Override
+    public String getDefaultSkin(){
+        return "default";
+    }
+
+    @Override
     public boolean isReinforced() { return false; }
 
     @Override

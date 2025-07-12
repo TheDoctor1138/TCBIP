@@ -86,6 +86,11 @@ public class EntityLocoElectricHLEClass18 extends ElectricTrain {
                 "Grey", "HLE Class 19 (different coupler)");
     }
 
+    @Override
+    public String getDefaultSkin(){
+        return "default";
+    }
+
     /**
      * <h1>Variable Overrides</h1>
      * We override the functions defined in the super here, to give them different values.

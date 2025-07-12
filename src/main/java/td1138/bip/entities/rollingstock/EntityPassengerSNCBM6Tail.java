@@ -59,6 +59,11 @@ public class EntityPassengerSNCBM6Tail extends EntityRollingStock implements IPa
     }
 
     @Override
+    public String getDefaultSkin(){
+        return "default";
+    }
+
+    @Override
     public boolean isReinforced() {
         return false;
     }
