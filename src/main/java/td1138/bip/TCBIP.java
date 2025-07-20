@@ -85,6 +85,7 @@ public class TCBIP {
 
 	public static AbstractTrains[] listDieselTrains() {
 		return new AbstractTrains[]{
+				new EntityLocoDieselClass47(null),
 				new EntityLocoDieselClass74(null),
 				new EntityLocoDieselClass68(null),
 		};
